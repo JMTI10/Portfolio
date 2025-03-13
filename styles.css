@@ -40,14 +40,16 @@ header {
     text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.5); /* Subtle glow */
 }
 
-/* Navigation Icons */
-nav a {
-    color: #fff;
-    margin-left: 15px;
-    font-size: 24px;
-    text-decoration: none;
-    display: inline-block;
-    transition: color 0.3s ease;
+nav a:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+
+nav a i {
+    transition: transform 0.3s ease;
+}
+
+nav a:hover i {
+    transform: scale(1.2); /* Slight zoom effect */
 }
 
 nav a:hover {
