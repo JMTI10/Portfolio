@@ -30,8 +30,13 @@ header {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Use a fancy font */
+    letter-spacing: 2px;
+    color: #FFD700; /* Gold color */
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.5); /* Glow effect */
 }
 
 nav a {
