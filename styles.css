@@ -37,8 +37,13 @@ header {
 nav a {
     color: #fff;
     margin-left: 15px;
-    font-size: 18px;
-    transition: color 0.3s ease;
+    font-size: 24px;
+    text-decoration: none; /* Removes any underlines */
+    display: inline-block; /* Prevents weird spacing */
+}
+
+nav a i {
+    vertical-align: middle; /* Ensures icons are aligned properly */
 }
 
 nav a:hover {
