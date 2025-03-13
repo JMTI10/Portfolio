@@ -14,13 +14,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 4000); // Changes every 4 seconds
 });
 
-// Sidebar Toggle Function
+// Ensure sidebar toggle works
 function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
-    if (sidebar.style.left === "0px") {
-        sidebar.style.left = "-250px"; // Hide sidebar
+    if (sidebar) {
+        if (sidebar.style.left === "0px") {
+            sidebar.style.left = "-250px"; // Hide sidebar
+        } else {
+            sidebar.style.left = "0px"; // Show sidebar
+        }
     } else {
-        sidebar.style.left = "0px"; // Show sidebar
+        console.error("Sidebar element not found. Check your HTML.");
     }
 }
 
@@ -28,8 +32,8 @@ function toggleMenu() {
 document.addEventListener("click", function (event) {
     const sidebar = document.getElementById("sidebar");
     const menuIcon = document.querySelector(".menu-icon");
-    
-    if (!sidebar.contains(event.target) && !menuIcon.contains(event.target)) {
+
+    if (sidebar && !sidebar.contains(event.target) && !menuIcon.contains(event.target)) {
         sidebar.style.left = "-250px";
     }
 });
