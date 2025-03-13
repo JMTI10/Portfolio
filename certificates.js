@@ -19,11 +19,18 @@ function closeImage() {
     document.getElementById("lightbox").style.display = "none";
 }
 
-// Remove Any Extra Empty Elements on Load
+// Sidebar Toggle Function
+function toggleMenu() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.style.left = sidebar.style.left === "0px" ? "-250px" : "0px";
+}
+
+// Make sure no empty images are displayed
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("img").forEach(img => {
-        if (!img.src) {
+        if (!img.src || img.src.trim() === "") {
             img.remove();
         }
     });
 });
+
