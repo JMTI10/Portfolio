@@ -8,15 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
     let index = 0;
     const headingElement = document.getElementById("dynamic-heading");
 
-    setInterval(() => {
-        headingElement.style.animation = "slideOut 0.5s ease-in-out";
-
+    function changeText() {
+        headingElement.style.opacity = "0"; // Fade out
         setTimeout(() => {
             index = (index + 1) % headings.length;
             headingElement.textContent = headings[index];
-            headingElement.style.animation = "slideIn 0.5s ease-in-out";
+            headingElement.style.opacity = "1"; // Fade in
         }, 500);
-    }, 4000);
+    }
+
+    setInterval(changeText, 4000);
 });
 
 // Sidebar Toggle Function

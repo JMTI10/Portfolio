@@ -12,10 +12,11 @@ body {
     color: #fff;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start;
+    min-height: 100vh;
 }
 
+/* Main Container */
 .container {
     width: 80%;
     max-width: 900px;
@@ -25,13 +26,17 @@ body {
 /* Header Styling */
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 20px;
     width: 100%;
 }
 
-/* Keep Name Yellow */
+/* Align Name with Left Content */
+.logo {
+    flex-grow: 1;
+    text-align: left;
+}
+
 .logo a {
     font-size: 32px;
     font-weight: bold;
@@ -40,6 +45,7 @@ header {
     text-transform: uppercase;
     text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.5);
     text-decoration: none;
+    display: inline-block;
 }
 
 .logo a:hover {
@@ -105,4 +111,12 @@ header {
 
 .close-btn:hover {
     color: #FFD700;
+}
+
+/* Headline Animation (Smooth Transition) */
+#dynamic-heading {
+    text-align: left;
+    font-size: 28px;
+    font-weight: bold;
+    transition: opacity 0.5s ease-in-out;
 }
