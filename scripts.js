@@ -1,3 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("Portfolio loaded successfully.");
+    const headings = [
+        "Hello, I'm Iúri Gonçalves.",
+        "Building the Future of Tech, One Line at a Time.",
+        "Innovating with Code & Passion."
+    ];
+
+    let index = 0;
+    const headingElement = document.getElementById("dynamic-heading");
+
+    setInterval(() => {
+        index = (index + 1) % headings.length;
+        headingElement.textContent = headings[index];
+    }, 4000); // Changes every 4 seconds
 });
