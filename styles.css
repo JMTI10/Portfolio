@@ -40,14 +40,21 @@ header {
     text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.5);
 }
 
+/* Align social icons and sidebar button */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between icons and menu button */
+}
+
 /* Social Icons */
 .social-icons {
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
 
 .social-icons a {
-    font-size: 24px;
+    font-size: 22px;
     color: #FFD700;
     text-decoration: none;
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -120,20 +127,20 @@ header {
     transition: opacity 0.5s ease-in-out;
 }
 
-/* Rotating Headline Animation */
-@keyframes rotateFade {
+/* Headline Carousel Animation */
+@keyframes slideFade {
     0% {
-        opacity: 1;
-        transform: rotateX(0deg);
-    }
-    50% {
         opacity: 0;
-        transform: rotateX(90deg);
+        transform: translateX(50px);
     }
     100% {
         opacity: 1;
-        transform: rotateX(0deg);
+        transform: translateX(0);
     }
+}
+
+#dynamic-heading {
+    transition: opacity 0.5s ease-in-out;
 }
 
 /* Projects Section */
@@ -158,4 +165,9 @@ header {
     color: #FFD700;
     text-decoration: none;
     font-size: 18px;
-    transition: color
+    transition: color 0.3s ease;
+}
+
+.projects ul li a:hover {
+    color: #fff;
+}
