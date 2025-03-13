@@ -44,7 +44,7 @@ header {
 .header-right {
     display: flex;
     align-items: center;
-    gap: 15px; /* Space between icons and menu button */
+    gap: 15px;
 }
 
 /* Social Icons */
@@ -124,11 +124,23 @@ header {
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 10px;
-    transition: opacity 0.5s ease-in-out;
+    display: inline-block;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 /* Headline Carousel Animation */
-@keyframes slideFade {
+@keyframes slideOut {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+}
+
+@keyframes slideIn {
     0% {
         opacity: 0;
         transform: translateX(50px);
@@ -140,7 +152,8 @@ header {
 }
 
 #dynamic-heading {
-    transition: opacity 0.5s ease-in-out;
+    display: inline-block;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 /* Projects Section */
@@ -170,4 +183,64 @@ header {
 
 .projects ul li a:hover {
     color: #fff;
+}
+
+/* Certificates Page */
+.certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.certificate-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.certificate-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.certificate-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.7); /* Gold glow */
+}
+
+/* Lightbox for Enlarged Images */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.lightbox .close:hover {
+    color: #FFD700;
 }

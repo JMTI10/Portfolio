@@ -9,17 +9,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const headingElement = document.getElementById("dynamic-heading");
 
     setInterval(() => {
-        headingElement.style.opacity = "0"; // Fade out
+        // Slide out current text
+        headingElement.style.animation = "slideOut 0.5s ease-in-out";
 
         setTimeout(() => {
+            // Change text
             index = (index + 1) % headings.length;
             headingElement.textContent = headings[index];
-            headingElement.style.opacity = "1"; // Fade in
-            headingElement.style.animation = "slideFade 0.8s ease-in-out"; // Slide in effect
-        }, 500);
-    }, 4000); // Change every 4 seconds
-});
 
+            // Slide in new text
+            headingElement.style.animation = "slideIn 0.5s ease-in-out";
+        }, 500);
+    }, 4000); // Change text every 4 seconds
+});
 
 // Sidebar Toggle Function
 function toggleMenu() {

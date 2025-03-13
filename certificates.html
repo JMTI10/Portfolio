@@ -11,18 +11,28 @@
     <div class="container">
         <header>
             <div class="logo"><a href="index.html">Iúri Gonçalves</a></div>
-            <nav>
-                <a href="https://www.linkedin.com/in/iuri-goncalves/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/JMTI10" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.instagram.com/iuri__goncalves/" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </nav>
+            <div class="header-right">
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/iuri-goncalves/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/JMTI10" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/iuri__goncalves/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            </div>
         </header>
+
+        <!-- Sidebar Navigation -->
+        <div id="sidebar" class="sidebar">
+            <div class="close-btn" onclick="toggleMenu()">×</div>
+            <a href="index.html">Home</a>
+            <a href="certificates.html">Certificates</a>
+        </div>
 
         <main>
             <h1>My Certificates</h1>
@@ -41,6 +51,7 @@
         </main>
     </div>
 
+    <!-- Lightbox for enlarged images -->
     <div class="lightbox" id="lightbox">
         <span class="close" onclick="closeImage()">&times;</span>
         <img id="lightbox-img">
