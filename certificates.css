@@ -16,16 +16,109 @@ body {
     min-height: 100vh;
 }
 
-/* Fix for Small Cube Issue */
-img:empty, div:empty {
-    display: none !important;
-}
-
-/* Container */
 .container {
     width: 80%;
     max-width: 900px;
     text-align: left;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Keep Name Yellow */
+.logo a {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #FFD700;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.5);
+    text-decoration: none;
+}
+
+.logo a:hover {
+    color: white;
+}
+
+/* Social Icons Stay Next to Each Other */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Styling for Social Icons */
+.social-icons a {
+    font-size: 22px;
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Align Name & "My Certificates" */
+.logo {
+    flex: 1;
+}
+
+h1 {
+    text-align: left;
+    font-size: 32px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #1a1a1a;
+    padding-top: 60px;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* Sidebar Links */
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out;
+}
+
+.sidebar a:hover {
+    background: #FFD700;
+    color: black;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.close-btn:hover {
+    color: #FFD700;
 }
 
 /* Certificates Grid */
@@ -36,7 +129,12 @@ img:empty, div:empty {
     padding: 20px;
 }
 
-/* Make Sure Images Don't Render Empty */
+/* Fix for Small Cube Issue */
+img:empty, div:empty {
+    display: none !important;
+}
+
+/* Certificate Images */
 .certificate-item img {
     width: 100%;
     height: auto;
