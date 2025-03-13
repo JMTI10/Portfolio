@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Certificates - Iúri Gonçalves</title>
     <link rel="stylesheet" href="certificates.css">
-    <script src="script.js" defer></script>
+    <script src="certificates.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -68,10 +68,16 @@
         </main>
     </div>
 
-    <!-- Lightbox for Enlarged Images -->
-    <div class="lightbox" id="lightbox">
-        <span class="close" onclick="closeImage()">&times;</span>
+<!-- Lightbox for Enlarged Images with Description -->
+<div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
         <img id="lightbox-img">
+        <div class="lightbox-description">
+            <p id="lightbox-text"></p>
+        </div>
     </div>
+    <span class="close" onclick="closeImage()">&times;</span>
+</div>
+
 </body>
 </html>
