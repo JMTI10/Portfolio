@@ -46,26 +46,6 @@ header {
     color: white;
 }
 
-/* Social Icons Stay Next to Each Other */
-.social-icons {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-/* Styling for Social Icons */
-.social-icons a {
-    font-size: 22px;
-    color: #FFD700;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.social-icons a:hover {
-    color: white;
-    transform: scale(1.1);
-}
-
 /* Align Name & "My Certificates" */
 .logo {
     flex: 1;

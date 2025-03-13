@@ -25,12 +25,11 @@ function toggleMenu() {
     sidebar.style.left = sidebar.style.left === "0px" ? "-250px" : "0px";
 }
 
-// Make sure no empty images are displayed
+// Remove Any Extra Empty Elements on Load
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("img").forEach(img => {
-        if (!img.src || img.src.trim() === "") {
+        if (!img.src) {
             img.remove();
         }
     });
 });
-
