@@ -53,21 +53,20 @@ header {
     color: white;
 }
 
-/* Header Right: Social Icons & Sidebar Button */
+/* Sidebar Button & Social Icons Alignment */
 .header-right {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-/* Social Icons */
+/* Social Icons Styling */
 .social-icons {
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-/* Styling for Social Icons */
 .social-icons a {
     font-size: 22px;
     color: #FFD700;
@@ -78,17 +77,6 @@ header {
 .social-icons a:hover {
     color: white;
     transform: scale(1.1);
-}
-
-/* Sidebar Button */
-.menu-icon {
-    font-size: 28px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-}
-
-.menu-icon:hover {
-    transform: scale(1.2);
 }
 
 /* Sidebar */
