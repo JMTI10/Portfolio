@@ -122,9 +122,12 @@ header {
 }
 
 /* Headline Animation */
+/* Headline Animation */
 #dynamic-heading {
     text-align: left;
     font-size: 28px;
     font-weight: bold;
+    opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
+
