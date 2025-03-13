@@ -16,55 +16,16 @@ body {
     min-height: 100vh;
 }
 
+/* Fix for Small Cube Issue */
+img:empty, div:empty {
+    display: none !important;
+}
+
 /* Container */
 .container {
     width: 80%;
     max-width: 900px;
     text-align: left;
-}
-
-/* Header Styling */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    width: 100%;
-}
-
-/* Keep Name Yellow */
-.logo a {
-    font-size: 32px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #FFD700;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.5);
-    text-decoration: none;
-}
-
-.logo a:hover {
-    color: white;
-}
-
-/* Social Icons Stay Next to Each Other */
-.social-icons {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-/* Styling for Social Icons */
-.social-icons a {
-    font-size: 22px;
-    color: #FFD700;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.social-icons a:hover {
-    color: white;
-    transform: scale(1.1);
 }
 
 /* Certificates Grid */
@@ -75,11 +36,19 @@ header {
     padding: 20px;
 }
 
-/* Fix Small Cube Issue */
-.certificate-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Make Sure Images Don't Render Empty */
+.certificate-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.certificate-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.7);
 }
 
 /* Lightbox */
@@ -95,4 +64,40 @@ header {
     justify-content: center;
     align-items: center;
     padding: 20px;
+}
+
+.lightbox-content {
+    display: flex;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    max-height: 80%;
+    gap: 20px;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 60%;
+    max-height: 90vh;
+    border-radius: 10px;
+}
+
+.lightbox-description {
+    max-width: 35%;
+    color: #fff;
+    font-size: 16px;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.lightbox .close:hover {
+    color: #FFD700;
 }

@@ -18,3 +18,12 @@ function openImage(src) {
 function closeImage() {
     document.getElementById("lightbox").style.display = "none";
 }
+
+// Remove Any Extra Empty Elements on Load
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("img").forEach(img => {
+        if (!img.src) {
+            img.remove();
+        }
+    });
+});
