@@ -28,9 +28,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    width: 100%;
 }
 
-/* Fancy Text Logo */
+/* Keep Name Yellow */
 .logo a {
     font-size: 32px;
     font-weight: bold;
@@ -45,12 +46,14 @@ header {
     color: white;
 }
 
-/* Social Icons */
+/* Social Icons Stay Next to Each Other */
 .social-icons {
     display: flex;
     gap: 10px;
+    align-items: center;
 }
 
+/* Styling for Social Icons */
 .social-icons a {
     font-size: 22px;
     color: #FFD700;
@@ -102,32 +105,4 @@ header {
 
 .close-btn:hover {
     color: #FFD700;
-}
-
-/* Headline Carousel Animation */
-@keyframes slideOut {
-    0% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-}
-
-@keyframes slideIn {
-    0% {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-#dynamic-heading {
-    display: inline-block;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }

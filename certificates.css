@@ -13,17 +13,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    min-height: 100vh; /* Make sure it's not forcing a small box */
+    min-height: 100vh;
 }
 
-/* Container */
 .container {
     width: 80%;
     max-width: 900px;
     text-align: left;
 }
 
-/* Header */
+/* Header Styling */
 header {
     display: flex;
     justify-content: space-between;
@@ -32,12 +31,66 @@ header {
     width: 100%;
 }
 
-h1 {
-    text-align: left;
+/* Keep Name Yellow */
+.logo a {
     font-size: 32px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    padding-left: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #FFD700;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.5);
+    text-decoration: none;
+}
+
+.logo a:hover {
+    color: white;
+}
+
+/* Social Icons Stay Next to Each Other */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Styling for Social Icons */
+.social-icons a {
+    font-size: 22px;
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #1a1a1a;
+    padding-top: 60px;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out;
+}
+
+.sidebar a:hover {
+    background: #FFD700;
+    color: black;
 }
 
 /* Certificates Grid */
@@ -60,13 +113,6 @@ h1 {
 .certificate-item img:hover {
     transform: scale(1.05);
     box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.7);
-}
-
-/* Fix Small Cube Issue */
-.certificate-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* Lightbox */
