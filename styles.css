@@ -40,20 +40,19 @@ header {
     text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.5); /* Subtle glow */
 }
 
-nav a:hover {
-    color: #FFD700; /* Gold color on hover */
-}
-
-nav a i {
-    transition: transform 0.3s ease;
-}
-
-nav a:hover i {
-    transform: scale(1.2); /* Slight zoom effect */
+/* Navigation Icons */
+nav a {
+    color: #fff;
+    margin-left: 15px;
+    font-size: 24px;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 nav a:hover {
     color: #FFD700; /* Gold on hover */
+    transform: scale(1.1);
 }
 
 /* Introduction */
@@ -97,11 +96,4 @@ nav a:hover {
 
 .projects ul li a:hover {
     color: #fff;
-}
-
-/* Footer */
-footer {
-    margin-top: 40px;
-    text-align: center;
-    font-size: 14px;
 }
