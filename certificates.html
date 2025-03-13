@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Certificates - Iúri Gonçalves</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html">Iúri Gonçalves</a></div>
+            <nav>
+                <a href="https://www.linkedin.com/in/iuri-goncalves/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/JMTI10" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/iuri__goncalves/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </nav>
+        </header>
+
+        <main>
+            <h1>My Certificates</h1>
+            <div class="certificate-grid">
+                <div class="certificate-item">
+                    <img src="certificates/cert1.jpg" alt="Certificate 1" onclick="openImage(this.src)">
+                </div>
+                <div class="certificate-item">
+                    <img src="certificates/cert2.jpg" alt="Certificate 2" onclick="openImage(this.src)">
+                </div>
+                <div class="certificate-item">
+                    <img src="certificates/cert3.jpg" alt="Certificate 3" onclick="openImage(this.src)">
+                </div>
+                <!-- Add more certificates as needed -->
+            </div>
+        </main>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close" onclick="closeImage()">&times;</span>
+        <img id="lightbox-img">
+    </div>
+</body>
+</html>
