@@ -37,7 +37,6 @@
         <main>
             <h1>My Certificates</h1>
             <div class="certificate-grid">
-                <!-- First 5 Certificates -->
                 <div class="certificate-item">
                     <img src="images/grades.jpg" alt="Grades Certificate" onclick="openImage(this.src)">
                 </div>
@@ -53,8 +52,6 @@
                 <div class="certificate-item">
                     <img src="images/Portuguese_army.jpg" alt="Portuguese Army Certificate" onclick="openImage(this.src)">
                 </div>
-
-                <!-- Last 3 Certificates (Moved Here) -->
                 <div class="certificate-item">
                     <img src="images/High_School_Diploma.jpg" alt="High School Diploma" onclick="openImage(this.src)">
                 </div>
@@ -68,16 +65,15 @@
         </main>
     </div>
 
-<!-- Lightbox for Enlarged Images with Description -->
-<div class="lightbox" id="lightbox">
-    <div class="lightbox-content">
-        <img id="lightbox-img">
-        <div class="lightbox-description">
-            <p id="lightbox-text"></p>
+    <!-- Lightbox for Enlarged Images with Description -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <img id="lightbox-img">
+            <div class="lightbox-description">
+                <p id="lightbox-text"></p>
+            </div>
         </div>
+        <span class="close" onclick="closeImage()">&times;</span>
     </div>
-    <span class="close" onclick="closeImage()">&times;</span>
-</div>
-
 </body>
 </html>
