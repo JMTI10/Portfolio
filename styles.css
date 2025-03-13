@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -22,6 +22,7 @@ body {
     text-align: left;
 }
 
+/* Header Styling */
 header {
     display: flex;
     justify-content: space-between;
@@ -29,35 +30,34 @@ header {
     padding: 20px 0;
 }
 
+/* Fancy Text Logo */
 .logo {
     font-size: 32px;
     font-weight: bold;
-    font-family: 'Poppins', sans-serif; /* Use a fancy font */
     letter-spacing: 2px;
     color: #FFD700; /* Gold color */
     text-transform: uppercase;
-    text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.5); /* Glow effect */
+    text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.5); /* Subtle glow */
 }
 
+/* Navigation Icons */
 nav a {
     color: #fff;
     margin-left: 15px;
     font-size: 24px;
-    text-decoration: none; /* Removes any underlines */
-    display: inline-block; /* Prevents weird spacing */
-}
-
-nav a i {
-    vertical-align: middle; /* Ensures icons are aligned properly */
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #FFD700;
+    color: #FFD700; /* Gold on hover */
 }
 
+/* Introduction */
 .intro h1 {
     font-size: 48px;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 10px;
 }
 
@@ -68,6 +68,7 @@ nav a:hover {
     line-height: 1.5;
 }
 
+/* Projects Section */
 .projects {
     margin-top: 40px;
 }
@@ -96,25 +97,9 @@ nav a:hover {
     color: #fff;
 }
 
+/* Footer */
 footer {
     margin-top: 40px;
     text-align: center;
     font-size: 14px;
-}
-
-.corner-gradient {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(45deg, gold, transparent);
-}
-
-.corner-top-left {
-    top: 0;
-    left: 0;
-}
-
-.corner-bottom-right {
-    bottom: 0;
-    right: 0;
 }
