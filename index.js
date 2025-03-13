@@ -20,8 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(changeText, 4000);
 });
 
-// Sidebar Toggle Function
+// Sidebar Toggle Function with Smooth Transition
 function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
-    sidebar.style.left = sidebar.style.left === "0px" ? "-250px" : "0px";
+    if (sidebar.style.left === "0px") {
+        sidebar.style.left = "-250px";
+    } else {
+        sidebar.style.left = "0px";
+    }
 }

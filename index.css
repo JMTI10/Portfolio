@@ -26,6 +26,7 @@ body {
 /* Header Styling */
 header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 20px;
     width: 100%;
@@ -52,7 +53,14 @@ header {
     color: white;
 }
 
-/* Social Icons Stay Next to Each Other */
+/* Header Right: Social Icons & Sidebar Button */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Social Icons */
 .social-icons {
     display: flex;
     gap: 10px;
@@ -70,6 +78,17 @@ header {
 .social-icons a:hover {
     color: white;
     transform: scale(1.1);
+}
+
+/* Sidebar Button */
+.menu-icon {
+    font-size: 28px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-icon:hover {
+    transform: scale(1.2);
 }
 
 /* Sidebar */
