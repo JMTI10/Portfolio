@@ -1,3 +1,4 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 * {
@@ -63,15 +64,19 @@ header {
 /* Social Icons Styling */
 .social-icons {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
 }
 
 .social-icons a {
-    font-size: 22px;
+    font-size: 24px;
     color: #FFD700;
     text-decoration: none;
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.social-icons a i {
+    font-size: 24px;
 }
 
 .social-icons a:hover {
@@ -121,7 +126,24 @@ header {
     color: #FFD700;
 }
 
-/* Headline Animation */
+/* Smooth Sidebar Opening */
+.sidebar-open {
+    left: 0 !important;
+}
+
+/* Menu Icon */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: #FFD700;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-icon:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
 /* Headline Animation */
 #dynamic-heading {
     text-align: left;
@@ -130,4 +152,3 @@ header {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
-
