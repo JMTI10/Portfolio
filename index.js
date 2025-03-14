@@ -16,17 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+// Sidebar Toggle Function (Now Identical to Certificates Page)
 function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
     const menuIcon = document.querySelector(".menu-icon");
 
-    if (sidebar.classList.contains("active")) {
-        sidebar.classList.remove("active");
-        menuIcon.classList.remove("active");
-    } else {
-        sidebar.classList.add("active");
-        menuIcon.classList.add("active");
-    }
+    sidebar.classList.toggle("active");
+    menuIcon.classList.toggle("active");
 }
 
 const canvas = document.createElement("canvas");

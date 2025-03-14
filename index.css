@@ -64,6 +64,7 @@ header {
     text-decoration: none;
 }
 
+/* Sidebar Default (Hidden) */
 .sidebar {
     position: fixed;
     top: 0;
@@ -76,10 +77,12 @@ header {
     z-index: 1000;
 }
 
+/* Sidebar Open (Make Sure It Moves Correctly) */
 .sidebar.active {
     left: 0;
 }
 
+/* Menu Icon (Same Rotation as Certificates Page) */
 .menu-icon {
     font-size: 30px;
     cursor: pointer;
@@ -87,6 +90,7 @@ header {
     transition: transform 0.3s ease-in-out;
 }
 
+/* Rotate the Menu Button When Sidebar Opens */
 .menu-icon.active {
     transform: rotate(90deg);
 }
