@@ -1,44 +1,58 @@
-// Sidebar Toggle Function (Adapted from Index.js)
-function toggleMenu() {
-    const sidebar = document.getElementById("sidebar");
+document.addEventListener("DOMContentLoaded", () => {
     const menuIcon = document.querySelector(".menu-icon");
+    const sidebar = document.getElementById("sidebar");
+    const closeBtn = document.querySelector(".close-btn");
 
-    if (sidebar.style.left === "0px") {
-        sidebar.style.left = "-250px"; // Close sidebar
-    } else {
-        sidebar.style.left = "0px"; // Open sidebar
-    }
-
-    // Toggle rotation on menu button
     if (menuIcon) {
-        menuIcon.classList.toggle("active");
+        console.log("Menu icon found, adding click event"); // Debugging log
+        menuIcon.addEventListener("click", toggleMenu);
+    } else {
+        console.error("Menu icon NOT found!");
     }
-}
 
+    if (closeBtn) {
+        closeBtn.addEventListener("click", toggleMenu);
+    }
+});
+
+// Ensure the script runs after the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
     const menuIcon = document.querySelector(".menu-icon");
     const sidebar = document.getElementById("sidebar");
     const closeBtn = document.querySelector(".close-btn");
 
     if (menuIcon && sidebar) {
+        console.log("Menu icon found, adding event listener.");
         menuIcon.addEventListener("click", () => {
-            if (sidebar.style.left === "0px") {
-                sidebar.style.left = "-250px";
-            } else {
-                sidebar.style.left = "0px";
-            }
+            toggleMenu();
         });
+    } else {
+        console.error("Sidebar or menu icon NOT found!");
     }
 
     if (closeBtn) {
         closeBtn.addEventListener("click", () => {
-            sidebar.style.left = "-250px"; // Close sidebar when clicking the X button
+            toggleMenu();
         });
     }
-
-    // Run the floating particles effect when the page loads
-    createParticles();
 });
+
+// Sidebar Toggle Function
+function toggleMenu() {
+    const sidebar = document.getElementById("sidebar");
+    const menuIcon = document.querySelector(".menu-icon");
+
+    if (sidebar) {
+        sidebar.classList.toggle("active");
+        console.log("Sidebar toggled! Current classes:", sidebar.className);
+    } else {
+        console.error("Sidebar NOT found!");
+    }
+
+    if (menuIcon) {
+        menuIcon.classList.toggle("active");
+    }
+}
 
 // Certificate Descriptions
 const certificateDescriptions = {
@@ -127,3 +141,6 @@ function createParticles() {
 
     animateParticles();
 }
+
+// Run the particles effect when the page loads
+document.addEventListener("DOMContentLoaded", createParticles);
