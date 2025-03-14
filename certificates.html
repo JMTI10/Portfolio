@@ -1,4 +1,3 @@
-<!-- certificates.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,11 +8,12 @@
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="sidebar.css">
     <script src="certificates.js" defer></script>
+    <script src="header.js" defer></script>
     <script src="sidebar.js" defer></script>
 </head>
 <body>
 
-    <!-- Load Header & Sidebar -->
+    <!-- Header & Sidebar will be dynamically loaded -->
     <div id="header-container"></div>
     <div id="sidebar-container"></div>
 
@@ -42,23 +42,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-        // Load Sidebar & Header Dynamically
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch("header.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("header-container").innerHTML = data;
-                });
-
-            fetch("sidebar.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("sidebar-container").innerHTML = data;
-                });
-        });
-    </script>
 
 </body>
 </html>
