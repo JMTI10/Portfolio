@@ -117,7 +117,32 @@ header {
     color: #FFD700;
 }
 
+/* Sidebar Menu Icon */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: #FFD700;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
 
+/* When Sidebar is Open, Change Button Colors */
+.sidebar.active ~ .header-right .menu-icon {
+    color: white;
+}
+
+/* Menu Button Rotation When Open */
+.menu-icon.active {
+    transform: rotate(90deg);
+    color: white;
+}
+
+/* Hover Effect for Menu Button */
+.menu-icon:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+/* Skills Section */
 .skills-section {
     text-align: right;
     margin-left: auto;
@@ -134,6 +159,7 @@ header {
     margin-bottom: 10px;
 }
 
+/* Link Colors */
 p a {
     color: #FFD700;
     text-decoration: none;
@@ -143,6 +169,8 @@ p a:hover {
     color: white;
     text-decoration: underline;
 }
+
+/* Button Styling */
 .btn {
     display: inline-block;
     background: #FFD700;
