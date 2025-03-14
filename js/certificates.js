@@ -62,7 +62,6 @@ function closeImage() {
     }
 }
 
-// ✅ Click outside the image to close the lightbox
 document.addEventListener("click", function (event) {
     const lightbox = document.getElementById("lightbox");
     if (event.target === lightbox) {
