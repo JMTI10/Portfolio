@@ -1,3 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Fix Page Background */
+body {
+    background: #121212 !important; /* Ensures dark mode */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ensure All Content Stays Centered */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.logo a {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #FFD700;
+    text-decoration: none;
+}
+
 /* Header Icons (GitHub, LinkedIn, Instagram) */
 .social-icon {
     color: white;
@@ -11,6 +56,13 @@
     color: #FFD700;
 }
 
+/* Align Social Icons & Sidebar Button */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 /* Sidebar */
 .sidebar {
     position: fixed;
@@ -20,15 +72,72 @@
     height: 100%;
     background: #1a1a1a;
     padding-top: 60px;
-    transition: left 0.4s ease-in-out;
-    z-index: 2000;
+    transition: left 0.4s ease-in-out !important;
+    z-index: 2000 !important;
+}
+
+.sidebar.open {
+    left: 0 !important;
 }
 
 .sidebar.active {
-    left: 0;
+    left: 0 !important;
+    transform: translateX(0) !important;
 }
 
-/* Certificates Grid Fix */
+/* Sidebar Links */
+.sidebar a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background: #FFD700;
+    color: #121212;
+}
+
+/* Sidebar Close Button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #FFD700;
+}
+
+/* Sidebar Button (☰) */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: #FFD700;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Sidebar Toggle Button Hover Effect */
+.menu-icon:hover {
+    transform: scale(1.2);
+    color: #FFA500;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-icon.active {
+    transform: rotate(90deg);
+}
+
+/* Certificates Section */
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #FFD700;
+}
+
+/* Certificates Grid */
 .certificate-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -40,20 +149,55 @@
     margin: 0 auto;
 }
 
-/* Lightbox Fix */
+/* Certificate Images */
+.certificate-item img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px;
+}
+
+.certificate-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.7);
+}
+
+/* Lightbox Background */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1002;
+}
+
+/* Lightbox Image & Description Side by Side */
 .lightbox-container {
     display: flex;
     align-items: center;
     gap: 20px;
     max-width: 80vw;
+    justify-content: center;
 }
 
+/* Lightbox Image */
 .lightbox-container img {
-    max-width: 50%;
-    height: auto;
+    max-width: 50vw;
+    max-height: 80vh;
     border-radius: 10px;
+    object-fit: contain;
 }
 
+/* Lightbox Description */
 .lightbox-description {
     max-width: 40%;
     color: white;
@@ -62,4 +206,25 @@
     background: rgba(255, 255, 255, 0.1);
     padding: 15px;
     border-radius: 10px;
+}
+
+/* Close Button */
+.lightbox .close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Floating Particles */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
 }
