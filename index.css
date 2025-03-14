@@ -1,69 +1,3 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    background: #121212;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-}
-
-.container {
-    width: 80%;
-    max-width: 900px;
-    text-align: left;
-}
-
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    width: 100%;
-}
-
-.logo {
-    flex-grow: 1;
-    text-align: left;
-}
-
-.logo a {
-    font-size: 32px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #FFD700;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.5);
-    text-decoration: none;
-}
-
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.social-icons {
-    display: flex;
-    gap: 15px;
-}
-
-.social-icons a {
-    font-size: 24px;
-    color: #FFD700;
-    text-decoration: none;
-}
-
 /* Sidebar Default (Hidden) */
 .sidebar {
     position: fixed;
@@ -125,18 +59,20 @@ header {
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* When Sidebar is Open, Change Button Colors */
-.sidebar.active ~ .header-right .menu-icon {
-    color: white;
-}
-
-/* Menu Button Rotation When Open */
+/* Rotate the Menu Icon When Sidebar Opens */
 .menu-icon.active {
     transform: rotate(90deg);
-    color: white;
 }
 
-/* Hover Effect for Menu Button */
+/* Make the Sidebar Button Background Yellow When Open */
+.sidebar.active .menu-icon {
+    background-color: #FFD700;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: black; /* Keep the text black inside the button */
+}
+
+/* Menu Button Hover Effect */
 .menu-icon:hover {
     transform: scale(1.1);
     color: white;
