@@ -1,10 +1,17 @@
 // Sidebar Toggle Function
 function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
-    sidebar.style.left = sidebar.style.left === "0px" ? "-250px" : "0px";
+    const menuIcon = document.querySelector(".menu-icon");
+
+    if (sidebar) {
+        sidebar.classList.toggle("active");
+    }
+
+    if (menuIcon) {
+        menuIcon.classList.toggle("active"); // Apply rotation
+    }
 }
 
-// 🎆 Floating Particles Effect
 const canvas = document.createElement("canvas");
 document.body.appendChild(canvas);
 const ctx = canvas.getContext("2d");

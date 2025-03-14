@@ -121,11 +121,17 @@ header {
 }
 
 /* ✅ FIXED: Menu Button */
+/* Rotation Effect for Menu Icon */
 .menu-icon {
     font-size: 30px;
     cursor: pointer;
     color: #FFD700;
     transition: transform 0.3s ease-in-out;
+}
+
+/* When active, rotate 90 degrees */
+.menu-icon.active {
+    transform: rotate(90deg);
 }
 
 .menu-icon:hover {
