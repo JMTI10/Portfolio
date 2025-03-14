@@ -21,6 +21,11 @@ header {
     z-index: 1000;
 }
 
+/* Fix Content Overlapping Header */
+body {
+    padding-top: 80px; /* Ensures content starts below header */
+}
+
 /* Logo (Your Name) - Left Aligned */
 .logo {
     font-size: 32px;
@@ -69,6 +74,13 @@ header {
 .menu-icon:hover {
     transform: scale(1.2);
     color: #FFA500;
+}
+
+/* Fix Sidebar Button Alignment */
+.header-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Ensure everything remains centered on all screens */
