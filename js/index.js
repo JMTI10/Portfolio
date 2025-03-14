@@ -1,3 +1,22 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const titleElement = document.querySelector("title");
+    const titles = [
+        "Portfolio - Iúri Gonçalves",
+        "ICT Student | Developer | Innovator",
+        "Passionate About Tech & Problem Solving",
+        "Exploring Cloud, AI, and IoT",
+        "Let's Build Something Great!"
+    ];
+    let index = 0;
+
+    function changeTitle() {
+        titleElement.textContent = titles[index];
+        index = (index + 1) % titles.length;
+    }
+
+    setInterval(changeTitle, 3000);
+});
+
 document.addEventListener("DOMContentLoaded", setupParticles);
 
 function setupParticles() {
