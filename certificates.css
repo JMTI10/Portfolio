@@ -47,19 +47,17 @@ header {
 .sidebar {
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -250px; /* Initially hidden */
     width: 250px;
     height: 100%;
     background: #1a1a1a;
-    padding-top: 60px;
-    transition: transform 0.4s ease-in-out;
+    transition: left 0.4s ease-in-out;
     z-index: 1000;
-    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5);
+}
+.sidebar.active {
+    left: 0;
 }
 
-.sidebar.active {
-    transform: translateX(250px);
-}
 
 /* Sidebar Links */
 .sidebar a {

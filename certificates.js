@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
 function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
     const menuIcon = document.querySelector(".menu-icon");
-
     if (sidebar && menuIcon) {
         sidebar.classList.toggle("active");
         menuIcon.classList.toggle("active");
