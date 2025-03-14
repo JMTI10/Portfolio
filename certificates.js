@@ -1,3 +1,20 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const menuIcon = document.querySelector(".menu-icon");
+    const sidebar = document.getElementById("sidebar");
+    const closeBtn = document.querySelector(".close-btn");
+
+    if (menuIcon) {
+        console.log("Menu icon found, adding click event"); // Debugging log
+        menuIcon.addEventListener("click", toggleMenu);
+    } else {
+        console.error("Menu icon NOT found!");
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener("click", toggleMenu);
+    }
+});
+
 // Ensure the script runs after the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
     const menuIcon = document.querySelector(".menu-icon");
