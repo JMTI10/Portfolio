@@ -7,6 +7,7 @@ const certificateDescriptions = {
     "images/High_School_Diploma.jpg": "Official High School Diploma from Agrupamento de Escolas Dr. Francisco Fernandes Lopes.",
     "images/Topas_Certificate.jpg": "Participation in the TOPAS programming competition.",
     "images/Apps_for_good.jpg": "Certificate from Apps for Good, a technology education initiative."
+    "images/mathlab.png": "MATLAB Onramp Certificate from MathWorks, indicating successful completion of the MATLAB Onramp training. Covers key concepts including commands, matrix operations, programming, function calls, and data visualization.",
 };
 
 
