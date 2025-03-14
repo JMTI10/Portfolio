@@ -71,41 +71,42 @@ header {
     left: -250px;
     width: 250px;
     height: 100%;
-    background: #1a1a1a;
+    background: #121212;
     padding-top: 60px;
     transition: left 0.3s ease-in-out;
     z-index: 1000;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
 }
 
-/* Sidebar Open (Ensure It Moves Properly) */
+/* Sidebar Open */
 .sidebar.active {
     left: 0;
 }
 
-/* Menu Icon (Rotation & Hover Fix) */
-.menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    color: #FFD700;
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-/* Rotate the Menu Button When Sidebar Opens */
-.menu-icon.active {
-    transform: rotate(90deg);
-}
-
-/* Fix Hover Effect */
-.menu-icon:hover {
-    transform: scale(1.1);
+/* Sidebar Links */
+.sidebar a {
+    display: block;
     color: white;
+    padding: 15px 10px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
 }
 
-/* Close Button Styling */
+/* Sidebar Link Hover Effect */
+.sidebar a:hover {
+    color: #FFD700;
+}
+
+/* Close Button */
 .close-btn {
     position: absolute;
     top: 10px;
-    right: 20px;
+    right: 15px;
     font-size: 30px;
     cursor: pointer;
     color: white;
@@ -115,6 +116,7 @@ header {
 .close-btn:hover {
     color: #FFD700;
 }
+
 
 .skills-section {
     text-align: right;
