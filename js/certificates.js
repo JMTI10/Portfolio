@@ -31,12 +31,12 @@ document.addEventListener("DOMContentLoaded", function () {
 const certificateDescriptions = {
     "grades.jpg": "Final grades from high school technical course in Information Systems Management and Programming.",
     "Erasmus.jpg": "Participation in the Erasmus+ program in Finland, Dec 9-13, 2019.",
-    "Finfami_support_person.jpg": "Certified support person in FinFami Mental Health Organization.",
-    "Finfami_basic_traning.jpg": "Completed basic training in voluntary mental health support.",
-    "Portuguese_army.jpg": "Certified by the Portuguese Army in professional ethics & first aid.",
+    "FinFami_support_person.jpg": "FinFami (The Finnish Central Association for Mental Health Families) provides support for individuals whose family members or loved ones are experiencing mental health challenges. A FinFami support person (or peer supporter) is typically someone who offers emotional support, guidance, and resources to families and caregivers affected by mental health issues.",
+    "FinFami_basic_traning.jpg": "Completed basic training in voluntary mental health support.",
+    "Army_certificate.jpg": "The military card is the official document that certifies, at the time of its issuance, the military status of citizens concerning the fulfillment of military duties. It records all information related to a national citizen’s military obligations, such as the completion of the DDN, the date of transfer to the recruitment reserve, or, in the case of former military personnel, the availability reserve.",
     "High_School_Diploma.jpg": "Official High School Diploma in Information Systems Management and Programming.",
-    "Topas_Certificate.jpg": "Participation in TOPAS Programming Competition at the University of Algarve.",
-    "Apps_for_good.jpg": "Recognition for participation in 'Apps for Good' technology initiative.",
+    "Topas_Certificate.jpg": "It is a programming competition for high school students from the Algarve, but open to all schools in the country. This year, the initiative includes the participation of eight teams from Loulé Secondary School, Pinheiro e Rosa Secondary School (Faro), and INETE - Institute of Technical Education (Lisbon). The programming challenge lasts four hours, during which participants must solve six to seven problems using a programming language of their choice (C, C++, Java, or Pascal).",
+    "Apps_for_good_certificate.jpg": "Apps for Good is a technological educational program that encourages students from 5th to 12th grade and teachers from all disciplinary areas to develop applications for smartphones or tablets that solve social problems, highlighting the transformative potential of technology in the world and communities. Regional and Final event certificates.",
     "mathlab.png": "MATLAB Onramp Certificate from MathWorks."
 };
 
