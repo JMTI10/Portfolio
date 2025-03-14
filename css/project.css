@@ -49,7 +49,7 @@ h1 {
 
 .project-img {
     width: 35%; /* Adjusted for better scaling */
-    max-width: 350px; /* Ensures it stays responsive */
+    max-width: 300px; /* Ensures it stays responsive and doesn't get too big */
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
 }
@@ -110,18 +110,10 @@ h1 {
 
     .project-img {
         width: 80%;
-        max-width: 300px;
+        max-width: 250px; /* Adjusted for mobile scaling */
     }
 
     .project-desc {
         width: 100%;
     }
-}
-
-.project-intro {
-    font-size: 18px;
-    font-weight: bold;
-    color: #FFD700;
-    text-align: center;
-    margin-bottom: 20px;
 }
