@@ -42,22 +42,23 @@ function setupParticles() {
 
     animateParticles();
 }
-
 document.addEventListener("DOMContentLoaded", function () {
-    const titleElement = document.querySelector("title");
+    const titleElement = document.getElementById("carousel-title");
     const titles = [
-        "Portfolio - Iúri Gonçalves",
-        "ICT Student | Developer | Innovator",
-        "Passionate About Tech & Problem Solving",
+        "Who Am I?",
+        "ICT Student & Software Developer",
+        "Passionate About Innovation & Tech",
         "Exploring Cloud, AI, and IoT",
         "Let's Build Something Great!"
     ];
     let index = 0;
 
     function changeTitle() {
-        titleElement.textContent = titles[index];
-        index = (index + 1) % titles.length;
+        if (titleElement) {
+            titleElement.textContent = titles[index];
+            index = (index + 1) % titles.length;
+        }
     }
 
-    setInterval(changeTitle, 3000);
+    setInterval(changeTitle, 3000); // Change every 3 seconds
 });
