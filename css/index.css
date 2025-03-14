@@ -15,12 +15,14 @@ body {
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
+    padding-top: 80px;
 }
 
 .container {
     width: 80%;
     max-width: 900px;
     text-align: left;
+    padding-top: 20px;
 }
 
 /* Header */
