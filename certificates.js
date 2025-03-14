@@ -30,7 +30,7 @@ function closeImage() {
 // Sidebar Toggle Function
 function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
-    sidebar.style.left = sidebar.style.left === "0px" ? "-250px" : "0px";
+    sidebar.classList.toggle("active"); // Add/remove "active" class for animation
 }
 
 // 🎆 Floating Particles Effect (Copied from index.js)

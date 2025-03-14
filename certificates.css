@@ -49,14 +49,49 @@ header {
 .sidebar {
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -250px; /* Hidden initially */
     width: 250px;
     height: 100%;
     background: #1a1a1a;
     padding-top: 60px;
-    transition: left 0.3s ease-in-out;
+    transition: transform 0.4s ease-in-out; /* Smooth sliding */
     z-index: 1000;
+    transform: translateX(-100%);
 }
+
+/* Show sidebar when active */
+.sidebar.active {
+    transform: translateX(0);
+}
+
+/* Sidebar Links */
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out;
+}
+
+.sidebar a:hover {
+    background: #FFD700;
+    color: black;
+}
+
+/* Sidebar Button Animation */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: #FFD700;
+    transition: transform 0.3s ease-in-out; /* Smooth effect */
+}
+
+.menu-icon:hover {
+    color: white;
+    transform: scale(1.1); /* Makes button slightly larger */
+}
+
 
 .sidebar a {
     display: block;
