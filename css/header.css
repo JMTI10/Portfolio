@@ -7,15 +7,18 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Header Container */
 header {
     display: flex;
-    justify-content: space-between; /* Left & Right Alignment */
+    justify-content: space-between;
     align-items: center;
     padding: 20px;
     width: 100%;
-    max-width: 1200px; /* Ensures it doesn’t stretch too wide */
-    margin: 0 auto; /* Centers the header */
+    background: #121212; /* Dark mode */
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 /* Logo (Your Name) - Left Aligned */

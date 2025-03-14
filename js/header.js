@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch("html/header.html") // Adjust the path if needed
+    fetch("html/header.html") // Ensure the path is correct
         .then(response => response.text())
         .then(data => {
-            document.querySelector("header").innerHTML = data;
+            document.body.insertAdjacentHTML("afterbegin", data); // Adds header at the top
         })
         .catch(error => console.error("Error loading header:", error));
 });
-
 function setupHeader() {
     const menuIcon = document.querySelector(".menu-icon");
 
