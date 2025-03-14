@@ -79,17 +79,23 @@ header {
     transform: scale(1.1);
 }
 
-/* Sidebar */
+/* Sidebar - Ensure it's above the particles */
 .sidebar {
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -250px; /* Initially hidden */
     width: 250px;
     height: 100%;
     background: #1a1a1a;
     padding-top: 60px;
-    transition: left 0.3s ease-in-out;
-    z-index: 1000;
+    transition: left 0.4s ease-in-out !important;
+    z-index: 2000 !important; /* Higher than particles */
+}
+
+/* Sidebar Active State - Moves into View */
+.sidebar.active {
+    left: 0 !important; /* Forces sidebar into view */
+    transform: translateX(0) !important;
 }
 
 .sidebar a {

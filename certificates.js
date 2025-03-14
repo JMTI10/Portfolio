@@ -18,22 +18,25 @@ document.addEventListener("DOMContentLoaded", () => {
     createParticles();
 });
 
+
 // Sidebar Toggle Function
 function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
     const menuIcon = document.querySelector(".menu-icon");
 
-    if (sidebar) {
-        sidebar.classList.toggle("active");
-        console.log("Sidebar toggled! Current classes:", sidebar.className);
-    } else {
+    if (!sidebar) {
         console.error("Sidebar NOT found!");
+        return;
     }
+
+    sidebar.classList.toggle("active");
+    console.log("Sidebar toggled! Current classes:", sidebar.className);
 
     if (menuIcon) {
         menuIcon.classList.toggle("active");
     }
 }
+
 
 // Certificate Descriptions
 const certificateDescriptions = {
