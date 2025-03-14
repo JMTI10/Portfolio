@@ -1,12 +1,21 @@
-/* Header Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header Container */
 header {
     display: flex;
-    justify-content: space-between; /* Ensures left & right alignment */
+    justify-content: space-between; /* Left & Right Alignment */
     align-items: center;
     padding: 20px;
     width: 100%;
-    max-width: 1200px; /* Keeps content centered */
-    margin: 0 auto; /* Centers the header on the page */
+    max-width: 1200px; /* Ensures it doesn’t stretch too wide */
+    margin: 0 auto; /* Centers the header */
 }
 
 /* Logo (Your Name) - Left Aligned */
@@ -29,8 +38,13 @@ header {
 }
 
 /* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 10px; /* Space between icons */
+}
+
 .social-icons a {
-    color: #FFD700 !important;
+    color: #FFD700 !important; /* Golden color */
     font-size: 22px;
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
@@ -48,7 +62,25 @@ header {
     transition: transform 0.3s ease-in-out;
 }
 
+/* Sidebar Toggle Button Hover Effect */
 .menu-icon:hover {
     transform: scale(1.2);
     color: #FFA500;
+}
+
+/* Ensure everything remains centered on all screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    .social-icons {
+        gap: 5px;
+    }
+
+    .menu-icon {
+        font-size: 28px;
+    }
 }
