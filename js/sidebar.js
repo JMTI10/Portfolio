@@ -15,13 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
         menuIcon.classList.toggle("active");
     }
 
-    function toggleMenu() {
-        const sidebar = document.getElementById("sidebar");
-        if (sidebar) {
-            sidebar.classList.toggle("active");
-        }
-    }
-
     // ✅ Open & Close Sidebar Events
     menuIcon.addEventListener("click", function (event) {
         event.stopPropagation(); // Prevents event bubbling
@@ -43,26 +36,4 @@ document.addEventListener("DOMContentLoaded", function () {
             toggleMenu();
         }
     });
-});
-
-// ✅ Double Code Trick to Ensure Function Exists
-document.addEventListener("DOMContentLoaded", () => {
-    const menuIcon = document.querySelector(".menu-icon");
-    const sidebar = document.getElementById("sidebar");
-    const closeBtn = document.querySelector(".close-btn");
-
-    if (menuIcon && sidebar) {
-        console.log("Menu icon found, adding event listener.");
-        menuIcon.addEventListener("click", () => {
-            toggleMenu();
-        });
-    } else {
-        console.error("Sidebar or menu icon NOT found!");
-    }
-
-    if (closeBtn) {
-        closeBtn.addEventListener("click", () => {
-            toggleMenu();
-        });
-    }
 });
