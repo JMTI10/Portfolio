@@ -1,44 +1,53 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const menuIcon = document.querySelector(".menu-icon");
     const sidebar = document.getElementById("sidebar");
+    const menuIcon = document.querySelector(".menu-icon");
     const closeBtn = document.querySelector(".close-btn");
 
-    // Debugging logs
-    console.log("Menu Icon:", menuIcon);
-    console.log("Sidebar:", sidebar);
-    console.log("Close Button:", closeBtn);
+    if (!sidebar || !menuIcon || !closeBtn) {
+        console.error("Sidebar, Menu Icon, or Close Button not found!");
+        return;
+    }
 
+    // ✅ Sidebar Toggle Function
     function toggleMenu() {
-        if (sidebar) {
-            sidebar.classList.toggle("active");
-        }
-        if (menuIcon) {
-            menuIcon.classList.toggle("active");
-        }
+        sidebar.classList.toggle("active");
+        menuIcon.classList.toggle("active");
     }
 
-    if (menuIcon) {
-        menuIcon.addEventListener("click", function (event) {
-            event.stopPropagation();
-            toggleMenu();
-        });
-    }
+    // ✅ Open & Close Sidebar Events
+    menuIcon.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevents event bubbling
+        toggleMenu();
+    });
 
-    if (closeBtn) {
-        closeBtn.addEventListener("click", function (event) {
-            event.stopPropagation();
-            toggleMenu();
-        });
-    }
+    closeBtn.addEventListener("click", function (event) {
+        event.stopPropagation();
+        toggleMenu();
+    });
 
-    // Click Outside Sidebar to Close
+    // ✅ Click Outside Sidebar to Close
     document.addEventListener("click", function (event) {
         if (
-            sidebar && sidebar.classList.contains("active") &&
+            sidebar.classList.contains("active") &&
             !sidebar.contains(event.target) &&
             !menuIcon.contains(event.target)
         ) {
             toggleMenu();
         }
     });
+});
+
+// ✅ Double Code Trick (Ensures Sidebar Always Works)
+document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.querySelector(".menu-icon");
+    const sidebar = document.getElementById("sidebar");
+    const closeBtn = document.querySelector(".close-btn");
+
+    if (menuIcon) {
+        menuIcon.addEventListener("click", toggleMenu);
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener("click", toggleMenu);
+    }
 });
