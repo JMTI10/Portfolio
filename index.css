@@ -120,12 +120,24 @@ header {
     color: #FFD700;
 }
 
-/* Default Menu Icon */
+/* Sidebar Toggle Button (☰) */
 .menu-icon {
     font-size: 30px;
     cursor: pointer;
     color: #FFD700;
-    transition: transform 0.3s ease-in-out; /* Smooth rotation */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.menu-icon:hover {
+    transform: scale(1.2);
+    color: #FFA500; /* Slightly different yellow for effect */
+    transition: all 0.2s ease-in-out;
+}
+
+/* Rotate When Sidebar is Open */
+.menu-icon.active {
+    transform: rotate(90deg);
 }
 
 /* Rotate immediately when clicked */
@@ -136,16 +148,6 @@ header {
 /* Keep it rotated when sidebar is open */
 .sidebar-active .menu-icon {
     transform: rotate(90deg);
-}
-
-.menu-icon.active {
-    transform: rotate(90deg);
-}
-
-
-.menu-icon:hover {
-    color: white;
-    transform: scale(1.1);
 }
 
 .content {

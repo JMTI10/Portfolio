@@ -1,23 +1,32 @@
-// Sidebar Toggle Function with Instant Rotation
+document.addEventListener("DOMContentLoaded", () => {
+    const menuIcon = document.querySelector(".menu-icon");
+    const sidebar = document.getElementById("sidebar");
+    const closeBtn = document.querySelector(".close-btn");
+
+    if (menuIcon) {
+        menuIcon.addEventListener("click", () => {
+            toggleMenu();
+        });
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener("click", () => {
+            toggleMenu();
+        });
+    }
+});
+
+// Sidebar Toggle Function (Same as Certificates Page)
 function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
     const menuIcon = document.querySelector(".menu-icon");
 
-    // Immediately rotate the button when clicked
-    menuIcon.classList.add("rotating");
+    if (sidebar) {
+        sidebar.classList.toggle("active");
+    }
 
-    // Check if the sidebar is already open
-    if (sidebar.style.left === "0px") {
-        sidebar.style.left = "-250px"; // Close sidebar
-        document.body.classList.remove("sidebar-active"); // Remove rotation effect
-
-        // Wait for animation to complete before resetting rotation
-        setTimeout(() => {
-            menuIcon.classList.remove("rotating");
-        }, 300);
-    } else {
-        sidebar.style.left = "0px"; // Open sidebar
-        document.body.classList.add("sidebar-active"); // Keep rotation
+    if (menuIcon) {
+        menuIcon.classList.toggle("active"); // Rotate button
     }
 }
 
