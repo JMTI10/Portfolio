@@ -3,14 +3,15 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.text())
         .then(data => {
             document.getElementById("header-container").innerHTML = data;
-            setupHeader(); // ✅ Initialize sidebar & menu button AFTER header loads
+            setupHeader(); 
         })
         .catch(error => console.error("Error loading header:", error));
 });
 
-// ✅ Double Code Trick (Ensures Sidebar Always Works)
 document.addEventListener("DOMContentLoaded", function () {
-    setupHeader();
+    setTimeout(() => {
+        setupHeader();
+    }, 500); 
 });
 
 function setupHeader() {
@@ -28,7 +29,6 @@ function setupHeader() {
         menuIcon.classList.toggle("active");
     }
 
-    // ✅ Open & Close Sidebar Events
     menuIcon.addEventListener("click", function (event) {
         event.stopPropagation();
         toggleMenu();
@@ -39,7 +39,6 @@ function setupHeader() {
         toggleMenu();
     });
 
-    // ✅ Click Outside Sidebar to Close
     document.addEventListener("click", function (event) {
         if (
             sidebar.classList.contains("active") &&
