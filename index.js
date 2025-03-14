@@ -3,13 +3,17 @@ function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
     sidebar.style.left = sidebar.style.left === "0px" ? "-250px" : "0px";
 }
-window.addEventListener("scroll", fadeInOnScroll);
-fadeInOnScroll();
 
-// Floating Particles Effect
+// 🎆 Floating Particles Effect
 const canvas = document.createElement("canvas");
 document.body.appendChild(canvas);
 const ctx = canvas.getContext("2d");
+
+canvas.style.position = "fixed";
+canvas.style.top = "0";
+canvas.style.left = "0";
+canvas.style.pointerEvents = "none"; // Makes sure it doesn’t interfere with user clicks
+canvas.style.zIndex = "-1"; // Keeps it in the background
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -27,7 +31,7 @@ for (let i = 0; i < 50; i++) {
 
 function animateParticles() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "#FFD700";
+    ctx.fillStyle = "#FFD700"; // Keeps the golden particles
     particles.forEach(p => {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
