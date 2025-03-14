@@ -16,21 +16,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// Sidebar Toggle Function
 function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
     const menuIcon = document.querySelector(".menu-icon");
 
     if (sidebar.classList.contains("active")) {
-        sidebar.classList.remove("active"); // Close sidebar
-        menuIcon.classList.remove("active"); // Rotate back
+        sidebar.classList.remove("active");
+        menuIcon.classList.remove("active");
     } else {
-        sidebar.classList.add("active"); // Open sidebar
-        menuIcon.classList.add("active"); // Rotate
+        sidebar.classList.add("active");
+        menuIcon.classList.add("active");
     }
 }
 
-// 🎆 Floating Particles Effect
 const canvas = document.createElement("canvas");
 document.body.appendChild(canvas);
 const ctx = canvas.getContext("2d");
@@ -38,8 +36,8 @@ const ctx = canvas.getContext("2d");
 canvas.style.position = "fixed";
 canvas.style.top = "0";
 canvas.style.left = "0";
-canvas.style.pointerEvents = "none"; // Prevents interaction issues
-canvas.style.zIndex = "-1"; // Keeps it in the background
+canvas.style.pointerEvents = "none";
+canvas.style.zIndex = "-1";
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -57,7 +55,7 @@ for (let i = 0; i < 50; i++) {
 
 function animateParticles() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "#FFD700"; // Keeps the golden particles
+    ctx.fillStyle = "#FFD700";
     particles.forEach(p => {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
@@ -72,7 +70,6 @@ function animateParticles() {
 
 animateParticles();
 
-// ✅ Resizes the canvas when the window size changes
 window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;

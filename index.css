@@ -18,13 +18,52 @@ body {
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
-    text-align: center;
-    margin: 0 auto;
+    width: 80%;
+    max-width: 900px;
+    text-align: left;
 }
 
-/* Sidebar Default Hidden */
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.logo {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.logo a {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #FFD700;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.5);
+    text-decoration: none;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: #FFD700;
+    text-decoration: none;
+}
+
 .sidebar {
     position: fixed;
     top: 0;
@@ -37,7 +76,6 @@ body {
     z-index: 1000;
 }
 
-/* Sidebar Open */
 .sidebar.active {
     left: 0;
 }
@@ -49,7 +87,32 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Rotate Menu Icon When Sidebar is Open */
 .menu-icon.active {
     transform: rotate(90deg);
+}
+
+.skills-section {
+    text-align: right;
+    margin-left: auto;
+    margin-right: 0;
+    max-width: 400px;
+}
+
+.skills {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills li {
+    margin-bottom: 10px;
+}
+
+p a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+p a:hover {
+    color: white;
+    text-decoration: underline;
 }
