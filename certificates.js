@@ -3,14 +3,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const sidebar = document.getElementById("sidebar");
     const closeBtn = document.querySelector(".close-btn");
 
-    // Ensure sidebar works correctly
+    // First event listener set
     if (menuIcon) {
         console.log("Menu icon found, adding click event");
+        menuIcon.addEventListener("click", toggleMenu);
+    } else {
+        console.error("Menu icon NOT found!");
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener("click", toggleMenu);
+    }
+});
+
+// Ensure the script runs after the DOM is fully loaded - Second Event Listener Set
+document.addEventListener("DOMContentLoaded", () => {
+    const menuIcon = document.querySelector(".menu-icon");
+    const sidebar = document.getElementById("sidebar");
+    const closeBtn = document.querySelector(".close-btn");
+
+    if (menuIcon && sidebar) {
+        console.log("Menu icon found, adding second event listener.");
         menuIcon.addEventListener("click", () => {
             toggleMenu();
         });
     } else {
-        console.error("Menu icon NOT found!");
+        console.error("Sidebar or menu icon NOT found!");
     }
 
     if (closeBtn) {
@@ -20,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// Sidebar Toggle Function - **Restored Working Version**
+// Sidebar Toggle Function
 function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
     const menuIcon = document.querySelector(".menu-icon");
