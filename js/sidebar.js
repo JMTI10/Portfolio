@@ -8,11 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => console.error("Error loading sidebar:", error));
 });
 
-// ✅ Double Code Trick (Ensures Sidebar Always Works)
 document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
         setupSidebar();
-    }, 500); // ⏳ Ensures elements are fully loaded
+    }, 500);
 });
 
 function setupSidebar() {
@@ -30,7 +29,6 @@ function setupSidebar() {
         menuIcon.classList.toggle("active");
     }
 
-    // ✅ Open & Close Sidebar Events
     menuIcon.addEventListener("click", function (event) {
         event.stopPropagation();
         toggleMenu();
@@ -41,7 +39,6 @@ function setupSidebar() {
         toggleMenu();
     });
 
-    // ✅ Click Outside Sidebar to Close
     document.addEventListener("click", function (event) {
         if (
             sidebar.classList.contains("active") &&
