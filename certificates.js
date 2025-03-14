@@ -10,6 +10,7 @@ const certificateDescriptions = {
 };
 
 
+
 // Ensure the lightbox is hidden on page load
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("lightbox").style.display = "none";
@@ -18,10 +19,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Open Lightbox
 function openImage(src) {
+    console.log("Opening image:", src); // Debugging
+
+    // Ensure paths are correct
+    const cleanSrc = src.replace(window.location.origin + "/", ""); // Removes full URL part
+    console.log("Processed src:", cleanSrc); // Debugging
+
     document.getElementById("lightbox-img").src = src;
-    document.getElementById("lightbox-text").textContent = certificateDescriptions[src] || "No description available.";
+    document.getElementById("lightbox-text").textContent = certificateDescriptions[cleanSrc] || "No description available.";
     document.getElementById("lightbox").style.display = "flex";
 }
+
 
 // Close Lightbox
 function closeImage() {
