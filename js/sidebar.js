@@ -3,6 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const sidebar = document.getElementById("sidebar");
     const closeBtn = document.querySelector(".close-btn");
 
+    // Debugging logs
+    console.log("Menu Icon:", menuIcon);
+    console.log("Sidebar:", sidebar);
+    console.log("Close Button:", closeBtn);
+
     function toggleMenu() {
         if (sidebar) {
             sidebar.classList.toggle("active");
@@ -14,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (menuIcon) {
         menuIcon.addEventListener("click", function (event) {
-            event.stopPropagation(); // Prevents event bubbling
+            event.stopPropagation();
             toggleMenu();
         });
     }
@@ -26,10 +31,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // ✅ Click Outside Sidebar to Close
+    // Click Outside Sidebar to Close
     document.addEventListener("click", function (event) {
         if (
-            sidebar.classList.contains("active") &&
+            sidebar && sidebar.classList.contains("active") &&
             !sidebar.contains(event.target) &&
             !menuIcon.contains(event.target)
         ) {
