@@ -192,3 +192,6 @@ p a:hover {
     background: white;
     transform: scale(1.05);
 }
+#carousel-title {
+    transition: opacity 0.5s ease-in-out;
+}
