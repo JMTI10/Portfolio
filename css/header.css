@@ -9,6 +9,7 @@ header {
 /* Social Icons */
 .social-icons {
     display: flex;
+    align-items: center;
     gap: 15px;
 }
 
@@ -31,6 +32,7 @@ header {
     transition: transform 0.3s ease-in-out;
 }
 
+/* Sidebar Toggle Button Hover Effect */
 .menu-icon:hover {
     transform: scale(1.2);
     color: #FFA500;
@@ -44,5 +46,5 @@ header {
 .header-right {
     display: flex;
     align-items: center;
-    gap: 15px; /* Adjust spacing */
+    gap: 15px;
 }
