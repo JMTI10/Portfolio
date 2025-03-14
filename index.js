@@ -30,15 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// Sidebar Toggle Function (Now Identical to Certificates Page)
-function toggleMenu() {
-    const sidebar = document.getElementById("sidebar");
-    const menuIcon = document.querySelector(".menu-icon");
-
-    sidebar.classList.toggle("active");
-    menuIcon.classList.toggle("active");
-}
-
 const canvas = document.createElement("canvas");
 document.body.appendChild(canvas);
 const ctx = canvas.getContext("2d");
