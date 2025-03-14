@@ -24,8 +24,10 @@ const certificateDescriptions = {
     "images/mathlab.png": "MATLAB Onramp Certificate from MathWorks, indicating successful completion of the MATLAB Onramp training. Covers key concepts including commands, matrix operations, programming, function calls, and data visualization."
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("lightbox").style.display = "none";
+document.querySelectorAll(".certificate-item img").forEach(img => {
+    img.addEventListener("click", function () {
+        openImage(this.src);
+    });
 });
 
 function openImage(src) {
@@ -33,13 +35,16 @@ function openImage(src) {
     const lightboxImg = document.getElementById("lightbox-img");
     const lightboxText = document.getElementById("lightbox-text");
 
-    if (lightbox && lightboxImg && lightboxText) {
-        const filename = src.split("/").pop();
-        lightboxImg.src = src;
-        lightboxText.textContent = certificateDescriptions["images/" + filename] || "No description available.";
-        lightbox.style.display = "flex";
-        document.body.style.overflow = "hidden";
+    if (!lightbox || !lightboxImg || !lightboxText) {
+        console.error("Lightbox elements not found!");
+        return;
     }
+
+    const filename = src.split("/").pop();
+    lightboxImg.src = src;
+    lightboxText.textContent = certificateDescriptions["images/" + filename] || "No description available.";
+    lightbox.style.display = "flex";
+    document.body.style.overflow = "hidden";
 }
 
 function closeImage() {
