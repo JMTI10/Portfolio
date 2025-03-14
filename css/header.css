@@ -1,27 +1,43 @@
+/* Header Styling */
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Ensures left & right alignment */
     align-items: center;
     padding: 20px;
     width: 100%;
+    max-width: 1200px; /* Keeps content centered */
+    margin: 0 auto; /* Centers the header on the page */
 }
 
-/* Social Icons */
-.social-icons {
+/* Logo (Your Name) - Left Aligned */
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo a {
+    color: #FFD700; /* Golden color */
+    text-decoration: none;
+}
+
+/* Header Right Section (Icons + Sidebar Button) */
+.header-right {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 15px; /* Adds spacing between icons & sidebar button */
 }
 
+/* Social Media Icons */
 .social-icons a {
-    color: #FFD700;
+    color: #FFD700 !important;
     font-size: 22px;
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .social-icons a:hover {
     transform: scale(1.2);
-    color: #FFA500;
+    color: #FFA500 !important; /* Slightly different yellow */
 }
 
 /* Sidebar Button (☰) */
@@ -32,19 +48,7 @@ header {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Sidebar Toggle Button Hover Effect */
 .menu-icon:hover {
     transform: scale(1.2);
     color: #FFA500;
-}
-
-.menu-icon.active {
-    transform: rotate(90deg);
-}
-
-/* Header Right Section (Icons + Menu) */
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 15px;
 }
