@@ -124,8 +124,13 @@ header {
     font-size: 30px;
     cursor: pointer;
     color: #FFD700;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out; /* Ensures smooth rotation */
 }
+
+.sidebar-open .menu-icon {
+    transform: rotate(90deg);
+}
+
 
 .menu-icon.active {
     transform: rotate(90deg);

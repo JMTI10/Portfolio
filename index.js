@@ -1,12 +1,17 @@
+// Sidebar Toggle Function with Smooth Rotation
 function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
     const menuIcon = document.querySelector(".menu-icon");
 
-    // Toggle sidebar open/close
-    if (sidebar.style.left === "0px") {
+    // Check if sidebar is open
+    const isOpen = sidebar.style.left === "0px";
+
+    if (isOpen) {
         sidebar.style.left = "-250px"; // Close sidebar
+        document.body.classList.remove("sidebar-open"); // Remove rotation effect
     } else {
         sidebar.style.left = "0px"; // Open sidebar
+        document.body.classList.add("sidebar-open"); // Add rotation effect
     }
     menuIcon.classList.toggle("active");
 }
