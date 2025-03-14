@@ -27,6 +27,7 @@ body {
     width: 100%;
     max-width: 1200px;
     padding: 20px;
+    text-align: center;
 }
 
 /* Ensure Header Doesn't Overlap Content */
@@ -38,6 +39,7 @@ header {
     background: #121212;
     z-index: 1000;
     padding: 15px 20px;
+    text-align: center;
 }
 
 main {
@@ -88,6 +90,15 @@ main {
 
 .sidebar.open {
     left: 0 !important;
+}
+
+/* 🏅 Certificates Section */
+h1 {
+    font-size: 32px;
+    margin: 20px 0;
+    text-align: center;
+    color: #FFD700;
+    padding-top: 20px; /* Extra padding to avoid overlap */
 }
 
 /* 🖼 Certificates Grid */
