@@ -1,4 +1,3 @@
-alert("✅ JavaScript is running! Console might be blocked.");
 document.addEventListener("DOMContentLoaded", function () {
     // Ensure the script runs only after the page is fully loaded
     setTimeout(() => {
