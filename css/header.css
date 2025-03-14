@@ -16,3 +16,55 @@
     transform: scale(1.2);
     color: #FFA500;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.logo a {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #FFD700;
+    text-decoration: none;
+}
+
+/* Social Media Icons */
+.social-icons a {
+    color: #FFD700;
+    font-size: 22px;
+    margin-right: 15px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #FFA500;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Sidebar Button (☰) */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: #FFD700;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-icon:hover {
+    transform: scale(1.2);
+    color: #FFA500;
+}
+
+.menu-icon.active {
+    transform: rotate(90deg);
+}
