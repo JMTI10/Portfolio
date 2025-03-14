@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Ensure the lightbox is hidden on page load
+    // Ensure the lightbox is hidden when the page loads
     document.getElementById("lightbox").style.display = "none";
 });
 
@@ -35,66 +35,23 @@ function openImage(src) {
         lightboxImg.src = src;
         lightboxText.textContent = certificateDescriptions["images/" + filename] || "No description available.";
         lightbox.style.display = "flex";
+        document.body.style.overflow = "hidden"; // Prevents scrolling when open
     }
 }
 
-// Close Lightbox - Fixed Issue
+// Close Lightbox
 function closeImage() {
     const lightbox = document.getElementById("lightbox");
     if (lightbox) {
         lightbox.style.display = "none";
-        document.body.style.overflow = "auto"; // Ensures scrolling is enabled after closing
+        document.body.style.overflow = "auto"; // Enables scrolling after closing
     }
 }
 
-// Ensure lightbox closes when clicking outside the image
+// Ensure clicking outside the image also closes the lightbox
 document.addEventListener("click", (event) => {
     const lightbox = document.getElementById("lightbox");
     if (event.target === lightbox) {
         closeImage();
     }
 });
-
-// Floating Particles Effect
-function setupParticles() {
-    const canvas = document.createElement("canvas");
-    document.body.appendChild(canvas);
-    const ctx = canvas.getContext("2d");
-
-    canvas.style.position = "fixed";
-    canvas.style.top = "0";
-    canvas.style.left = "0";
-    canvas.style.pointerEvents = "none";
-    canvas.style.zIndex = "-1";
-
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    let particles = [];
-    for (let i = 0; i < 50; i++) {
-        particles.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            radius: Math.random() * 2 + 1,
-            speedX: (Math.random() - 0.5) * 0.5,
-            speedY: (Math.random() - 0.5) * 0.5,
-        });
-    }
-
-    function animateParticles() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = "#FFD700";
-        particles.forEach(p => {
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-            ctx.fill();
-            p.x += p.speedX;
-            p.y += p.speedY;
-            if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
-            if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
-        });
-        requestAnimationFrame(animateParticles);
-    }
-
-    animateParticles();
-}
