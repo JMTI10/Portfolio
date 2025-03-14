@@ -15,12 +15,17 @@ document.addEventListener("DOMContentLoaded", function () {
     let index = 0;
 
     function changeTitle() {
-        titleElement.style.opacity = 0; // Fade out
+        titleElement.style.transform = "translateX(100%)";
+        titleElement.style.opacity = 0;
         setTimeout(() => {
             titleElement.textContent = titles[index];
-            titleElement.style.opacity = 1; // Fade in
+            titleElement.style.transform = "translateX(-100%)";
+            setTimeout(() => {
+                titleElement.style.transform = "translateX(0)";
+                titleElement.style.opacity = 1;
+            }, 300);
             index = (index + 1) % titles.length;
-        }, 500); // Wait for fade-out before changing text
+        }, 500);
     }
 
     setInterval(changeTitle, 3000); // Change every 3 seconds
