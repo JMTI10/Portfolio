@@ -43,7 +43,7 @@ header {
     text-decoration: none;
 }
 
-/* Sidebar - Initially Hidden */
+/* Sidebar - Ensure it's above the particles */
 .sidebar {
     position: fixed;
     top: 0;
@@ -52,9 +52,10 @@ header {
     height: 100%;
     background: #1a1a1a;
     padding-top: 60px;
-    transition: all 0.4s ease-in-out !important;
-    z-index: 1000;
+    transition: left 0.4s ease-in-out !important;
+    z-index: 2000 !important; /* Higher than particles */
 }
+
 
 /* Sidebar Active State - Move it into View */
 .sidebar.active {
