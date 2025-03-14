@@ -1,22 +1,3 @@
-/* Header & Social Icons */
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-/* Social Media Icons */
-.social-icon {
-    color: #FFD700;
-    font-size: 22px;
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.social-icon:hover {
-    transform: scale(1.2);
-    color: #FFA500;
-}
-
 header {
     display: flex;
     justify-content: space-between;
@@ -25,31 +6,21 @@ header {
     width: 100%;
 }
 
-.logo a {
-    font-size: 32px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #FFD700;
-    text-decoration: none;
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
 }
 
-/* Social Media Icons */
 .social-icons a {
     color: #FFD700;
     font-size: 22px;
-    margin-right: 15px;
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .social-icons a:hover {
     transform: scale(1.2);
     color: #FFA500;
-}
-
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 10px;
 }
 
 /* Sidebar Button (☰) */
@@ -67,4 +38,11 @@ header {
 
 .menu-icon.active {
     transform: rotate(90deg);
+}
+
+/* Header Right Section (Icons + Menu) */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adjust spacing */
 }
