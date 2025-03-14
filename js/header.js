@@ -1,27 +1,33 @@
-document.addEventListener("DOMContentLoaded", function() {
-    fetch("html/header.html") // Ensure correct path
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("html/header.html")
         .then(response => response.text())
         .then(data => {
-            document.body.insertAdjacentHTML("afterbegin", data); // Adds header at the top
+            document.body.insertAdjacentHTML("afterbegin", data);
 
-            // Reattach event listeners after loading
-            const menuIcon = document.querySelector(".menu-icon");
-            const sidebar = document.getElementById("sidebar");
-            const closeBtn = document.querySelector(".close-btn");
-
-            if (menuIcon && sidebar) {
-                console.log("Menu icon found, adding event listener.");
-                menuIcon.addEventListener("click", toggleMenu);
-            } else {
-                console.error("Sidebar or menu icon NOT found!");
-            }
-
-            if (closeBtn) {
-                closeBtn.addEventListener("click", toggleMenu);
-            }
+            // Ensure event listeners are reattached after loading
+            setupSidebar();
         })
         .catch(error => console.error("Error loading header:", error));
 });
+
+function setupSidebar() {
+    const menuIcon = document.querySelector(".menu-icon");
+    const sidebar = document.getElementById("sidebar");
+    const closeBtn = document.querySelector(".close-btn");
+
+    function toggleMenu() {
+        sidebar.classList.toggle("active");
+        menuIcon.classList.toggle("active");
+    }
+
+    if (menuIcon && sidebar) {
+        menuIcon.addEventListener("click", toggleMenu);
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener("click", toggleMenu);
+    }
+}
 
 // Double Code Trick (Ensures Sidebar Always Works)
 document.addEventListener("DOMContentLoaded", () => {
@@ -30,16 +36,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeBtn = document.querySelector(".close-btn");
 
     if (menuIcon) {
-        console.log("Menu icon found, adding click event");
         menuIcon.addEventListener("click", toggleMenu);
-    } else {
-        console.error("Menu icon NOT found!");
     }
 
     if (closeBtn) {
         closeBtn.addEventListener("click", toggleMenu);
     }
 });
+
 
 function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
