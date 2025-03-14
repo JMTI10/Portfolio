@@ -80,7 +80,7 @@ function closeImage() {
     }
 }
 
-// Floating Particles Effect - Optimized
+// 🎆 Floating Particles Effect
 function createParticles() {
     const canvas = document.createElement("canvas");
     document.body.appendChild(canvas);
@@ -89,8 +89,8 @@ function createParticles() {
     canvas.style.position = "fixed";
     canvas.style.top = "0";
     canvas.style.left = "0";
-    canvas.style.pointerEvents = "none"; 
-    canvas.style.zIndex = "-1"; 
+    canvas.style.pointerEvents = "none"; // Ensures it doesn’t interfere with user clicks
+    canvas.style.zIndex = "-1"; // Keeps it in the background
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -123,3 +123,7 @@ function createParticles() {
 
     animateParticles();
 }
+
+// Run the particles effect when the page loads
+document.addEventListener("DOMContentLoaded", createParticles);
+

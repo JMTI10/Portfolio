@@ -95,6 +95,14 @@ header {
     transition: transform 0.3s ease-in-out;
 }
 
+/* Sidebar Toggle Button Hover Effect */
+.menu-icon:hover {
+    transform: scale(1.2);
+    color: #FFA500; /* Slightly different yellow for effect */
+    transition: all 0.2s ease-in-out;
+}
+
+
 .menu-icon.active {
     transform: rotate(90deg);
 }
