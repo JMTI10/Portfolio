@@ -192,7 +192,7 @@ header {
     justify-content: center;
 }
 
-image img {
+.image img {
     width: 90%;
     max-width: 400px;
     border-radius: 10px;
@@ -209,22 +209,36 @@ image img {
     flex-direction: row-reverse;
 }
 
-/* Responsive for Mobile */
+.step {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Fix Alignment on Small Screens */
 @media (max-width: 768px) {
-    .image img {
-        width: 100%; /* Ensures the image takes full width on mobile */
-    }
     .step {
         flex-direction: column !important;
         text-align: center;
     }
-    
+
     .text {
-        text-align: center; /* Ensures text is centered */
+        text-align: center;
+        width: 90%; /* Avoids text stretching */
+        margin: 0 auto;
     }
 
-    .social-icons {
-        justify-content: center;
+    .image {
+        text-align: center;
+        margin: 10px 0; /* Adds spacing */
+    }
+
+    .image img {
+        width: 100%; /* Ensures proper scaling */
     }
 }
 
