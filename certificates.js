@@ -19,14 +19,20 @@ function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
     const menuIcon = document.querySelector(".menu-icon");
 
-    if (sidebar && menuIcon) {
+    if (sidebar) {
         sidebar.classList.toggle("active");
-        menuIcon.classList.toggle("active");
-        console.log("Sidebar toggled!"); // Debugging log
+        console.log("Sidebar class list:", sidebar.classList); // Debugging log
     } else {
-        console.error("Sidebar or menu icon not found");
+        console.error("Sidebar NOT found!");
+    }
+
+    if (menuIcon) {
+        menuIcon.classList.toggle("active");
+    } else {
+        console.error("Menu icon NOT found!");
     }
 }
+
 
 
 
