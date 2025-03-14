@@ -27,13 +27,19 @@ body {
     width: 100%;
 }
 
-/* 🏆 Header */
+/* Ensure Header Doesn't Overlap Content */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    background: #121212;
+    z-index: 1000;
+    padding: 15px 20px;
+}
+
+main {
+    margin-top: 80px;
 }
 
 /* 🎖 Logo */
@@ -47,7 +53,7 @@ header {
 
 /* 📢 Social Media Icons */
 .social-icon {
-    color: #FFD700 !important; /* Gold color */
+    color: #FFD700 !important;
     font-size: 22px;
     margin-right: 15px;
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -55,7 +61,7 @@ header {
 
 .social-icon:hover {
     transform: scale(1.2);
-    color: #FFA500 !important; /* Slightly different yellow for hover effect */
+    color: #FFA500 !important;
 }
 
 /* 🎯 Align Social Icons & Sidebar Button */
@@ -134,9 +140,10 @@ header {
 /* 🏅 Certificates Section */
 h1 {
     font-size: 28px;
-    margin-bottom: 20px;
+    margin: 20px 0;
     text-align: center;
     color: #FFD700;
+    padding-top: 20px; /* Extra padding to avoid overlap */
 }
 
 /* 🖼 Certificates Grid */
