@@ -77,22 +77,43 @@ header {
     z-index: 1000;
 }
 
-/* Sidebar Open (Make Sure It Moves Correctly) */
+/* Sidebar Open (Ensure It Moves Properly) */
 .sidebar.active {
     left: 0;
 }
 
-/* Menu Icon (Same Rotation as Certificates Page) */
+/* Menu Icon (Rotation & Hover Fix) */
 .menu-icon {
     font-size: 30px;
     cursor: pointer;
     color: #FFD700;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 /* Rotate the Menu Button When Sidebar Opens */
 .menu-icon.active {
     transform: rotate(90deg);
+}
+
+/* Fix Hover Effect */
+.menu-icon:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+/* Close Button Styling */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.close-btn:hover {
+    color: #FFD700;
 }
 
 .skills-section {

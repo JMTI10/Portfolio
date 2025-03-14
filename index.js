@@ -3,16 +3,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const sidebar = document.getElementById("sidebar");
     const closeBtn = document.querySelector(".close-btn");
 
+    function openSidebar() {
+        sidebar.classList.add("active");
+        menuIcon.classList.add("active");
+    }
+
+    function closeSidebar() {
+        sidebar.classList.remove("active");
+        menuIcon.classList.remove("active");
+    }
+
+    function toggleMenu() {
+        if (sidebar.classList.contains("active")) {
+            closeSidebar();
+        } else {
+            openSidebar();
+        }
+    }
+
     if (menuIcon) {
-        menuIcon.addEventListener("click", () => {
-            toggleMenu();
-        });
+        menuIcon.addEventListener("click", toggleMenu);
     }
 
     if (closeBtn) {
-        closeBtn.addEventListener("click", () => {
-            toggleMenu();
-        });
+        closeBtn.addEventListener("click", closeSidebar);
     }
 });
 
