@@ -3,13 +3,12 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.text())
         .then(data => {
             document.body.insertAdjacentHTML("afterbegin", data);
-
-            // Ensure event listeners are reattached after loading
             setupSidebar();
         })
         .catch(error => console.error("Error loading header:", error));
 });
 
+// Ensure Sidebar Button Works
 function setupSidebar() {
     const menuIcon = document.querySelector(".menu-icon");
     const sidebar = document.getElementById("sidebar");
@@ -43,21 +42,3 @@ document.addEventListener("DOMContentLoaded", () => {
         closeBtn.addEventListener("click", toggleMenu);
     }
 });
-
-
-function toggleMenu() {
-    const sidebar = document.getElementById("sidebar");
-    const menuIcon = document.querySelector(".menu-icon");
-
-    if (sidebar) {
-        sidebar.classList.toggle("active");
-        console.log("Sidebar toggled! Current classes:", sidebar.className);
-    } else {
-        console.error("Sidebar NOT found!");
-    }
-
-    if (menuIcon) {
-        menuIcon.classList.toggle("active");
-    }
-}
-
