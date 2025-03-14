@@ -192,8 +192,8 @@ header {
     justify-content: center;
 }
 
-.image img {
-    width: 80%;
+image img {
+    width: 90%;
     max-width: 400px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
@@ -211,9 +211,20 @@ header {
 
 /* Responsive for Mobile */
 @media (max-width: 768px) {
+    .image img {
+        width: 100%; /* Ensures the image takes full width on mobile */
+    }
     .step {
         flex-direction: column !important;
         text-align: center;
+    }
+    
+    .text {
+        text-align: center; /* Ensures text is centered */
+    }
+
+    .social-icons {
+        justify-content: center;
     }
 }
 
