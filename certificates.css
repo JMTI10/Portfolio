@@ -92,6 +92,7 @@ header {
     transform: rotate(90deg); /* Rotates 90 degrees */
 }
 
+
 .menu-icon:hover {
     color: white;
     transform: scale(1.1); /* Makes button slightly larger */
