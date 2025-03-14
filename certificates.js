@@ -1,35 +1,59 @@
+// Ensure the script runs after the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
     const menuIcon = document.querySelector(".menu-icon");
     const sidebar = document.getElementById("sidebar");
     const closeBtn = document.querySelector(".close-btn");
 
-    function openSidebar() {
-        sidebar.classList.add("active");
-        menuIcon.classList.add("active");
-    }
-
-    function closeSidebar() {
-        sidebar.classList.remove("active");
-        menuIcon.classList.remove("active");
-    }
-
-    function toggleMenu() {
-        if (sidebar.classList.contains("active")) {
-            closeSidebar();
-        } else {
-            openSidebar();
-        }
-    }
-
     if (menuIcon) {
+        console.log("Menu icon found, adding click event"); // Debugging log
         menuIcon.addEventListener("click", toggleMenu);
+    } else {
+        console.error("Menu icon NOT found!");
     }
 
     if (closeBtn) {
-        closeBtn.addEventListener("click", closeSidebar);
+        closeBtn.addEventListener("click", toggleMenu);
     }
 });
 
+// Double Event Listener Method
+document.addEventListener("DOMContentLoaded", () => {
+    const menuIcon = document.querySelector(".menu-icon");
+    const sidebar = document.getElementById("sidebar");
+    const closeBtn = document.querySelector(".close-btn");
+
+    if (menuIcon && sidebar) {
+        console.log("Menu icon found, adding event listener.");
+        menuIcon.addEventListener("click", () => {
+            toggleMenu();
+        });
+    } else {
+        console.error("Sidebar or menu icon NOT found!");
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener("click", () => {
+            toggleMenu();
+        });
+    }
+});
+
+// Sidebar Toggle Function
+function toggleMenu() {
+    const sidebar = document.getElementById("sidebar");
+    const menuIcon = document.querySelector(".menu-icon");
+
+    if (sidebar) {
+        sidebar.classList.toggle("active");
+        console.log("Sidebar toggled! Current classes:", sidebar.className);
+    } else {
+        console.error("Sidebar NOT found!");
+    }
+
+    if (menuIcon) {
+        menuIcon.classList.toggle("active");
+    }
+}
 // Certificate Descriptions
 const certificateDescriptions = {
     "images/grades.jpg": "Final grades from high school technical course in Information Systems Management and Programming. Completed at Agrupamento de Escolas Dr. Francisco Fernandes Lopes.",

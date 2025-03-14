@@ -1,0 +1,18 @@
+/* Header & Social Icons */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Social Media Icons */
+.social-icon {
+    color: #FFD700;
+    font-size: 22px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #FFA500;
+}

@@ -1,3 +1,4 @@
+<!-- certificates.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Certificates - Iúri Gonçalves</title>
     <link rel="stylesheet" href="certificates.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" defer></script>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <script src="certificates.js" defer></script>
+    <script src="sidebar.js" defer></script>
 </head>
 <body>
-    <!-- Sidebar and Header will be dynamically loaded -->
-    <div id="sidebar-container"></div>
+
+    <!-- Load Header & Sidebar -->
     <div id="header-container"></div>
+    <div id="sidebar-container"></div>
 
     <main>
         <h1>My Certificates</h1>
@@ -27,21 +32,33 @@
         </div>
     </main>
 
-    <!-- Load Sidebar & Header -->
+    <!-- Lightbox for Enlarged Images -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="close" onclick="closeImage()">&times;</span>
+            <img id="lightbox-img">
+            <div class="lightbox-description">
+                <p id="lightbox-text"></p>
+            </div>
+        </div>
+    </div>
+
     <script>
-        function loadHTML(id, file) {
-            fetch(file)
+        // Load Sidebar & Header Dynamically
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("header.html")
                 .then(response => response.text())
                 .then(data => {
-                    document.getElementById(id).innerHTML = data;
-                })
-                .catch(error => console.error("Error loading " + file, error));
-        }
+                    document.getElementById("header-container").innerHTML = data;
+                });
 
-        loadHTML("sidebar-container", "sidebar.html");
-        loadHTML("header-container", "header.html");
+            fetch("sidebar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("sidebar-container").innerHTML = data;
+                });
+        });
     </script>
 
-    <script src="certificates.js" defer></script>
 </body>
 </html>
