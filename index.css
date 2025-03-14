@@ -24,6 +24,7 @@ body {
     0% { background-position: 0% 50%; }
     100% { background-position: 100% 50%; }
 }
+
 /* Main Container */
 .container {
     width: 80%;
@@ -158,4 +159,76 @@ header {
     font-weight: bold;
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
+}
+
+/* Step Section Layout */
+.step-section {
+    width: 80%;
+    max-width: 1000px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.text {
+    flex: 1;
+    text-align: left;
+}
+
+.image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image img {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.image img:hover {
+    transform: scale(1.05);
+}
+
+/* Alternate Step Layout */
+.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .step {
+        flex-direction: column !important;
+        text-align: center;
+    }
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    background: #FFD700;
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: white;
 }
