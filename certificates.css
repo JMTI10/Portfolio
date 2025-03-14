@@ -17,14 +17,14 @@ body {
     min-height: 100vh;
 }
 
-/* Main Content Container */
 .container {
-    width: 90%;
-    max-width: 1100px;
-    text-align: left;
-    position: relative;
-    z-index: 1; /* Ensures it's above background effects */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensures everything is centered */
+    justify-content: center;
+    width: 100%;
 }
+
 
 /* Header */
 header {
@@ -137,13 +137,16 @@ h1 {
     color: #FFD700;
 }
 
-/* Certificates Grid */
+/* Certificates Grid - Center Align */
 .certificate-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
-    justify-items: center;
+    justify-content: center; /* Centers the grid */
+    align-items: center;
+    max-width: 90vw; /* Prevents overflow */
+    margin: 0 auto; /* Centers the whole section */
 }
 
 /* Certificate Images */
@@ -177,17 +180,13 @@ h1 {
     z-index: 1002;
 }
 
-/* Lightbox Content */
-.lightbox-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    background: #1a1a1a;
-    padding: 20px;
+/* Lightbox Image - Keep it Fit */
+.lightbox-container img {
+    max-width: 50vw; /* 50% of the viewport width */
+    max-height: 80vh; /* Prevents it from being too tall */
     border-radius: 10px;
+    object-fit: contain; /* Ensures no stretching */
 }
-
 /* Lightbox Container (Image + Description Side by Side) */
 .lightbox-container {
     display: flex;
