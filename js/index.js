@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const titles = [
-        "Who Am I?",
         "ICT Student & Software Developer",
         "Passionate About Innovation & Tech",
         "Exploring Cloud, AI, and IoT",
