@@ -49,18 +49,32 @@ header {
 .sidebar {
     position: fixed;
     top: 0;
-    left: -250px; /* Start hidden */
+    left: 0;
     width: 250px;
     height: 100%;
     background: #1a1a1a;
     padding-top: 60px;
-    transition: left 0.4s ease-in-out; /* Smooth transition */
+    transform: translateX(-100%); /* Initially hidden */
+    transition: transform 0.4s ease-in-out; /* Smooth slide-in animation */
     z-index: 1000;
 }
 
-/* When sidebar is active, move it into view */
+/* When active, slide into view */
 .sidebar.active {
-    left: 0;
+    transform: translateX(0);
+}
+
+/* Sidebar Button (☰) */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: #FFD700;
+    transition: transform 0.3s ease-in-out; /* Smooth effect */
+}
+
+/* Rotate button when sidebar is open */
+.menu-icon.active {
+    transform: rotate(90deg);
 }
 
 /* Sidebar Button (☰) */
