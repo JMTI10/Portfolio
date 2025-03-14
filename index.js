@@ -13,7 +13,6 @@ function toggleMenu() {
         sidebar.style.left = "0px"; // Open sidebar
         document.body.classList.add("sidebar-open"); // Add rotation effect
     }
-    menuIcon.classList.toggle("active");
 }
 
 const canvas = document.createElement("canvas");
