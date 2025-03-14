@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("html/sidebar.html")
+    fetch("html/sidebar.html") // ✅ Ensure this matches the folder name
         .then(response => response.text())
         .then(data => {
             document.getElementById("sidebar-container").innerHTML = data;
