@@ -16,20 +16,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// Sidebar Toggle Function (Same as Certificates Page)
+// Sidebar Toggle Function
 function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
     const menuIcon = document.querySelector(".menu-icon");
 
-    if (sidebar) {
-        sidebar.classList.toggle("active");
-    }
-
-    if (menuIcon) {
-        menuIcon.classList.toggle("active"); // Rotate button
+    if (sidebar.classList.contains("active")) {
+        sidebar.classList.remove("active"); // Close sidebar
+        menuIcon.classList.remove("active"); // Rotate back
+    } else {
+        sidebar.classList.add("active"); // Open sidebar
+        menuIcon.classList.add("active"); // Rotate
     }
 }
 
+// 🎆 Floating Particles Effect
 const canvas = document.createElement("canvas");
 document.body.appendChild(canvas);
 const ctx = canvas.getContext("2d");
@@ -37,7 +38,7 @@ const ctx = canvas.getContext("2d");
 canvas.style.position = "fixed";
 canvas.style.top = "0";
 canvas.style.left = "0";
-canvas.style.pointerEvents = "none"; // Makes sure it doesn’t interfere with user clicks
+canvas.style.pointerEvents = "none"; // Prevents interaction issues
 canvas.style.zIndex = "-1"; // Keeps it in the background
 
 canvas.width = window.innerWidth;
@@ -70,3 +71,9 @@ function animateParticles() {
 }
 
 animateParticles();
+
+// ✅ Resizes the canvas when the window size changes
+window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
