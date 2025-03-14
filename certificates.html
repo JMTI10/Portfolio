@@ -1,76 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <!-- 🔹 FontAwesome for icons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
-        <!-- 🔹 Stylesheets (Ensure Correct Paths) -->
-        <link rel="stylesheet" href="css/header.css">
-        <link rel="stylesheet" href="css/sidebar.css">
-        <link rel="stylesheet" href="css/certificates.css">
-        
-        <!-- 🔹 JavaScript Files (Ensure They Load Correctly) -->
-        <script src="js/header.js" defer></script>
-        <script src="js/sidebar.js" defer></script>
-        <script src="js/certificates.js" defer></script>
-        <script src="js/particles.js" defer></script>  <!-- Ensure particles are back! -->
-    
-        <!-- 🔹 Page Title -->
-        <title>My Certificates - Iúri Gonçalves</title>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Certificates - Iúri Gonçalves</title>
 
-        <!-- Header & Sidebar will be dynamically loaded -->
-        <div id="header-container"></div>
-        <div id="sidebar-container"></div>
-        <main>
-            <p>
-                <h1 class="page-title">My Certificates</h1> <!-- Ensure this is here -->
-                <div class="certificate-grid">
-                    <div class="certificate-item">
-                        <img src="images/grades.jpg" alt="Grades" onclick="openImage(this.src)">
-                    </div>
-                    <div class="certificate-item">
-                        <img src="images/Erasmus.jpg" alt="Erasmus" onclick="openImage(this.src)">
-                    </div>
-                    <div class="certificate-item">
-                        <img src="images/Finfami_support_person.jpg" alt="Support Person" onclick="openImage(this.src)">
-                    </div>
-                    <div class="certificate-item">
-                        <img src="images/Finfami_basic_traning.jpg" alt="Basic Training" onclick="openImage(this.src)">
-                    </div>
-                    <div class="certificate-item">
-                        <img src="images/Portuguese_army.jpg" alt="Army Certificate" onclick="openImage(this.src)">
-                    </div>
-                    <div class="certificate-item">
-                        <img src="images/High_School_Diploma.jpg" alt="Diploma" onclick="openImage(this.src)">
-                    </div>
-                    <div class="certificate-item">
-                        <img src="images/Topas_Certificate.jpg" alt="Topas" onclick="openImage(this.src)">
-                    </div>
-                    <div class="certificate-item">
-                        <img src="images/Apps_for_good.jpg" alt="Apps for Good" onclick="openImage(this.src)">
-                    </div>
-                    <div class="certificate-item">
-                        <img src="images/mathlab.png" alt="MATLAB Onramp" onclick="openImage(this.src)">
-                    </div>
-                </div>
-            </p>
-        </main>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- ✅ Correct Paths to Stylesheets -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/certificates.css">
 
-        <!-- Lightbox for Enlarged Images -->
-        <div class="lightbox" id="lightbox">
-            <div class="lightbox-content">
-                <span class="close" onclick="closeImage()">&times;</span>
-                <img id="lightbox-img">
-                <div class="lightbox-description">
-                    <p id="lightbox-text"></p>
-                </div>
+    <!-- ✅ JavaScript Files -->
+    <script src="js/header.js" defer></script>
+    <script src="js/sidebar.js" defer></script>
+    <script src="js/certificates.js" defer></script>
+    <script src="js/particles.js" defer></script>
+</head>
+<body>
+    <!-- ✅ Load Header -->
+    <div id="header-container"></div>
+
+    <!-- ✅ Load Sidebar -->
+    <div id="sidebar-container"></div>
+
+    <div class="container">
+        <h1>My Certificates</h1>
+        <div class="certificate-grid">
+            <div class="certificate-item">
+                <img src="images/grades.jpg" alt="Grades" onclick="openImage(this.src)">
+            </div>
+            <div class="certificate-item">
+                <img src="images/Erasmus.jpg" alt="Erasmus" onclick="openImage(this.src)">
+            </div>
+            <div class="certificate-item">
+                <img src="images/Finfami_support_person.jpg" alt="Support Person" onclick="openImage(this.src)">
+            </div>
+            <div class="certificate-item">
+                <img src="images/Finfami_basic_traning.jpg" alt="Basic Training" onclick="openImage(this.src)">
+            </div>
+            <div class="certificate-item">
+                <img src="images/Portuguese_army.jpg" alt="Army Certificate" onclick="openImage(this.src)">
+            </div>
+            <div class="certificate-item">
+                <img src="images/High_School_Diploma.jpg" alt="Diploma" onclick="openImage(this.src)">
+            </div>
+            <div class="certificate-item">
+                <img src="images/Topas_Certificate.jpg" alt="Topas" onclick="openImage(this.src)">
+            </div>
+            <div class="certificate-item">
+                <img src="images/Apps_for_good.jpg" alt="Apps for Good" onclick="openImage(this.src)">
+            </div>
+            <div class="certificate-item">
+                <img src="images/mathlab.png" alt="MATLAB Onramp" onclick="openImage(this.src)">
             </div>
         </div>
-
-    </body>
+    </div>
+</body>
 </html>

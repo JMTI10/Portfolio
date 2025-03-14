@@ -1,14 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const sidebar = document.getElementById("sidebar");
+    fetch("html/sidebar.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("sidebar-container").innerHTML = data;
+            setupSidebar();
+        })
+        .catch(error => console.error("Error loading sidebar:", error));
+});
+
+// ✅ Double Code Trick (Ensures Sidebar Always Works)
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+        setupSidebar();
+    }, 500); // ⏳ Ensures elements are fully loaded
+});
+
+function setupSidebar() {
     const menuIcon = document.querySelector(".menu-icon");
+    const sidebar = document.getElementById("sidebar");
     const closeBtn = document.querySelector(".close-btn");
 
-    if (!sidebar || !menuIcon || !closeBtn) {
-        console.error("Sidebar, Menu Icon, or Close Button not found!");
+    if (!menuIcon || !sidebar || !closeBtn) {
+        console.error("Sidebar elements not found!");
         return;
     }
 
-    // ✅ Sidebar Toggle Function
     function toggleMenu() {
         sidebar.classList.toggle("active");
         menuIcon.classList.toggle("active");
@@ -16,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // ✅ Open & Close Sidebar Events
     menuIcon.addEventListener("click", function (event) {
-        event.stopPropagation(); // Prevents event bubbling
+        event.stopPropagation();
         toggleMenu();
     });
 
@@ -35,19 +51,4 @@ document.addEventListener("DOMContentLoaded", function () {
             toggleMenu();
         }
     });
-});
-
-// ✅ Double Code Trick (Ensures Sidebar Always Works)
-document.addEventListener("DOMContentLoaded", function () {
-    const menuIcon = document.querySelector(".menu-icon");
-    const sidebar = document.getElementById("sidebar");
-    const closeBtn = document.querySelector(".close-btn");
-
-    if (menuIcon) {
-        menuIcon.addEventListener("click", toggleMenu);
-    }
-
-    if (closeBtn) {
-        closeBtn.addEventListener("click", toggleMenu);
-    }
-});
+}
