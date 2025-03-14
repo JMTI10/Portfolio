@@ -1,31 +1,31 @@
-// Ensure the script runs after the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
     const menuIcon = document.querySelector(".menu-icon");
     const sidebar = document.getElementById("sidebar");
+    const closeBtn = document.querySelector(".close-btn");
 
     if (menuIcon && sidebar) {
         menuIcon.addEventListener("click", toggleMenu);
     }
 
-    // Ensure the lightbox is hidden initially
-    const lightbox = document.getElementById("lightbox");
-    if (lightbox) {
-        lightbox.style.display = "none";
+    if (closeBtn) {
+        closeBtn.addEventListener("click", toggleMenu);
     }
-
-    // Initialize floating particles
-    createParticles();
 });
 
-// Sidebar Toggle Function - Fixed
+// Sidebar Toggle Function - Ensures it toggles properly
 function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
     const menuIcon = document.querySelector(".menu-icon");
+
     if (sidebar && menuIcon) {
         sidebar.classList.toggle("active");
         menuIcon.classList.toggle("active");
+        console.log("Sidebar toggled!"); // Debugging - Check if this appears in the console
+    } else {
+        console.error("Sidebar or menu icon not found");
     }
 }
+
 
 // Certificate Descriptions
 const certificateDescriptions = {

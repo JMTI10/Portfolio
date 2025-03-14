@@ -8,8 +8,16 @@
     <script src="certificates.js" defer></script>
 </head>
 <body>
+
+    <!-- Sidebar Navigation -->
+    <div id="sidebar" class="sidebar">
+        <div class="close-btn" onclick="toggleMenu()">&times;</div>
+        <a href="index.html">Home</a>
+        <a href="certificates.html">Certificates</a>
+    </div>
+
+    <!-- Main Container -->
     <div class="container">
-        <!-- Header Section -->
         <header>
             <div class="logo"><a href="index.html">Iúri Gonçalves</a></div>
             <div class="header-right">
@@ -17,14 +25,7 @@
             </div>
         </header>
 
-        <!-- Sidebar Navigation -->
-        <nav id="sidebar" class="sidebar">
-            <div class="close-btn" onclick="toggleMenu()">&times;</div>
-            <a href="index.html">Home</a>
-            <a href="certificates.html">Certificates</a>
-        </nav>
-
-        <!-- Main Content -->
+        <!-- Certificates Grid -->
         <main>
             <h1>My Certificates</h1>
             <div class="certificate-grid">
@@ -51,5 +52,6 @@
             </div>
         </div>
     </div>
+
 </body>
 </html>
