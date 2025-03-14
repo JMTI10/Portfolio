@@ -58,7 +58,7 @@ header {
 
 /* Sidebar Active State */
 .sidebar.active {
-    left: 0 !important; /* Ensure this overrides any other styles */
+    left: 0 !important; /* Ensure sidebar moves into view */
 }
 
 /* Sidebar Close Button */
@@ -83,8 +83,6 @@ header {
 .menu-icon.active {
     transform: rotate(90deg);
 }
-
-
 
 /* Sidebar Links */
 .sidebar a {

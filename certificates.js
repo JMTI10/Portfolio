@@ -3,8 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const sidebar = document.getElementById("sidebar");
     const closeBtn = document.querySelector(".close-btn");
 
-    if (menuIcon && sidebar) {
+    if (menuIcon) {
+        console.log("Menu icon found, adding click event"); // Debugging log
         menuIcon.addEventListener("click", toggleMenu);
+    } else {
+        console.error("Menu icon NOT found!");
     }
 
     if (closeBtn) {
@@ -12,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// Sidebar Toggle Function - Ensures it toggles properly
 function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
     const menuIcon = document.querySelector(".menu-icon");
@@ -20,11 +22,12 @@ function toggleMenu() {
     if (sidebar && menuIcon) {
         sidebar.classList.toggle("active");
         menuIcon.classList.toggle("active");
-        console.log("Sidebar toggled!"); // Debugging - Check if this appears in the console
+        console.log("Sidebar toggled!"); // Debugging log
     } else {
         console.error("Sidebar or menu icon not found");
     }
 }
+
 
 
 // Certificate Descriptions
