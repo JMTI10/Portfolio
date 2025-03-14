@@ -15,11 +15,15 @@ body {
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
-    background: #121212;
-    background-image: radial-gradient(rgba(255, 215, 0, 0.1) 5%, transparent 10%);
-    background-size: 50px 50px;
+    background: linear-gradient(45deg, #121212, #1a1a1a);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s infinite alternate;
 }
 
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
 /* Main Container */
 .container {
     width: 80%;
