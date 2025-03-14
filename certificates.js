@@ -27,11 +27,14 @@ function closeImage() {
     document.getElementById("lightbox").style.display = "none";
 }
 
-// Sidebar Toggle Function
 function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
-    sidebar.classList.toggle("active"); // Add/remove "active" class for animation
+    const menuIcon = document.querySelector(".menu-icon");
+
+    sidebar.classList.toggle("active"); // Toggles sidebar animation
+    menuIcon.classList.toggle("active"); // Toggles rotation animation
 }
+
 
 // 🎆 Floating Particles Effect (Copied from index.js)
 function createParticles() {
