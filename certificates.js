@@ -21,14 +21,16 @@ document.addEventListener("DOMContentLoaded", () => {
 function openImage(src) {
     console.log("Opening image:", src); // Debugging
 
-    // Ensure paths are correct
-    const cleanSrc = src.replace(window.location.origin + "/", ""); // Removes full URL part
-    console.log("Processed src:", cleanSrc); // Debugging
+    // Extract only the filename from the full URL
+    const filename = src.substring(src.lastIndexOf("images/")); 
+    console.log("Processed filename:", filename); // Debugging
 
+    // Assign image and description
     document.getElementById("lightbox-img").src = src;
-    document.getElementById("lightbox-text").textContent = certificateDescriptions[cleanSrc] || "No description available.";
+    document.getElementById("lightbox-text").textContent = certificateDescriptions[filename] || "No description available.";
     document.getElementById("lightbox").style.display = "flex";
 }
+
 
 
 // Close Lightbox
