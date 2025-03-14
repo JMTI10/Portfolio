@@ -25,14 +25,15 @@ body {
     100% { background-position: 100% 50%; }
 }
 
-/* Main Container */
+/* ✅ FIXED: Container Width & Centering */
 .container {
-    width: 80%;
-    max-width: 900px;
-    text-align: left;
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
 }
 
-/* Header Styling */
+/* ✅ FIXED: Header Styling */
 header {
     display: flex;
     justify-content: space-between;
@@ -41,7 +42,7 @@ header {
     width: 100%;
 }
 
-/* Align Name with Left Content */
+/* Logo */
 .logo {
     flex-grow: 1;
     text-align: left;
@@ -62,14 +63,13 @@ header {
     color: white;
 }
 
-/* Sidebar Button & Social Icons Alignment */
+/* ✅ FIXED: Social Icons */
 .header-right {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-/* Social Icons Styling */
 .social-icons {
     display: flex;
     gap: 15px;
@@ -105,7 +105,6 @@ header {
     z-index: 1000;
 }
 
-/* Sidebar Links */
 .sidebar a {
     display: block;
     color: white;
@@ -120,7 +119,7 @@ header {
     color: black;
 }
 
-/* Close Button */
+/* Sidebar Button */
 .close-btn {
     position: absolute;
     top: 10px;
@@ -134,12 +133,7 @@ header {
     color: #FFD700;
 }
 
-/* Smooth Sidebar Opening */
-.sidebar-open {
-    left: 0 !important;
-}
-
-/* Menu Icon */
+/* ✅ FIXED: Menu Button */
 .menu-icon {
     font-size: 30px;
     cursor: pointer;
@@ -152,19 +146,10 @@ header {
     transform: scale(1.1);
 }
 
-/* Headline Animation */
-#dynamic-heading {
-    text-align: left;
-    font-size: 28px;
-    font-weight: bold;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-}
-
-/* Step Section Layout */
+/* ✅ FIXED: Step Section Layout */
 .step-section {
-    width: 80%;
-    max-width: 1000px;
+    width: 90%;
+    max-width: 1200px;
     margin: 50px auto;
     display: flex;
     flex-direction: column;
@@ -181,11 +166,13 @@ header {
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
+/* ✅ FIXED: Text Alignment */
 .text {
     flex: 1;
     text-align: left;
 }
 
+/* ✅ FIXED: Image Display */
 .image {
     flex: 1;
     display: flex;
@@ -204,22 +191,12 @@ header {
     transform: scale(1.05);
 }
 
-/* Alternate Step Layout */
+/* ✅ FIXED: Reverse Layout */
 .reverse {
     flex-direction: row-reverse;
 }
 
-.step {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-/* Fix Alignment on Small Screens */
+/* ✅ FIXED: Mobile Styling */
 @media (max-width: 768px) {
     .step {
         flex-direction: column !important;
@@ -228,21 +205,26 @@ header {
 
     .text {
         text-align: center;
-        width: 90%; /* Avoids text stretching */
+        width: 90%;
         margin: 0 auto;
     }
 
     .image {
         text-align: center;
-        margin: 10px 0; /* Adds spacing */
+        margin: 10px 0;
     }
 
     .image img {
-        width: 100%; /* Ensures proper scaling */
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .social-icons {
+        justify-content: center;
     }
 }
 
-/* Button */
+/* ✅ FIXED: Button Styling */
 .btn {
     display: inline-block;
     background: #FFD700;
