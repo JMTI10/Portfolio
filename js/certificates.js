@@ -27,7 +27,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 500); // Delay to ensure elements exist
 });
 
+// ✅ Certificate descriptions
+const certificateDescriptions = {
+    "grades.jpg": "Final grades from high school technical course in Information Systems Management and Programming.",
+    "Erasmus.jpg": "Participation in the Erasmus+ program in Finland, Dec 9-13, 2019.",
+    "Finfami_support_person.jpg": "Certified support person in FinFami Mental Health Organization.",
+    "Finfami_basic_traning.jpg": "Completed basic training in voluntary mental health support.",
+    "Portuguese_army.jpg": "Certified by the Portuguese Army in professional ethics & first aid.",
+    "High_School_Diploma.jpg": "Official High School Diploma in Information Systems Management and Programming.",
+    "Topas_Certificate.jpg": "Participation in TOPAS Programming Competition at the University of Algarve.",
+    "Apps_for_good.jpg": "Recognition for participation in 'Apps for Good' technology initiative.",
+    "mathlab.png": "MATLAB Onramp Certificate from MathWorks."
+};
+
 function openImage(src) {
+    console.log(`🖼 openImage() called for: ${src}`);
+
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
     const lightboxText = document.getElementById("lightbox-text");
@@ -37,14 +52,17 @@ function openImage(src) {
         return;
     }
 
+    // Extract filename from full image path
     const filename = src.split("/").pop();
+
     lightboxImg.src = src;
-    lightboxText.textContent = certificateDescriptions["images/" + filename] || "No description available.";
+    lightboxText.textContent = certificateDescriptions[filename] || "No description available.";
     lightbox.style.display = "flex";
     document.body.style.overflow = "hidden";
 }
 
 function closeImage() {
+    console.log("❌ Closing Lightbox");
     const lightbox = document.getElementById("lightbox");
     if (lightbox) {
         lightbox.style.display = "none";
@@ -56,6 +74,7 @@ function closeImage() {
 document.addEventListener("click", function (event) {
     const lightbox = document.getElementById("lightbox");
     if (event.target === lightbox) {
+        console.log("❌ Clicked outside! Closing Lightbox...");
         closeImage();
     }
 });
