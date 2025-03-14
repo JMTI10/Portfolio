@@ -15,18 +15,25 @@ function toggleMenu() {
     }
 }
 
-// Ensure the script runs after the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
     const menuIcon = document.querySelector(".menu-icon");
     const sidebar = document.getElementById("sidebar");
     const closeBtn = document.querySelector(".close-btn");
 
     if (menuIcon && sidebar) {
-        menuIcon.addEventListener("click", toggleMenu);
+        menuIcon.addEventListener("click", () => {
+            if (sidebar.style.left === "0px") {
+                sidebar.style.left = "-250px";
+            } else {
+                sidebar.style.left = "0px";
+            }
+        });
     }
 
     if (closeBtn) {
-        closeBtn.addEventListener("click", toggleMenu);
+        closeBtn.addEventListener("click", () => {
+            sidebar.style.left = "-250px"; // Close sidebar when clicking the X button
+        });
     }
 
     // Run the floating particles effect when the page loads

@@ -43,7 +43,7 @@ header {
     text-decoration: none;
 }
 
-/* Sidebar - Ensure it's above the particles */
+
 .sidebar {
     position: fixed;
     top: 0;
@@ -53,11 +53,13 @@ header {
     background: #1a1a1a;
     padding-top: 60px;
     transition: left 0.4s ease-in-out !important;
-    z-index: 2000 !important; /* Higher than particles */
+    z-index: 2000 !important;
 }
 
+.sidebar.open {
+    left: 0 !important;
+}
 
-/* Sidebar Active State - Move it into View */
 .sidebar.active {
     left: 0 !important; /* Ensure sidebar moves into view */
     transform: translateX(0) !important;
