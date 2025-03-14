@@ -3,22 +3,6 @@ function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
     sidebar.style.left = sidebar.style.left === "0px" ? "-250px" : "0px";
 }
-
-// Scroll Animation for Step Sections
-function fadeInOnScroll() {
-    const steps = document.querySelectorAll(".step");
-    steps.forEach(step => {
-        const position = step.getBoundingClientRect().top;
-        if (position < window.innerHeight - 100) {
-            step.style.opacity = "1";
-            step.style.transform = "translateY(0)";
-        }
-    });
-}
-
-window.addEventListener("scroll", fadeInOnScroll);
-fadeInOnScroll();
-
 window.addEventListener("scroll", fadeInOnScroll);
 fadeInOnScroll();
 
