@@ -183,19 +183,20 @@ header {
     color: #FFD700;
 }
 
-/* Certificates Grid */
+/* Certificates Grid - Improved Layout */
 .certificate-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ensures responsive grid */
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive layout */
+    gap: 20px; /* More spacing between items */
     padding: 20px;
     justify-items: center;
+    align-items: center;
 }
 
-/* Certificate Images */
+/* Certificate Images - Ensure Consistency */
 .certificate-item img {
-    width: 100%; /* Fit container */
-    max-width: 300px; /* Prevents images from being too large */
+    width: 100%; /* Adjusts automatically */
+    max-width: 320px; /* Ensures uniform sizing */
     height: auto;
     display: block;
     border-radius: 10px;
@@ -203,6 +204,7 @@ header {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+/* Hover Effect */
 .certificate-item img:hover {
     transform: scale(1.05);
     box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.7);
