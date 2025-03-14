@@ -31,7 +31,6 @@ header {
     width: 100%;
 }
 
-/* Keep Name Yellow */
 .logo a {
     font-size: 32px;
     font-weight: bold;
@@ -44,19 +43,6 @@ header {
 
 .logo a:hover {
     color: white;
-}
-
-/* Align Name & "My Certificates" */
-.logo {
-    flex: 1;
-}
-
-h1 {
-    text-align: left;
-    font-size: 32px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    padding-left: 20px;
 }
 
 /* Sidebar */
@@ -72,7 +58,6 @@ h1 {
     z-index: 1000;
 }
 
-/* Sidebar Links */
 .sidebar a {
     display: block;
     color: white;
@@ -87,58 +72,15 @@ h1 {
     color: black;
 }
 
-/* Close Button */
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-}
-
-.close-btn:hover {
-    color: #FFD700;
-}
-
-/* Certificates Grid */
-.certificate-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    padding: 20px;
-}
-
-/* Fix for Small Cube Issue
-img:empty, div:empty {
-    display: none !important;
-} */
-
-/* Certificate Images */
-.certificate-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.certificate-item img:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.7);
-}
-
-/* Lightbox */
+/* Lightbox - Hide by Default */
 .lightbox {
-    display: none;
+    display: none; /* FIXED: Hide lightbox initially */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
-    display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
@@ -159,12 +101,6 @@ img:empty, div:empty {
     max-width: 60%;
     max-height: 90vh;
     border-radius: 10px;
-}
-
-.lightbox-description {
-    max-width: 35%;
-    color: #fff;
-    font-size: 16px;
 }
 
 .lightbox .close {
