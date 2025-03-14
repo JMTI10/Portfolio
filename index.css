@@ -9,12 +9,15 @@
 }
 
 body {
-    body {
-        background: #121212;
-        background-image: radial-gradient(rgba(255, 215, 0, 0.1) 5%, transparent 10%);
-        background-size: 50px 50px;
-    }
-    
+    background: #121212;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: #121212;
+    background-image: radial-gradient(rgba(255, 215, 0, 0.1) 5%, transparent 10%);
+    background-size: 50px 50px;
 }
 
 /* Main Container */
