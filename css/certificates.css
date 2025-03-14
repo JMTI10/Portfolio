@@ -149,18 +149,30 @@ h1 {
 /* Lightbox Content */
 .lightbox-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     max-width: 80vw;
     max-height: 80vh;
+    gap: 20px;
 }
 
 /* Lightbox Image */
 #lightbox-img {
-    max-width: 80vw;
+    max-width: 50vw;
     max-height: 80vh;
     border-radius: 10px;
     object-fit: contain;
+}
+
+/* Lightbox Description - Moved to Right Side */
+.lightbox-description {
+    max-width: 30vw;
+    color: white;
+    font-size: 18px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
 }
 
 /* Close Button */
