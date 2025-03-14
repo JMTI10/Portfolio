@@ -1,21 +1,23 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
     fetch("html/header.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById("header-container").innerHTML = data;
-
-            // Now that the header is loaded, add event listeners for the menu button
-            const menuIcon = document.querySelector(".menu-icon");
-            const sidebar = document.getElementById("sidebar");
-
-            if (menuIcon && sidebar) {
-                menuIcon.addEventListener("click", () => {
-                    sidebar.classList.toggle("active");
-                    menuIcon.classList.toggle("active");
-                });
-            } else {
-                console.error("Header elements not found!");
-            }
+            setupHeader(); // Ensures menu button works after loading
         })
         .catch(error => console.error("Error loading header:", error));
 });
+
+function setupHeader() {
+    const menuIcon = document.querySelector(".menu-icon");
+
+    if (menuIcon) {
+        menuIcon.addEventListener("click", () => {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("active");
+            menuIcon.classList.toggle("active");
+        });
+    } else {
+        console.error("Menu icon NOT found in header!");
+    }
+}

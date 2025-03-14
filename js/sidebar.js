@@ -3,12 +3,12 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.text())
         .then(data => {
             document.getElementById("sidebar-container").innerHTML = data;
-            addSidebarFunctionality(); // Ensure event listeners are added
+            setupSidebar(); // Ensure event listeners are added
         })
         .catch(error => console.error("Error loading sidebar:", error));
 });
 
-function addSidebarFunctionality() {
+function setupSidebar() {
     const menuIcon = document.querySelector(".menu-icon");
     const sidebar = document.getElementById("sidebar");
     const closeBtn = document.querySelector(".close-btn");
