@@ -1,43 +1,43 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.querySelector(".menu-icon");
     const sidebar = document.getElementById("sidebar");
     const closeBtn = document.querySelector(".close-btn");
 
     function toggleMenu() {
-        if (!sidebar || !menuIcon) {
-            console.error("Sidebar elements missing!");
-            return;
-        }
         sidebar.classList.toggle("active");
         menuIcon.classList.toggle("active");
     }
 
-    // Ensure sidebar opens and closes when clicking the menu button
+    // Open/Close Sidebar on Button Click
     if (menuIcon) {
-        menuIcon.addEventListener("click", (event) => {
-            event.stopPropagation(); // Prevents closing when clicking the button itself
+        menuIcon.addEventListener("click", function (event) {
+            event.stopPropagation(); // Prevents immediate closing
             toggleMenu();
         });
     }
 
-    // Ensure sidebar closes when clicking the X button
+    // Close Sidebar on X Button Click
     if (closeBtn) {
-        closeBtn.addEventListener("click", (event) => {
+        closeBtn.addEventListener("click", function (event) {
             event.stopPropagation();
             toggleMenu();
         });
     }
 
-    // Ensure sidebar closes when clicking anywhere outside
-    document.addEventListener("click", (event) => {
-        if (sidebar.classList.contains("active") && !sidebar.contains(event.target) && !menuIcon.contains(event.target)) {
+    // Close Sidebar on Click Outside
+    document.addEventListener("click", function (event) {
+        if (
+            sidebar.classList.contains("active") &&
+            !sidebar.contains(event.target) &&
+            !menuIcon.contains(event.target)
+        ) {
             toggleMenu();
         }
     });
 });
 
 // **Double Code Trick (Ensures Sidebar Always Works)**
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.querySelector(".menu-icon");
     const sidebar = document.getElementById("sidebar");
     const closeBtn = document.querySelector(".close-btn");
