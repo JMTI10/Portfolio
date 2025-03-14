@@ -52,13 +52,14 @@ header {
     height: 100%;
     background: #1a1a1a;
     padding-top: 60px;
-    transition: left 0.4s ease-in-out !important;
+    transition: all 0.4s ease-in-out !important;
     z-index: 1000;
 }
 
 /* Sidebar Active State - Move it into View */
 .sidebar.active {
     left: 0 !important; /* Ensure sidebar moves into view */
+    transform: translateX(0) !important;
 }
 
 /* Sidebar Links */
