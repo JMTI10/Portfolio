@@ -31,9 +31,16 @@ function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
     const menuIcon = document.querySelector(".menu-icon");
 
-    sidebar.classList.toggle("active"); // Toggles sidebar animation
-    menuIcon.classList.toggle("active"); // Toggles rotation animation
+    // Check if sidebar is active
+    if (sidebar.classList.contains("active")) {
+        sidebar.classList.remove("active"); // Close sidebar
+        menuIcon.classList.remove("active"); // Reset button rotation
+    } else {
+        sidebar.classList.add("active"); // Open sidebar
+        menuIcon.classList.add("active"); // Rotate button
+    }
 }
+
 
 
 // 🎆 Floating Particles Effect (Copied from index.js)

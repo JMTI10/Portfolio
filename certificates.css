@@ -49,19 +49,31 @@ header {
 .sidebar {
     position: fixed;
     top: 0;
-    left: -250px; /* Hidden initially */
+    left: -250px; /* Start hidden */
     width: 250px;
     height: 100%;
     background: #1a1a1a;
     padding-top: 60px;
-    transition: transform 0.4s ease-in-out; /* Smooth sliding */
+    transition: left 0.4s ease-in-out; /* Smooth transition */
     z-index: 1000;
-    transform: translateX(-100%);
 }
 
-/* Show sidebar when active */
+/* When sidebar is active, move it into view */
 .sidebar.active {
-    transform: translateX(0);
+    left: 0;
+}
+
+/* Sidebar Button (☰) */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: #FFD700;
+    transition: transform 0.3s ease-in-out; /* Smooth effect */
+}
+
+/* Rotate button when sidebar is open */
+.menu-icon.active {
+    transform: rotate(90deg);
 }
 
 /* Sidebar Links */
@@ -77,6 +89,20 @@ header {
 .sidebar a:hover {
     background: #FFD700;
     color: black;
+}
+
+/* Sidebar Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.close-btn:hover {
+    color: #FFD700;
 }
 
 /* Sidebar Button Animation */
