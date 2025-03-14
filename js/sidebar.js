@@ -53,3 +53,4 @@ function toggleMenu() {
     sidebar.classList.toggle("active");
     menuIcon.classList.toggle("active");
 }
+
