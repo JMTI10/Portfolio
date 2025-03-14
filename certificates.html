@@ -9,24 +9,22 @@
 </head>
 <body>
     <div class="container">
+        <!-- Header Section -->
         <header>
-            <div id="sidebar" class="sidebar">
-                <div class="close-btn" onclick="toggleMenu()">&times;</div>
-                <a href="index.html">Home</a>
-                <a href="certificates.html">Certificates</a>
+            <div class="logo"><a href="index.html">Iúri Gonçalves</a></div>
+            <div class="header-right">
+                <div class="menu-icon" onclick="toggleMenu()">☰</div>
             </div>
-            
-            <!-- Menu Button -->
-            <div class="menu-icon" onclick="toggleMenu()">☰</div>
         </header>
 
         <!-- Sidebar Navigation -->
-        <div id="sidebar" class="sidebar">
+        <nav id="sidebar" class="sidebar">
             <div class="close-btn" onclick="toggleMenu()">&times;</div>
             <a href="index.html">Home</a>
             <a href="certificates.html">Certificates</a>
-        </div>
+        </nav>
 
+        <!-- Main Content -->
         <main>
             <h1>My Certificates</h1>
             <div class="certificate-grid">
@@ -39,19 +37,19 @@
                 <div class="certificate-item"><img src="images/Topas_Certificate.jpg" alt="Topas" onclick="openImage(this.src)"></div>
                 <div class="certificate-item"><img src="images/Apps_for_good.jpg" alt="Apps for Good" onclick="openImage(this.src)"></div>
                 <div class="certificate-item"><img src="images/mathlab.png" alt="MATLAB Onramp" onclick="openImage(this.src)"></div>
-            </div>            
+            </div>
         </main>
     </div>
 
     <!-- Lightbox for Enlarged Images -->
     <div class="lightbox" id="lightbox">
         <div class="lightbox-content">
+            <span class="close" onclick="closeImage()">&times;</span>
             <img id="lightbox-img">
             <div class="lightbox-description">
                 <p id="lightbox-text"></p>
             </div>
         </div>
-        <span class="close" onclick="closeImage()">&times;</span>
     </div>
 </body>
 </html>

@@ -3,30 +3,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuIcon = document.querySelector(".menu-icon");
     const sidebar = document.getElementById("sidebar");
 
-    // Ensure menu button works
     if (menuIcon && sidebar) {
         menuIcon.addEventListener("click", toggleMenu);
     }
 
-    // Hide the lightbox on page load
-    document.getElementById("lightbox").style.display = "none";
+    // Ensure the lightbox is hidden initially
+    const lightbox = document.getElementById("lightbox");
+    if (lightbox) {
+        lightbox.style.display = "none";
+    }
 
     // Initialize floating particles
     createParticles();
 });
 
+// Sidebar Toggle Function - Fixed
 function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
     const menuIcon = document.querySelector(".menu-icon");
 
     if (sidebar && menuIcon) {
-        sidebar.classList.toggle("active"); // Slide in/out sidebar
-        menuIcon.classList.toggle("active"); // Rotate menu button
+        sidebar.classList.toggle("active");
+        menuIcon.classList.toggle("active");
     }
 }
 
-
-// Lightbox Functionality
+// Certificate Descriptions
 const certificateDescriptions = {
     "images/grades.jpg": "Final grades from high school technical course in Information Systems Management and Programming. Completed at Agrupamento de Escolas Dr. Francisco Fernandes Lopes.",
     
@@ -47,25 +49,30 @@ const certificateDescriptions = {
     "images/mathlab.png": "MATLAB Onramp Certificate from MathWorks, indicating successful completion of the MATLAB Onramp training. Covers key concepts including commands, matrix operations, programming, function calls, and data visualization."
 };
 
-// Open Lightbox Function
+// Open Lightbox Function - Fixed
 function openImage(src) {
-    console.log("Opening image:", src); // Debugging
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const lightboxText = document.getElementById("lightbox-text");
 
-    // Extract only the filename from the full URL
-    const filename = src.substring(src.lastIndexOf("images/")); 
-    console.log("Processed filename:", filename); // Debugging
-
-    document.getElementById("lightbox-img").src = src;
-    document.getElementById("lightbox-text").textContent = certificateDescriptions[filename] || "No description available.";
-    document.getElementById("lightbox").style.display = "flex";
+    if (lightbox && lightboxImg && lightboxText) {
+        // Extract filename correctly
+        const filename = src.split("/").pop();
+        lightboxImg.src = src;
+        lightboxText.textContent = certificateDescriptions["images/" + filename] || "No description available.";
+        lightbox.style.display = "flex";
+    }
 }
 
 // Close Lightbox Function
 function closeImage() {
-    document.getElementById("lightbox").style.display = "none";
+    const lightbox = document.getElementById("lightbox");
+    if (lightbox) {
+        lightbox.style.display = "none";
+    }
 }
 
-// 🎆 Floating Particles Effect
+// Floating Particles Effect - Optimized
 function createParticles() {
     const canvas = document.createElement("canvas");
     document.body.appendChild(canvas);
@@ -74,8 +81,8 @@ function createParticles() {
     canvas.style.position = "fixed";
     canvas.style.top = "0";
     canvas.style.left = "0";
-    canvas.style.pointerEvents = "none"; // Ensures it doesn’t interfere with user clicks
-    canvas.style.zIndex = "-1"; // Keeps it in the background
+    canvas.style.pointerEvents = "none"; 
+    canvas.style.zIndex = "-1"; 
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;

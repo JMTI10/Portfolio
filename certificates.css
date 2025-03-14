@@ -7,8 +7,9 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Page Background */
 body {
-    background: #121212;
+    background: #121212; /* Dark background */
     color: #fff;
     display: flex;
     justify-content: center;
@@ -16,13 +17,16 @@ body {
     min-height: 100vh;
 }
 
+/* Main Content Container */
 .container {
-    width: 80%;
-    max-width: 900px;
+    width: 90%;
+    max-width: 1100px;
     text-align: left;
+    position: relative;
+    z-index: 1; /* Ensures it's above background effects */
 }
 
-/* Header Styling */
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -36,32 +40,50 @@ header {
     font-weight: bold;
     letter-spacing: 2px;
     color: #FFD700;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.5);
     text-decoration: none;
 }
 
-.logo a:hover {
-    color: white;
-}
-
-/* Sidebar */
-/* Sidebar - Hidden by Default */
+/* Sidebar Navigation */
 .sidebar {
     position: fixed;
     top: 0;
-    left: -250px; /* Start off-screen */
+    left: -250px;
     width: 250px;
     height: 100%;
     background: #1a1a1a;
     padding-top: 60px;
-    transition: left 0.4s ease-in-out; /* Smooth animation */
+    transition: transform 0.4s ease-in-out;
     z-index: 1000;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Show Sidebar when active */
 .sidebar.active {
-    left: 0;
+    transform: translateX(250px);
+}
+
+/* Sidebar Links */
+.sidebar a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background: #FFD700;
+    color: #121212;
+}
+
+/* Sidebar Close Button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #FFD700;
 }
 
 /* Sidebar Button (☰) */
@@ -72,90 +94,47 @@ header {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Rotate button when sidebar is open */
 .menu-icon.active {
     transform: rotate(90deg);
 }
 
-/* Sidebar Button (☰) */
-.menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    color: #FFD700;
-    transition: transform 0.3s ease-in-out; /* Smooth effect */
-}
-
-/* Rotate button when sidebar is open */
-.menu-icon.active {
-    transform: rotate(90deg);
-}
-
-/* Sidebar Links */
-.sidebar a {
-    display: block;
-    color: white;
-    padding: 15px;
-    text-decoration: none;
-    font-size: 18px;
-    transition: background 0.3s ease-in-out;
-}
-
-.sidebar a:hover {
-    background: #FFD700;
-    color: black;
-}
-
-/* Sidebar Close Button */
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-}
-
-.close-btn:hover {
+/* Certificates Section */
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
     color: #FFD700;
 }
 
-/* Sidebar Button Animation */
-.menu-icon {
-    font-size: 30px;
+/* Certificates Grid */
+.certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+/* Certificate Images */
+.certificate-item img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 10px;
     cursor: pointer;
-    color: #FFD700;
-    transition: transform 0.3s ease-in-out; /* Smooth effect */
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px;
 }
 
-/* When sidebar is open, rotate the menu button */
-.menu-icon.active {
-    transform: rotate(90deg); /* Rotates 90 degrees */
+.certificate-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.7);
 }
 
-
-.menu-icon:hover {
-    color: white;
-    transform: scale(1.1); /* Makes button slightly larger */
-}
-
-
-.sidebar a {
-    display: block;
-    color: white;
-    padding: 15px;
-    text-decoration: none;
-    font-size: 18px;
-    transition: background 0.3s ease-in-out;
-}
-
-.sidebar a:hover {
-    background: #FFD700;
-    color: black;
-}
-
-/* Lightbox - Hide by Default */
+/* Lightbox */
 .lightbox {
-    display: none; /* FIXED: Hide lightbox initially */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -164,26 +143,25 @@ header {
     background: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    z-index: 1002;
 }
 
+/* Lightbox Content */
 .lightbox-content {
-    display: flex;
-    background: #1a1a1a;
-    padding: 20px;
-    border-radius: 10px;
+    position: relative;
     max-width: 80%;
-    max-height: 80%;
-    gap: 20px;
-    align-items: center;
+    max-height: 90vh;
+    text-align: center;
 }
 
-.lightbox img {
-    max-width: 60%;
+/* Lightbox Image */
+.lightbox-content img {
+    max-width: 100%;
     max-height: 90vh;
     border-radius: 10px;
 }
 
+/* Lightbox Close Button */
 .lightbox .close {
     position: absolute;
     top: 20px;
@@ -191,35 +169,20 @@ header {
     font-size: 40px;
     color: white;
     cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .lightbox .close:hover {
-    color: #FFD700;
+    opacity: 0.7;
 }
 
-/* Certificates Grid - Improved Layout */
-.certificate-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive layout */
-    gap: 20px; /* More spacing between items */
-    padding: 20px;
-    justify-items: center;
-    align-items: center;
-}
-
-/* Certificate Images - Ensure Consistency */
-.certificate-item img {
-    width: 100%; /* Adjusts automatically */
-    max-width: 320px; /* Ensures uniform sizing */
-    height: auto;
-    display: block;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-/* Hover Effect */
-.certificate-item img:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.7);
+/* Floating Particles */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
 }
