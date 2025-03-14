@@ -9,34 +9,21 @@
 }
 
 body {
-    background: linear-gradient(45deg, #121212, #1a1a1a);
-    background-size: 400% 400%;
-    animation: gradientAnimation 10s infinite alternate;
+    background: #121212;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
-    overflow: hidden; /* Prevent scrollbars from particles */
+    background: linear-gradient(45deg, #121212, #1a1a1a);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s infinite alternate;
 }
 
-/* Gradient Animation */
 @keyframes gradientAnimation {
     0% { background-position: 0% 50%; }
     100% { background-position: 100% 50%; }
 }
-
-/* Canvas for Floating Particles */
-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    pointer-events: none;
-}
-
 /* Main Container */
 .container {
     width: 80%;
@@ -93,6 +80,10 @@ header {
     color: #FFD700;
     text-decoration: none;
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.social-icons a i {
+    font-size: 24px;
 }
 
 .social-icons a:hover {
