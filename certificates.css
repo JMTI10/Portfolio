@@ -163,7 +163,7 @@ h1 {
     box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.7);
 }
 
-/* Lightbox */
+/* Lightbox Background */
 .lightbox {
     display: none;
     position: fixed;
@@ -179,34 +179,50 @@ h1 {
 
 /* Lightbox Content */
 .lightbox-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
-    max-width: 80%;
-    max-height: 90vh;
-    text-align: center;
-}
-
-/* Lightbox Image */
-.lightbox-content img {
-    max-width: 100%;
-    max-height: 90vh;
+    background: #1a1a1a;
+    padding: 20px;
     border-radius: 10px;
 }
 
-/* Lightbox Close Button */
+/* Lightbox Container (Image + Description Side by Side) */
+.lightbox-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 80vw; /* Ensures it doesn't stretch too wide */
+}
+
+/* Lightbox Image */
+.lightbox-container img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Lightbox Description */
+.lightbox-description {
+    max-width: 40%;
+    color: white;
+    font-size: 18px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Close Button */
 .lightbox .close {
     position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 40px;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
     color: white;
     cursor: pointer;
-    transition: opacity 0.3s ease-in-out;
 }
-
-.lightbox .close:hover {
-    opacity: 0.7;
-}
-
 /* Floating Particles */
 canvas {
     position: fixed;
