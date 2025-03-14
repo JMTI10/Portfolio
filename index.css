@@ -128,11 +128,15 @@ header {
     transition: transform 0.3s ease-in-out; /* Smooth rotation */
 }
 
-/* Rotate when sidebar is open */
-.sidebar-active .menu-icon {
+/* Rotate immediately when clicked */
+.menu-icon.rotating {
     transform: rotate(90deg);
 }
 
+/* Keep it rotated when sidebar is open */
+.sidebar-active .menu-icon {
+    transform: rotate(90deg);
+}
 
 .menu-icon.active {
     transform: rotate(90deg);

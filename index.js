@@ -1,18 +1,25 @@
-// Sidebar Toggle Function with Smooth Rotation
+// Sidebar Toggle Function with Instant Rotation
 function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
     const menuIcon = document.querySelector(".menu-icon");
 
-    // Toggle sidebar open/close
+    // Immediately rotate the button when clicked
+    menuIcon.classList.add("rotating");
+
+    // Check if the sidebar is already open
     if (sidebar.style.left === "0px") {
         sidebar.style.left = "-250px"; // Close sidebar
         document.body.classList.remove("sidebar-active"); // Remove rotation effect
+
+        // Wait for animation to complete before resetting rotation
+        setTimeout(() => {
+            menuIcon.classList.remove("rotating");
+        }, 300);
     } else {
         sidebar.style.left = "0px"; // Open sidebar
-        document.body.classList.add("sidebar-active"); // Add rotation effect
+        document.body.classList.add("sidebar-active"); // Keep rotation
     }
 }
-
 
 const canvas = document.createElement("canvas");
 document.body.appendChild(canvas);
