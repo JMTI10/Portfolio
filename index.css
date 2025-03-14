@@ -15,14 +15,6 @@ body {
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
-    background: linear-gradient(45deg, #121212, #1a1a1a);
-    background-size: 400% 400%;
-    animation: gradientAnimation 10s infinite alternate;
-}
-
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
 }
 
 /* ✅ FIXED: Container Width & Centering */
@@ -31,119 +23,6 @@ body {
     max-width: 1200px;
     text-align: center;
     margin: 0 auto;
-}
-
-/* ✅ FIXED: Header Styling */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    width: 100%;
-}
-
-/* Logo */
-.logo {
-    flex-grow: 1;
-    text-align: left;
-}
-
-.logo a {
-    font-size: 32px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #FFD700;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.5);
-    text-decoration: none;
-    display: inline-block;
-}
-
-.logo a:hover {
-    color: white;
-}
-
-/* ✅ FIXED: Social Icons */
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.social-icons {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-.social-icons a {
-    font-size: 24px;
-    color: #FFD700;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.social-icons a i {
-    font-size: 24px;
-}
-
-.social-icons a:hover {
-    color: white;
-    transform: scale(1.1);
-}
-
-/* Sidebar */
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background: #1a1a1a;
-    padding-top: 60px;
-    transition: left 0.3s ease-in-out;
-    z-index: 1000;
-}
-
-.sidebar a {
-    display: block;
-    color: white;
-    padding: 15px;
-    text-decoration: none;
-    font-size: 18px;
-    transition: background 0.3s ease-in-out;
-}
-
-.sidebar a:hover {
-    background: #FFD700;
-    color: black;
-}
-
-/* Sidebar Button */
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-}
-
-.close-btn:hover {
-    color: #FFD700;
-}
-
-/* ✅ FIXED: Menu Button */
-.menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    color: #FFD700;
-    transition: transform 0.3s ease-in-out;
-}
-
-.menu-icon:hover {
-    color: white;
-    transform: scale(1.1);
 }
 
 /* ✅ FIXED: Step Section Layout */
@@ -187,10 +66,6 @@ header {
     transition: transform 0.3s;
 }
 
-.image img:hover {
-    transform: scale(1.05);
-}
-
 /* ✅ FIXED: Reverse Layout */
 .reverse {
     flex-direction: row-reverse;
@@ -218,24 +93,4 @@ header {
         width: 100%;
         max-width: 300px;
     }
-
-    .social-icons {
-        justify-content: center;
-    }
-}
-
-/* ✅ FIXED: Button Styling */
-.btn {
-    display: inline-block;
-    background: #FFD700;
-    color: black;
-    padding: 10px 15px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.btn:hover {
-    background: white;
 }

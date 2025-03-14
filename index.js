@@ -19,6 +19,9 @@ function fadeInOnScroll() {
 window.addEventListener("scroll", fadeInOnScroll);
 fadeInOnScroll();
 
+window.addEventListener("scroll", fadeInOnScroll);
+fadeInOnScroll();
+
 // Floating Particles Effect
 const canvas = document.createElement("canvas");
 document.body.appendChild(canvas);
