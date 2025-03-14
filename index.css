@@ -183,6 +183,7 @@ p a:hover {
     text-decoration: underline;
 }
 
+/* Align skills title and content to the right */
 .skills {
     text-align: right;
     margin-left: auto;
