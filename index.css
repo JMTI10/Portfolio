@@ -120,14 +120,16 @@ header {
     color: #FFD700;
 }
 
+/* Default Menu Icon */
 .menu-icon {
     font-size: 30px;
     cursor: pointer;
     color: #FFD700;
-    transition: transform 0.3s ease-in-out; /* Ensures smooth rotation */
+    transition: transform 0.3s ease-in-out; /* Smooth rotation */
 }
 
-.sidebar-open .menu-icon {
+/* Rotate when sidebar is open */
+.sidebar-active .menu-icon {
     transform: rotate(90deg);
 }
 

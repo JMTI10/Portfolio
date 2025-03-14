@@ -3,17 +3,16 @@ function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
     const menuIcon = document.querySelector(".menu-icon");
 
-    // Check if sidebar is open
-    const isOpen = sidebar.style.left === "0px";
-
-    if (isOpen) {
+    // Toggle sidebar open/close
+    if (sidebar.style.left === "0px") {
         sidebar.style.left = "-250px"; // Close sidebar
-        document.body.classList.remove("sidebar-open"); // Remove rotation effect
+        document.body.classList.remove("sidebar-active"); // Remove rotation effect
     } else {
         sidebar.style.left = "0px"; // Open sidebar
-        document.body.classList.add("sidebar-open"); // Add rotation effect
+        document.body.classList.add("sidebar-active"); // Add rotation effect
     }
 }
+
 
 const canvas = document.createElement("canvas");
 document.body.appendChild(canvas);
