@@ -7,7 +7,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Fix Page Background */
+/* 🌑 Fix Page Background */
 body {
     background: #121212 !important; /* Ensures dark mode */
     color: white;
@@ -15,18 +15,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-/* Ensure All Content Stays Centered */
+/* ✅ Ensures Everything Stays Centered */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
 }
 
-/* Header */
+/* 🏆 Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -35,6 +36,7 @@ header {
     width: 100%;
 }
 
+/* 🎖 Logo */
 .logo a {
     font-size: 32px;
     font-weight: bold;
@@ -43,7 +45,7 @@ header {
     text-decoration: none;
 }
 
-/* Social Media Icons (Yellow Color) */
+/* 📢 Social Media Icons */
 .social-icon {
     color: #FFD700 !important; /* Gold color */
     font-size: 22px;
@@ -56,14 +58,14 @@ header {
     color: #FFA500 !important; /* Slightly different yellow for hover effect */
 }
 
-/* Align Social Icons & Sidebar Button */
+/* 🎯 Align Social Icons & Sidebar Button */
 .header-right {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-/* Sidebar */
+/* 📜 Sidebar */
 .sidebar {
     position: fixed;
     top: 0;
@@ -85,7 +87,7 @@ header {
     transform: translateX(0) !important;
 }
 
-/* Sidebar Links */
+/* 🖥 Sidebar Links */
 .sidebar a {
     display: block;
     padding: 15px;
@@ -100,7 +102,7 @@ header {
     color: #121212;
 }
 
-/* Sidebar Close Button */
+/* ❌ Sidebar Close Button */
 .close-btn {
     position: absolute;
     top: 15px;
@@ -110,7 +112,7 @@ header {
     color: #FFD700;
 }
 
-/* Sidebar Button (☰) */
+/* 📌 Sidebar Button (☰) */
 .menu-icon {
     font-size: 30px;
     cursor: pointer;
@@ -118,7 +120,7 @@ header {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Sidebar Toggle Button Hover Effect */
+/* 🖱 Sidebar Toggle Button Hover Effect */
 .menu-icon:hover {
     transform: scale(1.2);
     color: #FFA500;
@@ -129,7 +131,7 @@ header {
     transform: rotate(90deg);
 }
 
-/* Certificates Section */
+/* 🏅 Certificates Section */
 h1 {
     font-size: 28px;
     margin-bottom: 20px;
@@ -137,7 +139,7 @@ h1 {
     color: #FFD700;
 }
 
-/* Certificates Grid */
+/* 🖼 Certificates Grid */
 .certificate-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -149,7 +151,7 @@ h1 {
     margin: 0 auto;
 }
 
-/* Certificate Images */
+/* 📜 Certificate Images */
 .certificate-item img {
     width: 100%;
     max-width: 320px;
@@ -166,7 +168,7 @@ h1 {
     box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.7);
 }
 
-/* Lightbox Background */
+/* 🔍 Lightbox Background */
 .lightbox {
     display: none;
     position: fixed;
@@ -180,7 +182,7 @@ h1 {
     z-index: 1002;
 }
 
-/* Lightbox Image & Description Side by Side */
+/* 🖼 Lightbox Image & Description Side by Side */
 .lightbox-container {
     display: flex;
     align-items: center;
@@ -189,7 +191,7 @@ h1 {
     justify-content: center;
 }
 
-/* Lightbox Image */
+/* 🖼 Lightbox Image */
 .lightbox-container img {
     max-width: 50vw;
     max-height: 80vh;
@@ -197,7 +199,7 @@ h1 {
     object-fit: contain;
 }
 
-/* Lightbox Description */
+/* 📖 Lightbox Description */
 .lightbox-description {
     max-width: 40%;
     color: white;
@@ -208,7 +210,7 @@ h1 {
     border-radius: 10px;
 }
 
-/* Close Button */
+/* ❌ Close Button */
 .lightbox .close {
     position: absolute;
     top: 15px;
@@ -218,7 +220,7 @@ h1 {
     cursor: pointer;
 }
 
-/* Floating Particles */
+/* ✨ Floating Particles */
 canvas {
     position: fixed;
     top: 0;
