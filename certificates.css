@@ -46,23 +46,22 @@ header {
 }
 
 /* Sidebar */
-/* Sidebar */
+/* Sidebar - Hidden by Default */
 .sidebar {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -250px; /* Start off-screen */
     width: 250px;
     height: 100%;
     background: #1a1a1a;
     padding-top: 60px;
-    transform: translateX(-100%); /* Initially hidden */
-    transition: transform 0.4s ease-in-out; /* Smooth slide-in animation */
+    transition: left 0.4s ease-in-out; /* Smooth animation */
     z-index: 1000;
 }
 
-/* When active, slide into view */
+/* Show Sidebar when active */
 .sidebar.active {
-    transform: translateX(0);
+    left: 0;
 }
 
 /* Sidebar Button (☰) */
@@ -77,7 +76,6 @@ header {
 .menu-icon.active {
     transform: rotate(90deg);
 }
-
 
 /* Sidebar Button (☰) */
 .menu-icon {

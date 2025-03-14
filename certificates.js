@@ -15,16 +15,16 @@ document.addEventListener("DOMContentLoaded", () => {
     createParticles();
 });
 
-// Sidebar Toggle Function - FIXED
 function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
     const menuIcon = document.querySelector(".menu-icon");
 
     if (sidebar && menuIcon) {
-        sidebar.classList.toggle("active");
-        menuIcon.classList.toggle("active");
+        sidebar.classList.toggle("active"); // Slide in/out sidebar
+        menuIcon.classList.toggle("active"); // Rotate menu button
     }
 }
+
 
 // Lightbox Functionality
 const certificateDescriptions = {
