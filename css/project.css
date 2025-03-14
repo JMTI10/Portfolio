@@ -24,6 +24,7 @@ h1 {
     font-size: 32px;
     color: #FFD700;
     margin-bottom: 20px;
+    margin-top: 100px; /* Ensures it's not hidden under the header */
 }
 
 .projects {
@@ -47,8 +48,8 @@ h1 {
 }
 
 .project-img {
-    width: 40%;
-    max-width: 400px;
+    width: 35%; /* Adjusted for better scaling */
+    max-width: 350px; /* Ensures it stays responsive */
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
 }
@@ -58,7 +59,7 @@ h1 {
 }
 
 .project-desc {
-    width: 50%;
+    width: 55%;
     text-align: left;
 }
 
@@ -99,4 +100,28 @@ h1 {
 .project-row.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .project-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-img {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .project-desc {
+        width: 100%;
+    }
+}
+
+.project-intro {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFD700;
+    text-align: center;
+    margin-bottom: 20px;
 }
