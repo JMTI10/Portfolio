@@ -28,8 +28,10 @@ function toggleMenu() {
 // Remove Any Extra Empty Elements on Load
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("img").forEach(img => {
-        if (!img.src) {
+        console.log("Checking image:", img.src);  // Debugging log
+        if (!img.src || img.src.endsWith("/")) {
             img.remove();
         }
     });
 });
+
