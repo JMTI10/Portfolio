@@ -27,9 +27,10 @@ function toggleMenu() {
 
 // Remove Any Extra Empty Elements on Load
 document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll("img").forEach(img => {
-        console.log("Checking image:", img.src);  // Debugging log
+    document.querySelectorAll(".certificate-item img").forEach(img => {
+        console.log("Image found:", img.src); // Log the loaded image path
         if (!img.src || img.src.endsWith("/")) {
+            console.log("Removing empty image:", img);
             img.remove();
         }
     });

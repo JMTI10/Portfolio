@@ -109,10 +109,10 @@ h1 {
     padding: 20px;
 }
 
-/* Fix for Small Cube Issue */
+/* Fix for Small Cube Issue
 img:empty, div:empty {
     display: none !important;
-}
+} */
 
 /* Certificate Images */
 .certificate-item img {
