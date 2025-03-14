@@ -169,3 +169,16 @@ ul li {
 .btn:hover {
     background: white;
 }
+
+/* Make footer links yellow */
+p a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+p a:hover {
+    color: white; /* Changes to white when hovered */
+    text-decoration: underline;
+}
