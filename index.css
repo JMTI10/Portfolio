@@ -17,7 +17,6 @@ body {
     min-height: 100vh;
 }
 
-/* ✅ FIXED: Container Width & Centering */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -25,7 +24,6 @@ body {
     margin: 0 auto;
 }
 
-/* ✅ FIXED: Header Styling */
 header {
     display: flex;
     justify-content: space-between;
@@ -54,7 +52,6 @@ header {
     color: white;
 }
 
-/* ✅ FIXED: Social Icons */
 .header-right {
     display: flex;
     align-items: center;
@@ -133,6 +130,7 @@ header {
 .menu-icon.active {
     transform: rotate(90deg);
 }
+
 
 .menu-icon:hover {
     color: white;
