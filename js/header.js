@@ -1,9 +1,8 @@
-document.addEventListener("DOMContentLoaded", function () {
-    fetch("html/header.html") // ✅ Ensure this matches the folder name
+document.addEventListener("DOMContentLoaded", function() {
+    fetch("html/header.html") // Adjust the path if needed
         .then(response => response.text())
         .then(data => {
-            document.getElementById("header-container").innerHTML = data;
-            setupHeader(); // Ensures menu button works after loading
+            document.querySelector("header").innerHTML = data;
         })
         .catch(error => console.error("Error loading header:", error));
 });
