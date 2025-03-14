@@ -1,4 +1,3 @@
-// Ensure the script runs after the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
     setupLightbox();
     setupParticles();
@@ -7,9 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
 // Lightbox Functionality
 function setupLightbox() {
     const certificateDescriptions = {
-        "images/grades.jpg": "Final grades from high school technical course in Information Systems Management and Programming. Completed at Agrupamento de Escolas Dr. Francisco Fernandes Lopes.",
-        "images/Erasmus.jpg": "Participation in the Erasmus+ program, a European Union initiative for education and training. Attended the 'School Building for Better Everyday School Life' project in Finland from December 9th to 13th, 2019.",
-        "images/Finfami_support_person.jpg": "FinFami (The Finnish Central Association for Mental Health Families) provides support for individuals whose family members or loved ones are experiencing mental health challenges.",
+        "images/grades.jpg": "Final grades from high school technical course in Information Systems Management and Programming.",
+        "images/Erasmus.jpg": "Participation in the Erasmus+ program in Finland, December 9-13, 2019.",
+        "images/Finfami_support_person.jpg": "FinFami support for families of those with mental health issues.",
         "images/mathlab.png": "MATLAB Onramp Certificate from MathWorks, indicating successful completion of the MATLAB Onramp training."
     };
 
@@ -34,7 +33,7 @@ function setupLightbox() {
     window.closeImage = closeImage;
 }
 
-// 🎆 Floating Particles Effect
+// Floating Particles Effect
 function setupParticles() {
     const canvas = document.createElement("canvas");
     document.body.appendChild(canvas);
@@ -76,9 +75,4 @@ function setupParticles() {
     }
 
     animateParticles();
-
-    window.addEventListener("resize", () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    });
 }
