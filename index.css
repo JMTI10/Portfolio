@@ -79,7 +79,6 @@ header {
     transform: scale(1.1);
 }
 
-/* Sidebar - Ensure it's above the particles */
 .sidebar {
     position: fixed;
     top: 0;
@@ -92,7 +91,6 @@ header {
     z-index: 2000 !important; /* Higher than particles */
 }
 
-/* Sidebar Active State - Moves into View */
 .sidebar.active {
     left: 0 !important; /* Forces sidebar into view */
     transform: translateX(0) !important;
@@ -112,7 +110,6 @@ header {
     color: black;
 }
 
-/* Sidebar Button */
 .close-btn {
     position: absolute;
     top: 10px;
@@ -126,8 +123,6 @@ header {
     color: #FFD700;
 }
 
-/* ✅ FIXED: Menu Button */
-/* Rotation Effect for Menu Icon */
 .menu-icon {
     font-size: 30px;
     cursor: pointer;
@@ -135,7 +130,6 @@ header {
     transition: transform 0.3s ease-in-out;
 }
 
-/* When active, rotate 90 degrees */
 .menu-icon.active {
     transform: rotate(90deg);
 }
@@ -145,7 +139,6 @@ header {
     transform: scale(1.1);
 }
 
-/* ✅ FIXED: Content Layout */
 .content {
     text-align: left;
     margin: 40px auto;
@@ -166,7 +159,6 @@ ul li {
     padding: 5px 0;
 }
 
-/* ✅ FIXED: Button Styling */
 .btn {
     display: inline-block;
     background: #FFD700;
@@ -182,7 +174,6 @@ ul li {
     background: white;
 }
 
-/* Make footer links yellow */
 p a {
     color: #FFD700;
     text-decoration: none;
@@ -191,14 +182,13 @@ p a {
 }
 
 p a:hover {
-    color: white; /* Changes to white when hovered */
+    color: white;
     text-decoration: underline;
 }
 
-/* Align skills title and content to the right */
 .skills {
     text-align: right;
     margin-left: auto;
     margin-right: 0;
-    max-width: 400px; /* Keeps it from stretching too much */
+    max-width: 400px;
 }
