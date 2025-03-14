@@ -46,6 +46,7 @@ header {
 }
 
 /* Sidebar */
+/* Sidebar */
 .sidebar {
     position: fixed;
     top: 0;
@@ -69,13 +70,14 @@ header {
     font-size: 30px;
     cursor: pointer;
     color: #FFD700;
-    transition: transform 0.3s ease-in-out; /* Smooth effect */
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Rotate button when sidebar is open */
 .menu-icon.active {
     transform: rotate(90deg);
 }
+
 
 /* Sidebar Button (☰) */
 .menu-icon {
