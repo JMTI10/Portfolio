@@ -15,6 +15,13 @@ document.addEventListener("DOMContentLoaded", function () {
         menuIcon.classList.toggle("active");
     }
 
+    function toggleMenu() {
+        const sidebar = document.getElementById("sidebar");
+        if (sidebar) {
+            sidebar.classList.toggle("active");
+        }
+    }
+
     // ✅ Open & Close Sidebar Events
     menuIcon.addEventListener("click", function (event) {
         event.stopPropagation(); // Prevents event bubbling
