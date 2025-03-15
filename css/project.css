@@ -118,7 +118,8 @@ h1 {
     }
 }
 
-.lightbox {
+/* Lightbox Background */
+#lightbox {
     display: none;
     position: fixed;
     top: 0;
@@ -128,15 +129,23 @@ h1 {
     background: rgba(0, 0, 0, 0.9);
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 2000;
 }
 
-.lightbox-img {
+/* Show Lightbox When Active */
+#lightbox.active {
+    display: flex;
+}
+
+/* Lightbox Image */
+#lightbox img {
     max-width: 80vw;
     max-height: 80vh;
     border-radius: 10px;
+    object-fit: contain;
 }
 
-.lightbox.active {
-    display: flex;
+/* Close Lightbox on Click */
+#lightbox:hover {
+    cursor: pointer;
 }
