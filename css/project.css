@@ -27,6 +27,13 @@ h1 {
     margin-top: 100px; /* Ensures it's not hidden under the header */
 }
 
+.content p {
+    color: #FFD700; /* Gold/Yellow color */
+    font-size: 18px; /* Slightly larger for emphasis */
+    font-weight: 500;
+}
+
+
 .projects {
     display: flex;
     flex-direction: column;
