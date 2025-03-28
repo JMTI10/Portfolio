@@ -26,11 +26,10 @@ body {
     padding-top: 80px; /* Ensures content starts below header */
 }
 
-/* Logo (Your Name) - Left Aligned */
 .logo {
-    font-size: 32px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .logo a {
@@ -72,15 +71,24 @@ body {
 
 
 .menu-icon {
-    font-size: 30px;
-    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 3000;
+    font-size: 28px;
     color: #FFD700;
-    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
 }
 
 .menu-icon:hover {
-    transform: scale(1.2);
-    color: #FFA500;
+    background-color: #FFD700;
+    color: #121212;
+    transform: scale(1.1);
 }
 
 .header-right {
@@ -95,12 +103,12 @@ body {
         justify-content: space-between;
         padding: 15px;
     }
+}
 
-    .social-icons {
-        gap: 5px;
-    }
+.social-icons {
+    gap: 5px;
+}
 
-    .menu-icon {
-        font-size: 28px;
-    }
+.menu-icon {
+    font-size: 28px;
 }
