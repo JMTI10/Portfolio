@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 * {
@@ -24,15 +25,14 @@ h1 {
     font-size: 32px;
     color: #FFD700;
     margin-bottom: 20px;
-    margin-top: 100px; /* Ensures it's not hidden under the header */
+    margin-top: 100px;
 }
 
 .content p {
-    color: #FFD700; /* Gold/Yellow color */
-    font-size: 18px; /* Slightly larger for emphasis */
+    color: #FFD700;
+    font-size: 18px;
     font-weight: 500;
 }
-
 
 .projects {
     display: flex;
@@ -48,6 +48,14 @@ h1 {
     padding: 20px;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.05);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.project-row.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .project-row:nth-child(even) {
@@ -55,8 +63,8 @@ h1 {
 }
 
 .project-img {
-    width: 35%; /* Adjusted for better scaling */
-    max-width: 300px; /* Ensures it stays responsive and doesn't get too big */
+    width: 35%;
+    max-width: 300px;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
 }
@@ -98,34 +106,7 @@ h1 {
     background: #FFA500;
 }
 
-.project-row {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.project-row.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-@media (max-width: 768px) {
-    .project-row {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .project-img {
-        width: 80%;
-        max-width: 250px;
-    }
-
-    .project-desc {
-        width: 100%;
-    }
-}
-
-/* Lightbox Background */
+/* Lightbox */
 #lightbox {
     display: none;
     position: fixed;
@@ -139,12 +120,10 @@ h1 {
     z-index: 2000;
 }
 
-/* Show Lightbox When Active */
 #lightbox.active {
     display: flex;
 }
 
-/* Lightbox Image */
 #lightbox img {
     max-width: 80vw;
     max-height: 80vh;
@@ -152,11 +131,11 @@ h1 {
     object-fit: contain;
 }
 
-/* Close Lightbox on Click */
 #lightbox:hover {
     cursor: pointer;
 }
 
+/* Project Card Section */
 .project-links {
     text-align: center;
     margin-top: 40px;
@@ -182,10 +161,23 @@ h1 {
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
+.project-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .project-card h3 {
-    color: #FFD700;
-    text-decoration: none;
-    font-weight: bold;
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.project-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    color: #ccc;
 }
 
 .project-card h3 a:link,
@@ -204,4 +196,20 @@ h1 {
 .project-card:hover {
     transform: translateY(-5px);
     border-color: #FFD700;
+}
+
+@media (max-width: 768px) {
+    .project-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-img {
+        width: 80%;
+        max-width: 250px;
+    }
+
+    .project-desc {
+        width: 100%;
+    }
 }
