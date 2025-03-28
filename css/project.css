@@ -191,14 +191,13 @@ h1 {
 .project-card h3 a {
     color: #FFD700;
     text-decoration: none;
+    font-weight: bold;
     transition: color 0.3s ease;
-    color: white;
-    text-decoration: underline
 }
 
 .project-card h3 a:hover {
     color: white;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .project-card:hover {
