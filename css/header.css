@@ -71,7 +71,6 @@ body {
 }
 
 
-/* Sidebar Button (☰)
 .menu-icon {
     font-size: 30px;
     cursor: pointer;
@@ -79,20 +78,17 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-Sidebar Toggle Button Hover Effect
 .menu-icon:hover {
     transform: scale(1.2);
     color: #FFA500;
 }
 
-Fix Sidebar Button Alignment
 .header-right {
     display: flex;
     justify-content: center;
     align-items: center;
-}*/
+}
 
-/* Ensure everything remains centered on all screens */
 @media (max-width: 768px) {
     header {
         flex-direction: row;
