@@ -74,29 +74,28 @@ h1 {
 }
 
 .project-desc {
-    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: left;
 }
 
 .project-desc h3 {
     font-size: 24px;
-    margin-bottom: 10px;
-    text-align: left; /* keeps alignment consistent */
-    display: inline-block;
+    font-weight: bold;
+    margin: 0 0 10px 0;
 }
 
 .project-desc h3 a {
     color: #FFD700;
     text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
+    display: inline; /* keeps the title flowing naturally with text */
 }
 
 .project-desc h3 a:hover {
     color: white;
     text-decoration: none;
 }
-
 
 .project-desc p {
     font-size: 16px;
