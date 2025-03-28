@@ -9,7 +9,7 @@
 }
 
 body {
-    background: #121212;
+    background: #121212 !important;
     color: #fff;
     display: flex;
     justify-content: center;
