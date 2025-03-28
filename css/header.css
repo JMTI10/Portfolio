@@ -26,6 +26,10 @@ body {
     padding-top: 80px; /* Ensures content starts below header */
 }
 
+body.no-sidebar-button .menu-icon {
+    display: none !important;
+}
+
 .logo {
     display: flex;
     align-items: center;
