@@ -195,3 +195,54 @@ p a:hover {
 #carousel-title {
     transition: opacity 0.5s ease-in-out;
 }
+
+
+h1 {
+    font-size: 36px;
+    color: #FFD700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.quick-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.quick-links a {
+    color: #FFD700;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.quick-links a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.profile-photo {
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.role-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.role-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    color: #FFD700;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
+}
