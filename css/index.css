@@ -332,3 +332,46 @@ h2 {
     }
 }
 
+.floating-skills {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 15px;
+    border-radius: 10px;
+    width: 180px;
+    z-index: 1500;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    color: #ccc;
+    font-size: 13px;
+}
+
+.bar {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    height: 8px;
+    margin-top: 3px;
+    overflow: hidden;
+}
+
+.fill {
+    background: #FFD700;
+    height: 100%;
+    border-radius: 6px;
+    transition: width 1s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .floating-skills {
+        display: none;
+    }
+}
+
