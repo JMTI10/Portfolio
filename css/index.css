@@ -1,4 +1,4 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 * {
@@ -21,7 +21,6 @@ body {
 .container {
     width: 80%;
     max-width: 900px;
-    text-align: left;
     padding-top: 20px;
 }
 
@@ -61,12 +60,25 @@ header {
 }
 
 .social-icons a {
-    font-size: 24px;
-    color: #FFD700;
-    text-decoration: none;
+    font-size: 22px;
+    color: #FFD700 !important;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
 }
 
-/* Sidebar Default (Hidden) */
+.social-icons a:hover {
+    background: #FFD700 !important;
+    color: #121212 !important;
+    transform: scale(1.15);
+}
+
+/* Sidebar */
 .sidebar {
     position: fixed;
     top: 0;
@@ -84,12 +96,10 @@ header {
     padding-left: 0;
 }
 
-/* Sidebar Open */
 .sidebar.active {
     left: 0;
 }
 
-/* Sidebar Links */
 .sidebar a {
     display: block;
     color: white;
@@ -100,13 +110,11 @@ header {
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* Sidebar Button Hover Effect (Turns Yellow) */
 .sidebar a:hover {
     background: #FFD700;
     color: black;
 }
 
-/* Close Button */
 .close-btn {
     position: absolute;
     top: 10px;
@@ -121,7 +129,6 @@ header {
     color: #FFD700;
 }
 
-/* Sidebar Menu Icon */
 .menu-icon {
     font-size: 30px;
     cursor: pointer;
@@ -129,20 +136,17 @@ header {
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* Rotate the Menu Icon When Sidebar Opens */
 .menu-icon.active {
     transform: rotate(90deg);
 }
 
-/* Make the Sidebar Button Background Yellow When Open */
 .sidebar.active .menu-icon {
     background-color: #FFD700;
     padding: 5px 10px;
     border-radius: 5px;
-    color: black; /* Keep the text black inside the button */
+    color: black;
 }
 
-/* Menu Button Hover Effect */
 .menu-icon:hover {
     transform: scale(1.1);
     color: white;
@@ -192,10 +196,6 @@ p a:hover {
     background: white;
     transform: scale(1.05);
 }
-#carousel-title {
-    transition: opacity 0.5s ease-in-out;
-}
-
 
 h1 {
     font-size: 36px;
@@ -204,8 +204,8 @@ h1 {
     text-align: center;
 }
 
-h2{
-    text-align: center !important;
+h2 {
+    text-align: center;
     margin-bottom: 15px;
 }
 
@@ -258,6 +258,7 @@ h2{
     text-align: center;
     box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
 }
+
 .content {
     text-align: center;
 }
