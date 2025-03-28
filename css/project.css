@@ -80,9 +80,23 @@ h1 {
 
 .project-desc h3 {
     font-size: 24px;
-    color: #FFD700;
     margin-bottom: 10px;
+    text-align: left; /* keeps alignment consistent */
+    display: inline-block;
 }
+
+.project-desc h3 a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.project-desc h3 a:hover {
+    color: white;
+    text-decoration: none;
+}
+
 
 .project-desc p {
     font-size: 16px;
