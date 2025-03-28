@@ -199,9 +199,14 @@ p a:hover {
 
 h1 {
     font-size: 36px;
-    color: #FFD700;
+    color: white;
     margin-bottom: 10px;
     text-align: center;
+}
+
+h2{
+    text-align: center !important;
+    margin-bottom: 15px;
 }
 
 .quick-links {
@@ -225,8 +230,15 @@ h1 {
 }
 
 .profile-photo {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 30px auto;
     display: block;
-    margin: 0 auto 20px;
+    border: 4px solid #FFD700;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+    background-color: #121212;
 }
 
 .role-cards {
@@ -246,3 +258,15 @@ h1 {
     text-align: center;
     box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
 }
+.content {
+    text-align: center;
+}
+
+.content p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+    color: #ccc;
+}
+

@@ -48,21 +48,30 @@ body {
 /* Social Media Icons */
 .social-icons {
     display: flex;
-    gap: 10px; /* Space between icons */
+    gap: 12px;
 }
 
 .social-icons a {
-    color: #FFD700 !important; /* Golden color */
     font-size: 22px;
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: #FFD700 !important;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
 }
 
 .social-icons a:hover {
-    transform: scale(1.2);
-    color: #FFA500 !important; /* Slightly different yellow */
+    background: #FFD700 !important;
+    color: #121212 !important;
+    transform: scale(1.15);
 }
 
-/* Sidebar Button (☰) */
+
+/* Sidebar Button (☰)
 .menu-icon {
     font-size: 30px;
     cursor: pointer;
@@ -70,18 +79,18 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Sidebar Toggle Button Hover Effect */
+Sidebar Toggle Button Hover Effect
 .menu-icon:hover {
     transform: scale(1.2);
     color: #FFA500;
 }
 
-/* Fix Sidebar Button Alignment */
+Fix Sidebar Button Alignment
 .header-right {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+}*/
 
 /* Ensure everything remains centered on all screens */
 @media (max-width: 768px) {
