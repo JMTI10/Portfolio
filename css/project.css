@@ -188,14 +188,15 @@ h1 {
     font-weight: bold;
 }
 
-.project-card h3 a {
+.project-card h3 a:link,
+.project-card h3 a:visited {
     color: #FFD700;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
 }
 
-.project-card h3 a:hover {
+.project-card h3 a:hover,
+.project-card h3 a:focus {
     color: white;
     text-decoration: none;
 }
