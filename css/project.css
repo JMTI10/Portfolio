@@ -73,23 +73,21 @@ h1 {
     transform: scale(1.05);
 }
 
-.project-desc {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
+.project-row .project-desc {
+    margin-left: 30px;
 }
 
-.project-desc h3 {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0 0 10px 0;
+.project-row.reverse .project-desc {
+    margin-right: 30px;
 }
 
 .project-desc h3 a {
     color: #FFD700;
     text-decoration: none;
-    display: inline; /* keeps the title flowing naturally with text */
+    font-weight: bold;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1.2;
 }
 
 .project-desc h3 a:hover {
@@ -99,9 +97,10 @@ h1 {
 
 .project-desc p {
     font-size: 16px;
-    line-height: 1.6;
     color: #ccc;
+    line-height: 1.6;
 }
+
 
 .btn {
     display: inline-block;
