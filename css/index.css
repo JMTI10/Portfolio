@@ -263,7 +263,7 @@ h2 {
 .study-cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 50px;
     justify-content: center;
     margin-bottom: 60px;
 }
@@ -333,42 +333,46 @@ h2 {
     }
 }
 
-.floating-skills-wrapper {
+/* Skill bar panel */
+.floating-skills {
     position: fixed;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    display: flex;
-    align-items: center;
-    z-index: 1500;
-}
-
-/* JUST slide the skill panel, not the whole wrapper */
-.floating-skills {
     background: rgba(255, 255, 255, 0.03);
     padding: 15px;
     border-radius: 10px 0 0 10px;
     width: 180px;
+    z-index: 1500;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-.floating-skills.collapsed {
-    transform: translateX(100%);
-    opacity: 0;
-    pointer-events: none;
-}
-
+/* Arrow button */
 .toggle-skills-btn {
+    position: fixed;
+    top: 50%;
+    right: 180px; /* same as skill panel width */
+    transform: translateY(-50%);
     background: #FFD700;
     color: #121212;
     font-size: 18px;
     padding: 8px;
     cursor: pointer;
     border-radius: 5px 0 0 5px;
-    margin-right: 4px;
-    transition: background 0.3s ease;
+    z-index: 1600;
+    transition: right 0.3s ease-in-out;
 }
 
+/* When hidden, push panel off screen and move button to edge */
+.floating-skills.collapsed {
+    transform: translateY(-50%) translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.toggle-skills-btn.collapsed {
+    right: 0;
+}
 
 .skill {
     display: flex;

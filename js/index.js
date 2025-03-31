@@ -1,11 +1,11 @@
 function toggleSkills() {
     const panel = document.getElementById("floatingSkills");
-    const arrow = document.querySelector(".toggle-skills-btn");
+    const arrow = document.getElementById("toggleSkillsBtn");
 
-    if (panel && arrow) {
-        panel.classList.toggle("collapsed");
-        arrow.textContent = panel.classList.contains("collapsed") ? "◀" : "➤";
-    }
+    panel.classList.toggle("collapsed");
+    arrow.classList.toggle("collapsed");
+
+    arrow.textContent = panel.classList.contains("collapsed") ? "◀" : "➤";
 }
 document.addEventListener("DOMContentLoaded", function () {
     const titleElement = document.getElementById("carousel-title");
