@@ -1,4 +1,3 @@
-// Make toggleSkills globally available
 function toggleSkills() {
     const panel = document.getElementById("floatingSkills");
     const arrow = document.querySelector(".toggle-skills-btn");
@@ -8,8 +7,6 @@ function toggleSkills() {
         arrow.textContent = panel.classList.contains("collapsed") ? "◀" : "➤";
     }
 }
-
-// DOM Ready Logic (e.g. carousel title)
 document.addEventListener("DOMContentLoaded", function () {
     const titleElement = document.getElementById("carousel-title");
 

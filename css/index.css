@@ -263,7 +263,7 @@ h2 {
 .study-cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 20px;
     justify-content: center;
     margin-bottom: 60px;
 }
@@ -343,12 +343,19 @@ h2 {
     z-index: 1500;
 }
 
+/* JUST slide the skill panel, not the whole wrapper */
 .floating-skills {
     background: rgba(255, 255, 255, 0.03);
     padding: 15px;
     border-radius: 10px 0 0 10px;
     width: 180px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.floating-skills.collapsed {
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
 }
 
 .toggle-skills-btn {
@@ -358,15 +365,10 @@ h2 {
     padding: 8px;
     cursor: pointer;
     border-radius: 5px 0 0 5px;
-    transition: transform 0.3s ease;
     margin-right: 4px;
+    transition: background 0.3s ease;
 }
 
-.floating-skills.collapsed {
-    transform: translateX(100%);
-    opacity: 0;
-    pointer-events: none;
-}
 
 .skill {
     display: flex;
