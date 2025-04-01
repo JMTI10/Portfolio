@@ -1,4 +1,5 @@
 function toggleSkills() {
+    console.log(arrow.classList);
     const panel = document.getElementById("floatingSkills");
     const arrow = document.getElementById("toggleSkillsBtn");
 
@@ -7,6 +8,7 @@ function toggleSkills() {
 
     arrow.textContent = panel.classList.contains("collapsed") ? "◀" : "➤";
 }
+
 document.addEventListener("DOMContentLoaded", function () {
     const titleElement = document.getElementById("carousel-title");
 
