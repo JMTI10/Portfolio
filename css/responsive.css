@@ -1,0 +1,20 @@
+@media (max-width: 768px) {
+    .floating-skills {
+        width: 75vw;
+        font-size: 14px;
+    }
+
+    .toggle-skills-btn {
+        left: 75vw;
+        font-size: 16px;
+        padding: 6px;
+    }
+
+    .floating-skills.collapsed {
+        transform: translateY(-50%) translateX(-100%);
+    }
+
+    .toggle-skills-btn.collapsed {
+        left: 0;
+    }
+}

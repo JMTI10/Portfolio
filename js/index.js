@@ -40,4 +40,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     setInterval(changeTitle, 3000);
+
+    if (window.innerWidth <= 768) {
+        document.getElementById("floatingSkills").classList.add("collapsed");
+        document.getElementById("toggleSkillsBtn").classList.add("collapsed");
+    }
 });
