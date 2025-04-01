@@ -73,12 +73,14 @@
     }
 
     .project-img {
+        order: 1; /* image first */
         width: 100%;
         max-width: 280px;
         margin-bottom: 15px;
     }
 
     .project-desc {
+        order: 2; /* text second */
         width: 100%;
         max-width: 500px;
         padding: 0 20px;
@@ -89,7 +91,7 @@
 
     .project-desc h3,
     .project-desc p {
-        text-align: center !important;
+        text-align: center;
         width: 100%;
     }
 }
