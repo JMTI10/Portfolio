@@ -66,3 +66,27 @@
         max-width: 90%;
     }
 }
+
+@media (max-width: 768px) {
+    .project-row {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .project-img {
+        width: 100%;
+        max-width: 250px;
+        margin-bottom: 15px;
+    }
+
+    .project-desc {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .project-desc h3,
+    .project-desc p {
+        text-align: center;
+    }
+}
