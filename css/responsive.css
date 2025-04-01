@@ -8,109 +8,6 @@
         align-items: center;
     }
 
-    .floating-skills {
-        position: relative;
-        top: auto;
-        left: auto;
-        transform: none;
-        width: 90%;
-        margin: 20px auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .toggle-skills-btn {
-        position: relative;
-        left: auto;
-        transform: none;
-        margin-top: 10px;
-    }
-
-    .profile-photo {
-        margin-top: 20px;
-        width: 180px;
-        height: 180px;
-        display: block;
-    }
-
-    #carousel-title {
-        margin: 20px 0;
-        font-size: 1.1rem;
-        padding: 0 10px;
-        text-align: center;
-    }
-
-    .skill {
-        width: 100%;
-        max-width: 250px;
-    }
-
-    .bar {
-        width: 100%;
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 5px;
-        overflow: hidden;
-        height: 8px;
-    }
-
-    .fill {
-        height: 8px;
-        background: #FFD700;
-        border-radius: 5px;
-    }
-
-    .content p {
-        padding: 0 10px;
-        max-width: 90%;
-    }
-
-    .floating-skills {
-        position: fixed;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%) translateX(0);
-        width: 75vw;
-        transition: transform 0.4s ease;
-        z-index: 1500;
-    }
-
-    .floating-skills.collapsed {
-        transform: translateY(-50%) translateX(-100%);
-    }
-
-    .toggle-skills-btn {
-        position: fixed;
-        top: 50%;
-        left: 70vw !important; /* same as sidebar width */
-        transform: translateY(-50%);
-        transition: left 0.4s ease;
-        z-index: 1600;
-    }
-
-    .toggle-skills-btn.collapsed {
-        left: 0 !important;
-    }
-
-    .floating-skills {
-        width: 70vw !important;
-        padding: 12px !important;
-        font-size: 14px !important;
-    }
-    
-    .skill {
-        width: 100%;
-        max-width: 100%;
-    }
-    
-    .skill span {
-        font-size: 14px;
-        margin-bottom: 5px;
-        display: block;
-        text-align: left;
-    }
-    
     .bar {
         width: 100%;
         background-color: rgba(255, 255, 255, 0.1);
@@ -146,4 +43,27 @@
         margin: 10px 0 !important;
         width: 100% !important;
     }
+
+    @media (max-width: 768px) {
+        .floating-skills,
+        .toggle-skills-btn {
+            display: none !important;
+        }
+    
+        .social-icons {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 2000;
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+        }
+    
+        .social-icons a {
+            font-size: 20px;
+            color: #FFD700;
+        }
+    }
+    
 }
