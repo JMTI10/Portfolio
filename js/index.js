@@ -1,7 +1,11 @@
 function toggleSkills() {
-    console.log(arrow.classList);
     const panel = document.getElementById("floatingSkills");
     const arrow = document.getElementById("toggleSkillsBtn");
+
+    if (!panel || !arrow) {
+        console.warn("toggleSkills: missing panel or arrow element");
+        return;
+    }
 
     panel.classList.toggle("collapsed");
     arrow.classList.toggle("collapsed");

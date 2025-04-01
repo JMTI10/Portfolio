@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="js/index.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Iúri Gonçalves</title>
@@ -11,7 +12,7 @@
 </head>
 <body class="no-sidebar-button">
     <div class="floating-skills-wrapper">
-        <div class="toggle-skills-btn" onclick="toggleSkills()">➤</div>
+        <div class="toggle-skills-btn" id="toggleSkillsBtn" onclick="toggleSkills()">➤</div>
         <div class="floating-skills" id="floatingSkills">
             <div class="skill">
                 <span>Python</span>
@@ -96,7 +97,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="js/index.js" defer></script>
     <script src="js/particles.js" defer></script>
     <script src="js/smoothScroll.js" defer></script>
     <!--<script src="js/header.js" defer></script>-->

@@ -363,6 +363,10 @@ h2 {
     transition: right 0.3s ease-in-out;
 }
 
+.toggle-skills-btn.collapsed {
+    right: 0;
+}
+
 /* When hidden, push panel off screen and move button to edge */
 .floating-skills.collapsed {
     transform: translateY(-50%) translateX(100%);
@@ -410,9 +414,4 @@ h2 {
 
 .floating-skills .skill span {
     font-size: clamp(10px, 1.2vw, 13px);
-}
-
-.toggle-skills-btn.collapsed {
-    right: 0 !important;
-    background-color: red !important;
 }
