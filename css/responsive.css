@@ -90,7 +90,7 @@
     }
 
     .toggle-skills-btn.collapsed {
-        left: 0;
+        left: 0 !important;
     }
 
     .floating-skills {
