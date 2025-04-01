@@ -66,3 +66,18 @@
         max-width: 90%;
     }
 }
+
+@media (max-width: 768px) {
+    body {
+        background: red !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-desc h3,
+    .project-desc p {
+        color: limegreen !important;
+        text-align: center !important;
+        border: 1px solid red;
+    }
+}
