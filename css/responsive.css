@@ -65,15 +65,7 @@
         padding: 0 10px;
         max-width: 90%;
     }
-}
-
-@media (max-width: 768px) {
-    .project-row {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
-
+    
     .project-img {
         width: 100%;
         max-width: 250px;
@@ -90,3 +82,4 @@
         text-align: center;
     }
 }
+    
