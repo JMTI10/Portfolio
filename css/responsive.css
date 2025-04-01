@@ -1,20 +1,68 @@
 @media (max-width: 768px) {
+    body,
+    .container,
+    .content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .floating-skills {
-        width: 75vw;
-        font-size: 14px;
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 90%;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     .toggle-skills-btn {
-        left: 75vw;
-        font-size: 16px;
-        padding: 6px;
+        position: relative;
+        left: auto;
+        transform: none;
+        margin-top: 10px;
     }
 
-    .floating-skills.collapsed {
-        transform: translateY(-50%) translateX(-100%);
+    .profile-photo {
+        margin-top: 20px;
+        width: 180px;
+        height: 180px;
+        display: block;
     }
 
-    .toggle-skills-btn.collapsed {
-        left: 0;
+    #carousel-title {
+        margin: 20px 0;
+        font-size: 1.1rem;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .skill {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .bar {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        overflow: hidden;
+        height: 8px;
+    }
+
+    .fill {
+        height: 8px;
+        background: #FFD700;
+        border-radius: 5px;
+    }
+
+    .content p {
+        padding: 0 10px;
+        max-width: 90%;
     }
 }
