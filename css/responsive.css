@@ -1,6 +1,3 @@
-* {
-  outline: 1px solid red;
-}
 @media (max-width: 768px) {
   html, body {
     margin: 0 !important;
