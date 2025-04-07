@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!titleElement) return;
 
     const titles = [
-        "ICT Student & Software Developer",
-        "Passionate About Innovation & Tech",
+        "ICT Student & Health Tech",
+        "Passionate About Innovation",
         "Exploring Cloud, AI, and IoT",
         "Let's Build Something Great!"
     ];
