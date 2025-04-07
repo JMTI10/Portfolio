@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-
     checkElementsInView();
     window.addEventListener("scroll", checkElementsInView);
 });

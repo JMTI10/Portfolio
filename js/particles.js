@@ -1,19 +1,15 @@
 document.addEventListener("DOMContentLoaded", createParticles);
-
 function createParticles() {
     const canvas = document.createElement("canvas");
     document.body.appendChild(canvas);
     const ctx = canvas.getContext("2d");
-
     canvas.style.position = "fixed";
     canvas.style.top = "0";
     canvas.style.left = "0";
-    canvas.style.pointerEvents = "none"; // Ensures particles don’t interfere with clicks
-    canvas.style.zIndex = "-1"; // Keeps it in the background
-
+    canvas.style.pointerEvents = "none";
+    canvas.style.zIndex = "-1";
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-
     let particles = [];
     for (let i = 0; i < 50; i++) {
         particles.push({
@@ -24,7 +20,6 @@ function createParticles() {
             speedY: (Math.random() - 0.5) * 0.5,
         });
     }
-
     function animateParticles() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle = "#FFD700"; // Golden particles
@@ -39,10 +34,7 @@ function createParticles() {
         });
         requestAnimationFrame(animateParticles);
     }
-
     animateParticles();
-
-    // Resize canvas when window resizes
     window.addEventListener("resize", () => {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;

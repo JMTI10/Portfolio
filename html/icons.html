@@ -1,0 +1,22 @@
+<div class="quick-links-under-title">
+    <a href="index.html">Home</a>
+    <a href="certificates.html">Certificates</a>
+    <a href="project.html">Projects</a>
+</div>
+<div class="social-icons-header">
+    <a href="https://www.linkedin.com/in/iuri-goncalves/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/JMTI10" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.instagram.com/iuri__goncalves/" target="_blank"><i class="fab fa-instagram"></i></a>
+</div>  
+<div class="floating-socials-right">
+    <a href="https://www.linkedin.com/in/iuri-goncalves/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/JMTI10" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.instagram.com/iuri__goncalves/" target="_blank"><i class="fab fa-instagram"></i></a>
+</div>
+<script>
+    fetch("HTML/icons.html")
+    .then(res => res.text())
+    .then(data => {
+        document.getElementById("icons-container").innerHTML = data;
+    });
+</script>

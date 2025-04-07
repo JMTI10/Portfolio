@@ -13,7 +13,7 @@ header {
     align-items: center;
     padding: 20px;
     width: 100%;
-    background: #121212; /* Dark mode */
+    background: #121212;
     color: white;
     position: fixed;
     top: 0;
@@ -21,9 +21,8 @@ header {
     z-index: 1000;
 }
 
-/* Fix Content Overlapping Header */
 body {
-    padding-top: 80px; /* Ensures content starts below header */
+    padding-top: 80px;
 }
 
 body.no-sidebar-button .menu-icon {
@@ -37,18 +36,16 @@ body.no-sidebar-button .menu-icon {
 }
 
 .logo a {
-    color: #FFD700; /* Golden color */
+    color: #FFD700;
     text-decoration: none;
 }
 
-/* Header Right Section (Icons + Sidebar Button) */
 .header-right {
     display: flex;
     align-items: center;
-    gap: 15px; /* Adds spacing between icons & sidebar button */
+    gap: 15px;
 }
 
-/* Social Media Icons */
 .social-icons {
     display: flex;
     gap: 12px;

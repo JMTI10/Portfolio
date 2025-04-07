@@ -7,7 +7,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* 🌑 Fix Page Background */
 body {
     background: #121212;
     color: white;
@@ -17,6 +16,13 @@ body {
     justify-content: center;
     min-height: 100vh;
     overflow-x: hidden;
+}
+
+h1 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .certificate-list {
@@ -47,118 +53,3 @@ body {
     color: #ccc;
     line-height: 1.6;
 }
-
-/*
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    padding: 20px;
-    text-align: center;
-}
-
-main {
-    margin-top: 80px;
-}
-
-.logo a {
-    font-size: 32px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #FFD700;
-    text-decoration: none;
-}
-
-.sidebar.open {
-    left: 0 !important;
-}
-
-
-h1 {
-    font-size: 32px;
-    margin: 20px 0;
-    text-align: center;
-    color: #FFD700;
-    padding-top: 20px;
-}
-
-.certificate-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    max-width: 90vw;
-    margin: 0 auto;
-}
-
-.certificate-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.certificate-item img {
-    width: 100%;
-    max-width: 320px;
-    height: auto;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.certificate-item img:hover {
-    transform: scale(1.05);
-}
-
-.lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    justify-content: center;
-    align-items: center;
-    z-index: 1002;
-}
-
-.lightbox-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    max-width: 80vw;
-    max-height: 80vh;
-    gap: 20px;
-}
-
-#lightbox-img {
-    max-width: 50vw;
-    max-height: 80vh;
-    border-radius: 10px;
-    object-fit: contain;
-}
-
-.lightbox-description {
-    max-width: 30vw;
-    color: white;
-    font-size: 18px;
-    text-align: left;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    border-radius: 10px;
-}
-
-.lightbox .close {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-}
-*/
-

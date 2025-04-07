@@ -7,38 +7,31 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error("Error loading sidebar:", error));
 });
-
 document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
         setupSidebar();
     }, 500);
 });
-
 function setupSidebar() {
     const menuIcon = document.querySelector(".menu-icon");
     const sidebar = document.getElementById("sidebar");
     const closeBtn = document.querySelector(".close-btn");
-
     if (!menuIcon || !sidebar || !closeBtn) {
         console.error("Sidebar elements not found!");
         return;
     }
-
     function toggleMenu() {
         sidebar.classList.toggle("active");
         menuIcon.classList.toggle("active");
     }
-
     menuIcon.addEventListener("click", function (event) {
         event.stopPropagation();
         toggleMenu();
     });
-
     closeBtn.addEventListener("click", function (event) {
         event.stopPropagation();
         toggleMenu();
     });
-
     document.addEventListener("click", function (event) {
         if (
             sidebar.classList.contains("active") &&
