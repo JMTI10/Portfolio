@@ -22,7 +22,7 @@ function createParticles() {
     }
     function animateParticles() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = "#FFD700"; // Golden particles
+        ctx.fillStyle = "#FFD700";
         particles.forEach(p => {
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
