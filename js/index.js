@@ -5,7 +5,7 @@ function toggleSkills() {
     panel.classList.toggle("collapsed");
     arrow.classList.toggle("collapsed");
 
-    arrow.textContent = panel.classList.contains("collapsed") ? "◀" : "➤";
+    arrow.textContent = panel.classList.contains("collapsed") ? "➤" : "◀";
 }
 
 document.addEventListener("DOMContentLoaded", function () {
