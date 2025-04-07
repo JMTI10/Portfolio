@@ -82,20 +82,26 @@
   .quick-links-under-title {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 25px;
     margin: 10px 0 20px;
     flex-wrap: wrap;
   }
-
+  
   .quick-links-under-title a {
     color: #FFD700;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
   }
-
+  
   .quick-links-under-title a:hover {
     color: white;
+  }
+  
+  .secondary-links {
+    display: flex;
+    gap: 25px;
   }
 }
 
