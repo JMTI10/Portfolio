@@ -1,11 +1,18 @@
 function toggleSkills() {
     const panel = document.getElementById("floatingSkills");
-    const arrow = document.getElementById("toggleSkillsBtn");
+    const arrowBtn = document.getElementById("toggleSkillsBtn");
+    const icon = arrowBtn.querySelector("i");
 
     panel.classList.toggle("collapsed");
-    arrow.classList.toggle("collapsed");
+    arrowBtn.classList.toggle("collapsed");
 
-    arrow.textContent = panel.classList.contains("collapsed") ? "➤" : "◀";
+    if (panel.classList.contains("collapsed")) {
+        icon.classList.remove("fa-angle-left");
+        icon.classList.add("fa-angle-right");
+    } else {
+        icon.classList.remove("fa-angle-right");
+        icon.classList.add("fa-angle-left");
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
