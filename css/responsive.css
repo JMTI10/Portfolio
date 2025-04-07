@@ -18,16 +18,21 @@
     max-width: 100%;
     text-align: center;
   }
-
+  
   .quick-links-under-title a {
     color: #FFD700;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
   }
-
+  
   .quick-links-under-title a:hover {
     color: white;
+  }
+  
+  .secondary-links {
+    display: flex;
+    gap: 20px;
   }
 }
 
