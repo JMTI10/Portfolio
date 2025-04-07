@@ -6,7 +6,7 @@ html, body {
   overflow-x: hidden;
   box-sizing: border-box;
 }
-/* ===== Default Desktop Layout (≥ 769px): Side-by-side ===== */
+
 .quick-links-under-title {
   display: flex;
   justify-content: center;
@@ -33,8 +33,6 @@ html, body {
   gap: 25px;
 }
 
-
-/* ===== Pyramid Layout (601px–768px) ===== */
 @media (max-width: 768px) and (min-width: 601px) {
   .quick-links-under-title {
     flex-direction: column;
@@ -69,8 +67,6 @@ html, body {
   }
 }
 
-
-/* ===== Stacked Layout (≤ 600px) ===== */
 @media (max-width: 600px) {
   .quick-links-under-title {
     flex-direction: column;

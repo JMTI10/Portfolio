@@ -244,11 +244,11 @@ h2 {
     position: fixed;
     top: 50%;
     left: 0;
-    transform: translateY(-50%) translateX(0);
+    transform: translateY(-50%);
     display: flex;
     align-items: center;
-    transition: transform 0.4s ease, opacity 0.4s ease;
     z-index: 1500;
+    transition: transform 0.4s ease;
 }
 
 .floating-skills-wrapper.collapsed {
