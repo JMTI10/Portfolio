@@ -1,3 +1,10 @@
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+}
 
 .quick-links-under-title {
   display: flex;
@@ -64,12 +71,4 @@
   .secondary-links a {
     transform: none !important;
   }
-}
-
-html, body {
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100% !important;
-  max-width: 100vw !important;
-  overflow-x: hidden !important;
 }
