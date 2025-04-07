@@ -1,180 +1,67 @@
-/* ---------------- Base mobile layout (max-width: 768px) ---------------- */
-@media (max-width: 768px) {
-  * {
-    box-sizing: border-box;
-  }
 
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden;
-    text-align: center;
-  }
-
-  body {
-    background: #121212;
-    color: white;
-  }
-
-  .container,
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 100%;
-    padding: 0 20px;
-    margin: 0 auto;
-  }
-
-  .profile-photo {
-    max-width: 80%;
-    height: auto;
-  }
-
-  .floating-skills,
-  .toggle-skills-btn,
-  .floating-skills-wrapper {
-    display: none;
-  }
-
-  .social-icons {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 2000;
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-  }
-
-  .social-icons a {
-    font-size: 20px;
-    color: #FFD700;
-  }
-
-  .project-row {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .project-desc {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 15px;
-    box-sizing: border-box;
-  }
-
-  .project-desc h3,
-  .project-desc p {
-    text-align: center;
-    margin: 10px 0;
-    width: 100%;
-  }
-
-  .quick-links-under-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    margin: 10px 0 20px;
-    flex-wrap: wrap;
-  }
-  
-  .quick-links-under-title a {
-    color: #FFD700;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  .quick-links-under-title a:hover {
-    color: white;
-  }
-  
-  .secondary-links {
-    display: flex;
-    gap: 25px;
-  }
+.quick-links-under-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin: 10px 0 20px;
+  flex-wrap: wrap;
 }
 
+.quick-links-under-title a {
+  color: #FFD700;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
 
-/* ---------------- Pyramid layout (max-width: 600px) ---------------- */
-@media (max-width: 600px) {
+.quick-links-under-title a:hover {
+  color: white;
+}
+
+@media (max-width: 768px) and (min-width: 401px) {
   .quick-links-under-title {
-    justify-content: center;
     flex-direction: column;
     align-items: center;
-  }
-
-  .home-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    gap: 10px;
   }
 
   .home-link {
     font-size: 1.1rem;
-    margin-bottom: 8px;
   }
 
-  .pyramid-links {
+  .secondary-links {
+    display: flex;
+    justify-content: center;
     position: relative;
-    width: 100px;
-    height: auto;
+    width: 100%;
+    gap: 0;
   }
 
-  .cert-link,
-  .proj-link {
-    position: absolute;
-    top: 0;
-    white-space: nowrap;
+  .secondary-links a:first-child {
+    transform: translateX(-40%);
   }
 
-  .cert-link {
-    right: 100%;
-    transform: translateX(10px);
-  }
-
-  .proj-link {
-    left: 100%;
-    transform: translateX(-10px);
+  .secondary-links a:last-child {
+    transform: translateX(40%);
   }
 }
 
-
-/* ---------------- Full stack layout (max-width: 400px) ---------------- */
 @media (max-width: 400px) {
   .quick-links-under-title {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
   }
 
-  .quick-links-under-title a {
-    text-align: center;
-    width: 100%;
-  }
-
-  .quick-links-under-title .secondary-links {
+  .secondary-links {
     flex-direction: column;
     align-items: center;
-    gap: 8px;
-    width: 100%;
-  }
-
-  .cert-link,
-  .proj-link {
-    position: static;
+    gap: 10px;
     transform: none;
+  }
+
+  .secondary-links a {
+    transform: none !important;
   }
 }
