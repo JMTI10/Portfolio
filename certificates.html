@@ -7,66 +7,57 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
-    <!-- ✅ Correct Paths to Stylesheets -->
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/certificates.css">
 
-    <!-- ✅ JavaScript Files -->
     <script src="js/header.js" defer></script>
     <script src="js/sidebar.js" defer></script>
     <script src="js/certificates.js" defer></script>
     <script src="js/particles.js" defer></script>
     <script src="js/smoothScroll.js" defer></script>
 
-</head>
-<body>
-    <!-- ✅ Load Header -->
     <div id="header-container"></div>
-
-    <!-- ✅ Load Sidebar -->
     <div id="sidebar-container"></div>
 
-    <div class="container">
-        <h1>My Certificates</h1>
-        <div class="certificate-grid">
-            <div class="certificate-item">
-                <img src="images/grades.jpg" alt="Grades" onclick="openImage(this.src)">
-            </div>
-            <div class="certificate-item">
-                <img src="images/Erasmus.jpg" alt="Erasmus" onclick="openImage(this.src)">
-            </div>
-            <div class="certificate-item">
-                <img src="images/Finfami_support_person.jpg" alt="Support Person" onclick="openImage(this.src)">
-            </div>
-            <div class="certificate-item">
-                <img src="images/Finfami_basic_traning.jpg" alt="Basic Training" onclick="openImage(this.src)">
-            </div>
-            <div class="certificate-item">
-                <img src="images/Portuguese_army.jpg" alt="Army Certificate" onclick="openImage(this.src)">
-            </div>
-            <div class="certificate-item">
-                <img src="images/High_School_Diploma.jpg" alt="Diploma" onclick="openImage(this.src)">
-            </div>
-            <div class="certificate-item">
-                <img src="images/Topas_Certificate.jpg" alt="Topas" onclick="openImage(this.src)">
-            </div>
-            <div class="certificate-item">
-                <img src="images/Apps_for_good.jpg" alt="Apps for Good" onclick="openImage(this.src)">
-            </div>
-            <div class="certificate-item">
-                <img src="images/mathlab.png" alt="MATLAB Onramp" onclick="openImage(this.src)">
-            </div>
+</head>
+<body>
+    <div class="certificate-list">
+        <div class="certificate-card">
+            <h3>📄 Academic Certification</h3>
+            <p>Academic certification listing completed coursework, subjects, and final grades achieved during the program.</p>
         </div>
-    </div>
-        <!-- Lightbox for Enlarged Images -->
-    <div id="lightbox" class="lightbox">
-        <div class="lightbox-content">
-            <span class="close" onclick="closeImage()">&times;</span>
-            <img id="lightbox-img" alt="Certificate Preview">
-            <div class="lightbox-description">
-                <p id="lightbox-text"></p>
-            </div>
+        <div class="certificate-card">
+            <h3>🌍 Erasmus+ Participation</h3>
+            <p>Certificate of participation in an Erasmus+ project, an international exchange program that fosters learning experiences across different countries.</p>
+        </div>
+        <div class="certificate-card">
+            <h3>💬 FinFami Support Person</h3>
+            <p>Offers emotional support, guidance, and resources to families and caregivers affected by mental health issues.</p>
+        </div>
+        <div class="certificate-card">
+            <h3>🤝 FinFami Volunteer Training</h3>
+            <p>Basic volunteer training diploma from FinFami, focusing on providing a safe space and support for those affected by mental health challenges.</p>
+        </div>
+        <div class="certificate-card">
+            <h3>🪖 Military Card</h3>
+            <p>Official document certifying a citizen’s military status, tracking military obligations and service history.</p>
+        </div>
+        <div class="certificate-card">
+            <h3>🎓 High School Diploma</h3>
+            <p>Completion of secondary education with a specialization in Information Systems and Programming.</p>
+        </div>
+        <div class="certificate-card">
+            <h3>💻 Programming Competition</h3>
+            <p>Four-hour national challenge solving problems using C, C++, Java, or Pascal among top high school teams.</p>
+        </div>
+        <div class="certificate-card">
+            <h3>📱 Apps for Good</h3>
+            <p>Program encouraging students to build socially impactful apps; certificates earned for regional and final events.</p>
+        </div>
+        <div class="certificate-card">
+            <h3>📊 MATLAB Onramp</h3>
+            <p>Intro course in programming and math computing using MATLAB, covering fundamentals and problem solving.</p>
         </div>
     </div>
 </body>
