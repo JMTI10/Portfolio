@@ -94,6 +94,20 @@
     text-decoration: none;
 }
 
+.social-icons a {
+    font-size: 24px;
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}  
+
+.social-icons a:hover,
+.social-icons a:focus,
+.social-icons a:active {
+    color: white;
+    outline: none;
+}
+
 .floating-socials-right a:hover {
     color: white;
 }
