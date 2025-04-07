@@ -99,6 +99,7 @@
     color: #FFD700;
     text-decoration: none;
     transition: color 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
 }  
 
 .social-icons a:hover,
