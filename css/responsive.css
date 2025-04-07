@@ -5,9 +5,9 @@
 
     .quick-links-under-title {
         display: flex;
-        justify-content: center;
-        gap: 15px;
         flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
         margin-top: 10px;
         margin-bottom: 15px;
     }
@@ -17,14 +17,15 @@
         font-weight: 600;
         color: #FFD700;
         text-decoration: none;
+        padding: 4px 10px;
         transition: color 0.3s ease;
-        padding: 4px 8px;
         white-space: nowrap;
     }
     
     .quick-links-under-title a:hover {
         color: white;
     }
+
     .container,
     .content {
         display: flex;
@@ -84,9 +85,27 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     .quick-links-under-title {
         flex-direction: column;
         align-items: center;
+    }
+
+    .quick-links-under-title a:first-child {
+        width: 100%;
+        text-align: center;
+    }
+
+    .quick-links-under-title a:nth-child(2),
+    .quick-links-under-title a:nth-child(3) {
+        display: inline-block;
+        width: auto;
+    }
+}
+
+@media (max-width: 400px) {
+    .quick-links-under-title a {
+        width: 100%;
+        text-align: center;
     }
 }
