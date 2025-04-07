@@ -22,7 +22,7 @@ body {
     width: 80%;
     max-width: 900px;
     padding-top: 20px;
-    margin-left: 100px
+    margin-left: 0 auto;
 }
 
 .skills-section {
