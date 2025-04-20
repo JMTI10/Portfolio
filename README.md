@@ -5,10 +5,10 @@ A personal portfolio to showcase my projects, certificates, and skills in web de
 ## 🔗 Live Preview
 
 [👉 Visit Website](https://jmti10.github.io/Portfolio/)
+![Portfolio](https://github.com/user-attachments/assets/e42a4394-a443-47a2-838f-0c587ce356a9)
 
-## 📁 Project Structure
-
-📁 Portfolio/
+```
+📁Portfolio/
 ├── index.html
 ├── certificates.html
 ├── project.html
@@ -28,3 +28,4 @@ A personal portfolio to showcase my projects, certificates, and skills in web de
 ├── HTML/
 │   └── icons.html
 └── images/
+```
