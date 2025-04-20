@@ -1,19 +1,21 @@
 # 🌐 Iúri Gonçalves – Portfolio Website
 
+## 📌 Table of Contents
+
+- [Live Preview](#live-preview)
+- [Features](#-features)
+- [Technologies Used](#-technologies-used)
+- [Project Structure](#-project-structure)
+
+
+
+
 A personal portfolio to showcase my projects, certificates, and skills in web development, software, and robotics.
 
 ## 🔗 Live Preview
 
 [👉 Visit Website](https://jmti10.github.io/Portfolio/)
 ![Portfolio Banner](https://github.com/user-attachments/assets/e42a4394-a443-47a2-838f-0c587ce356a9)
-
-## 📌 Table of Contents
-
-- [Live Preview](#live-preview)
-- [Project Structure](#-project-structure)
-- [Features](#-features)
-- [Technologies Used](#-technologies-used)
-- [How to Use](#-how-to-use)
 
 - ## ✨ Features
 
@@ -42,7 +44,7 @@ These look cool on personal repos:
 ## 📊 GitHub Stats
 
 ![Iúri's GitHub Stats](https://github-readme-stats.vercel.app/api?username=JMTI10&show_icons=true&theme=radical)
-
+```
 
 
 ```
