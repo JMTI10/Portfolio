@@ -31,15 +31,6 @@ A personal portfolio to showcase my projects, certificates, and skills in web de
 - GitHub Pages for deployment
 - Google Fonts & Font Awesome
 
-
-### 📌 6. **Add GitHub Stats (Optional, if you like)**
-```markdown
-## 📊 GitHub Stats
-
-![Iúri's GitHub Stats](https://github-readme-stats.vercel.app/api?username=JMTI10&show_icons=true&theme=radical)
-```
-
-
 ```
 📁Portfolio/
 ├── index.html
