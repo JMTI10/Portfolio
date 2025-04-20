@@ -5,7 +5,45 @@ A personal portfolio to showcase my projects, certificates, and skills in web de
 ## 🔗 Live Preview
 
 [👉 Visit Website](https://jmti10.github.io/Portfolio/)
-![Portfolio](https://github.com/user-attachments/assets/e42a4394-a443-47a2-838f-0c587ce356a9)
+![Portfolio Banner](https://github.com/user-attachments/assets/e42a4394-a443-47a2-838f-0c587ce356a9)
+
+## 📌 Table of Contents
+
+- [Live Preview](#live-preview)
+- [Project Structure](#-project-structure)
+- [Features](#-features)
+- [Technologies Used](#-technologies-used)
+- [How to Use](#-how-to-use)
+
+- ## ✨ Features
+
+- 🔗 Reusable HTML components with partial includes
+- 🎨 Responsive design with mobile-first layout
+- 🧠 Skills sidebar with toggleable animation
+- 🪄 Particle background effect
+
+- ## 🛠️ Technologies Used
+
+- HTML5 / CSS3 / JavaScript
+- Vanilla JS DOM manipulation
+- GitHub Pages for deployment
+- Google Fonts & Font Awesome
+
+- ### 📌 6. **Add GitHub Stats (Optional, if you like)**
+These look cool on personal repos:
+
+
+---
+
+### 📌 6. **Add GitHub Stats (Optional, if you like)**
+These look cool on personal repos:
+
+```markdown
+## 📊 GitHub Stats
+
+![Iúri's GitHub Stats](https://github-readme-stats.vercel.app/api?username=JMTI10&show_icons=true&theme=radical)
+
+
 
 ```
 📁Portfolio/
