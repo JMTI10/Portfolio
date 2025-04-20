@@ -31,15 +31,8 @@ A personal portfolio to showcase my projects, certificates, and skills in web de
 - GitHub Pages for deployment
 - Google Fonts & Font Awesome
 
-- ### 📌 6. **Add GitHub Stats (Optional, if you like)**
-These look cool on personal repos:
-
-
----
 
 ### 📌 6. **Add GitHub Stats (Optional, if you like)**
-These look cool on personal repos:
-
 ```markdown
 ## 📊 GitHub Stats
 
