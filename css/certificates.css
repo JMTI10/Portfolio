@@ -60,7 +60,6 @@ h1 {
 
 .btn {
     display: inline-block;
-    margin-top: 20px;
     padding: 10px 20px;
     font-size: 18px;
     color: black;
@@ -69,4 +68,5 @@ h1 {
     border-radius: 5px;
     transition: background 0.3s ease-in-out;
     text-align: center;
+    margin-bottom: 30px;
 }
