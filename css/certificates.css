@@ -69,4 +69,5 @@ h1 {
     transition: background 0.3s ease-in-out;
     text-align: center;
     margin-bottom: 30px;
+    font-weight: bold;
 }
