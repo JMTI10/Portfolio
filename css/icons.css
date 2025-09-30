@@ -2,7 +2,7 @@
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #FFD700;
+    color: #16114bff;
 }
 
 .bar {
@@ -15,7 +15,7 @@
 
 .fill {
     height: 8px;
-    background: #FFD700;
+    background: #16114bff;
     border-radius: 5px;
 }
 
@@ -31,7 +31,7 @@
 
 .floating-socials a {
     font-size: 24px;
-    color: #FFD700;
+    color: #16114bff;
     transition: color 0.3s ease;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .quick-links a {
-    color: #FFD700;
+    color: #16114bff;
     text-decoration: none;
     margin: 0 10px;
     font-weight: bold;
@@ -64,7 +64,7 @@
 }
 
 .quick-links-under-title a {
-    color: #FFD700;
+    color: #16114bff;
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
@@ -89,14 +89,14 @@
 
 .floating-socials-right a {
     font-size: 24px;
-    color: #FFD700;
+    color: #16114bff;
     transition: color 0.3s ease;
     text-decoration: none;
 }
 
 .social-icons a {
     font-size: 24px;
-    color: #FFD700;
+    color: #16114bff;
     text-decoration: none;
     transition: color 0.3s ease;
     -webkit-tap-highlight-color: transparent;
@@ -122,7 +122,7 @@
 
 .social-icons-header a {
     font-size: 20px;
-    color: #FFD700;
+    color: #16114bff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -165,7 +165,7 @@
 
 .floating-socials-right a {
     font-size: 24px;
-    color: #FFD700;
+    color: #16114bff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -183,7 +183,7 @@
 
 .social-icons-header a {
     font-size: 20px;
-    color: #FFD700;
+    color: #16114bff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
