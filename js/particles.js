@@ -22,7 +22,7 @@ function createParticles() {
     }
     function animateParticles() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = "#16114bff";
+        ctx.fillStyle = "rgb(26, 100, 161)";
         particles.forEach(p => {
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
