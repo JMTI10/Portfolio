@@ -2,7 +2,7 @@
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #16114bff;
+    color: rgb(26, 100, 161);
 }
 
 .bar {
@@ -15,7 +15,7 @@
 
 .fill {
     height: 8px;
-    background: #16114bff;
+    background: rgb(26, 100, 161);
     border-radius: 5px;
 }
 
@@ -31,7 +31,7 @@
 
 .floating-socials a {
     font-size: 24px;
-    color: #16114bff;
+    color: rgb(26, 100, 161);
     transition: color 0.3s ease;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .quick-links a {
-    color: #16114bff;
+    color: rgb(26, 100, 161);
     text-decoration: none;
     margin: 0 10px;
     font-weight: bold;
@@ -64,7 +64,7 @@
 }
 
 .quick-links-under-title a {
-    color: #16114bff;
+    color: rgb(26, 100, 161);
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
@@ -89,7 +89,7 @@
 
 .floating-socials-right a {
     font-size: 24px;
-    color: #16114bff;
+    color: rgb(26, 100, 161);
     transition: color 0.3s ease;
     text-decoration: none;
 }
@@ -122,7 +122,7 @@
 
 .social-icons-header a {
     font-size: 20px;
-    color: #16114bff;
+    color: rgb(26, 100, 161);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -165,7 +165,7 @@
 
 .floating-socials-right a {
     font-size: 24px;
-    color: #16114bff;
+    color: rgb(26, 100, 161);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -183,7 +183,7 @@
 
 .social-icons-header a {
     font-size: 20px;
-    color: #16114bff;
+    color: rgb(26, 100, 161);
     text-decoration: none;
     transition: color 0.3s ease;
 }

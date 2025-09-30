@@ -42,7 +42,7 @@ body {
 }
 
 p a {
-    color: #16114bff;
+    color: rgb(26, 100, 161);
     text-decoration: none;
 }
 
@@ -53,7 +53,7 @@ p a:hover {
 
 .btn {
     display: inline-block;
-    background: #FFD700;
+    background: rgb(26, 100, 161);
     color: black;
     padding: 10px 20px;
     text-decoration: none;
@@ -87,7 +87,7 @@ h2 {
 }
 
 .quick-links a {
-    color: #16114bff;
+    color: rgb(26, 100, 161);
     font-weight: bold;
     text-decoration: none;
     font-size: 18px;
@@ -106,8 +106,8 @@ h2 {
     object-fit: cover;
     margin: 30px auto;
     display: block;
-    border: 4px solid #16114bff;
-    box-shadow: 0 0 25px #16114bff(255, 215, 0, 0.4);
+    border: 4px solid rgb(26, 100, 161);
+    box-shadow: 0 0 25px rgb(26, 100, 161);
     background-color: #121212;
 }
 
@@ -127,12 +127,12 @@ h2 {
     width: 280px;
     color: #ccc;
     text-align: center;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
+    box-shadow: 0 0 10px rgb(26, 100, 161);
     transition: transform 0.3s ease;
 }
 
 .role-card h3 {
-    color: #16114bff;
+    color: rgb(26, 100, 161);
     margin-bottom: 10px;
 }
 
@@ -156,12 +156,12 @@ h2 {
     width: 280px;
     color: #ccc;
     text-align: center;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
+    box-shadow: 0 0 10px rgb(26, 100, 161);
     transition: transform 0.3s ease;
 }
 
 .study-card h3 {
-    color: #16114bff;
+    color: rgb(26, 100, 161);
     margin-bottom: 10px;
 }
 
@@ -200,7 +200,7 @@ h2 {
     top: 50%;
     left: 180px;
     transform: translateY(-50%);
-    background: #16114bff;
+    background: rgb(26, 100, 161);
     color: #121212;
     font-size: 18px;
     padding: 8px;
@@ -266,7 +266,7 @@ h2 {
 }
 
 .fill {
-    background: #16114bff;
+    background: rgb(26, 100, 161);
     height: 100%;
     border-radius: 6px;
     transition: width 1s ease-in-out;

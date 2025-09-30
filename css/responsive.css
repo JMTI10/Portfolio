@@ -17,7 +17,7 @@ html, body {
 }
 
 .quick-links-under-title a {
-  color: #16114bff;
+  color: rgb(26, 100, 161);
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
